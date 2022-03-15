@@ -21,7 +21,6 @@ pub struct FieldRow {
 pub struct Field {
     pub latest_x: Option<i32>,
     pub latest_y: Option<i32>,
-    pub latest_color: Option<Color>,
     pub rows: Vec<FieldRow>,
 }
 
@@ -320,7 +319,6 @@ impl From<wuziqi::FieldState> for Field {
         Field {
             latest_x: Some(f.latest.0 as i32),
             latest_y: Some(f.latest.1 as i32),
-            latest_color: Some(f.latest.2.into()),
             rows: field,
         }
     }
@@ -339,14 +337,12 @@ impl From<wuziqi::FieldStateNullable> for Field {
             Field {
                 latest_x: Some(latest.0 as i32),
                 latest_y: Some(latest.1 as i32),
-                latest_color: Some(latest.2.into()),
                 rows: field,
             }
         } else {
             Field {
                 latest_x: None,
                 latest_y: None,
-                latest_color: None,
                 rows: field,
             }
         }

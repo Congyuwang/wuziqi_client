@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'ffi.dart' as backend;
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '五子棋',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: '五子棋'),
     );
   }
 }
@@ -34,16 +35,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final StreamController<backend.Field> testController =
       StreamController<backend.Field>();
-  late Future<backend.Field> testField;
+  Future<backend.Field> testField = backend.api.emptyField();
   bool isBlack = true;
-
-  @override
-  void initState() {
-    super.initState();
-    testField = backend.api.emptyField();
-    testPlay(5, 5, backend.Color.Black);
-    testPlay(5, 6, backend.Color.White);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,11 +72,23 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  /// this is test code
   Stream<backend.Field> testPlay(int x, int y, backend.Color color) async* {
-    // update field latest position state
-    // final field = await backend.api.modifyFieldLatest(
-    //     field: await testField, latestX: x, latestY: y, latestColor: color);
-    final field = await testField;
+    final bytes = (await testField)
+        .rows
+        .expand((e) => e.columns.map((s) {
+              switch (s) {
+                case backend.SingleState.B:
+                  return 1;
+                case backend.SingleState.W:
+                  return 2;
+                case backend.SingleState.E:
+                  return 0;
+              }
+            }))
+        .toList(growable: false);
+    final field = await backend.api.constructFieldWithLatest(
+        latestX: x, latestY: y, seeds: Uint8List.fromList(bytes));
     switch (color) {
       case backend.Color.Black:
         field.rows[x].columns[y] = backend.SingleState.B;

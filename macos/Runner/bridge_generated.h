@@ -130,6 +130,11 @@ void wire_send(int64_t port_, struct wire_Messages *msg);
 
 void wire_empty_field(int64_t port_);
 
+void wire_construct_field_with_latest(int64_t port_,
+                                      int32_t latest_x,
+                                      int32_t latest_y,
+                                      struct wire_uint_8_list *seeds);
+
 void wire_default_session_config(int64_t port_);
 
 void wire_set_undo_request_timeout(int64_t port_, struct wire_SessionConfig *config, uint64_t secs);
@@ -173,6 +178,7 @@ static int64_t dummy_method_to_enforce_bundling(void) {
     dummy_var ^= ((int64_t) (void*) wire_connect_to_server);
     dummy_var ^= ((int64_t) (void*) wire_send);
     dummy_var ^= ((int64_t) (void*) wire_empty_field);
+    dummy_var ^= ((int64_t) (void*) wire_construct_field_with_latest);
     dummy_var ^= ((int64_t) (void*) wire_default_session_config);
     dummy_var ^= ((int64_t) (void*) wire_set_undo_request_timeout);
     dummy_var ^= ((int64_t) (void*) wire_set_undo_dialogue_extra_seconds);

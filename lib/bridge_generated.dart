@@ -31,7 +31,15 @@ abstract class Native {
   /// for flutter debug use only
   Future<Field> emptyField({dynamic hint});
 
-  /// for flutter debug use only
+  /// for flutter debug use only.
+  /// 0 for empty, 1 for black, 2 for white
+  /// ! do not use this in production
+  Future<Field> constructFieldWithLatest(
+      {required int latestX,
+      required int latestY,
+      required Uint8List seeds,
+      dynamic hint});
+
   Future<SessionConfig> defaultSessionConfig({dynamic hint});
 
   Future<SessionConfig> setUndoRequestTimeout(
@@ -82,13 +90,11 @@ class ConnectionInitError with _$ConnectionInitError {
 class Field {
   final int? latestX;
   final int? latestY;
-  final Color? latestColor;
   final List<FieldRow> rows;
 
   Field({
     this.latestX,
     this.latestY,
-    this.latestColor,
     required this.rows,
   });
 }
@@ -399,6 +405,26 @@ class NativeImpl extends FlutterRustBridgeBase<NativeWire> implements Native {
         hint: hint,
       ));
 
+  Future<Field> constructFieldWithLatest(
+          {required int latestX,
+          required int latestY,
+          required Uint8List seeds,
+          dynamic hint}) =>
+      executeNormal(FlutterRustBridgeTask(
+        callFfi: (port_) => inner.wire_construct_field_with_latest(
+            port_,
+            _api2wire_i32(latestX),
+            _api2wire_i32(latestY),
+            _api2wire_uint_8_list(seeds)),
+        parseSuccessData: _wire2api_field,
+        constMeta: const FlutterRustBridgeTaskConstMeta(
+          debugName: "construct_field_with_latest",
+          argNames: ["latestX", "latestY", "seeds"],
+        ),
+        argValues: [latestX, latestY, seeds],
+        hint: hint,
+      ));
+
   Future<SessionConfig> defaultSessionConfig({dynamic hint}) =>
       executeNormal(FlutterRustBridgeTask(
         callFfi: (port_) => inner.wire_default_session_config(port_),
@@ -475,6 +501,10 @@ class NativeImpl extends FlutterRustBridgeBase<NativeWire> implements Native {
     final ptr = inner.new_box_autoadd_session_config();
     _api_fill_to_wire_session_config(raw, ptr.ref);
     return ptr;
+  }
+
+  int _api2wire_i32(int raw) {
+    return raw;
   }
 
   ffi.Pointer<wire_uint_8_list> _api2wire_opt_String(String? raw) {
@@ -670,13 +700,12 @@ ConnectionInitError _wire2api_connection_init_error(dynamic raw) {
 
 Field _wire2api_field(dynamic raw) {
   final arr = raw as List<dynamic>;
-  if (arr.length != 4)
-    throw Exception('unexpected arr length: expect 4 but see ${arr.length}');
+  if (arr.length != 3)
+    throw Exception('unexpected arr length: expect 3 but see ${arr.length}');
   return Field(
     latestX: _wire2api_opt_box_autoadd_i32(arr[0]),
     latestY: _wire2api_opt_box_autoadd_i32(arr[1]),
-    latestColor: _wire2api_opt_color(arr[2]),
-    rows: _wire2api_list_field_row(arr[3]),
+    rows: _wire2api_list_field_row(arr[2]),
   );
 }
 
@@ -703,10 +732,6 @@ List<SingleState> _wire2api_list_single_state(dynamic raw) {
 
 int? _wire2api_opt_box_autoadd_i32(dynamic raw) {
   return raw == null ? null : _wire2api_box_autoadd_i32(raw);
-}
-
-Color? _wire2api_opt_color(dynamic raw) {
-  return raw == null ? null : _wire2api_color(raw);
 }
 
 Responses _wire2api_responses(dynamic raw) {
@@ -940,6 +965,29 @@ class NativeWire implements FlutterRustBridgeWireBase {
           'wire_empty_field');
   late final _wire_empty_field =
       _wire_empty_fieldPtr.asFunction<void Function(int)>();
+
+  void wire_construct_field_with_latest(
+    int port_,
+    int latest_x,
+    int latest_y,
+    ffi.Pointer<wire_uint_8_list> seeds,
+  ) {
+    return _wire_construct_field_with_latest(
+      port_,
+      latest_x,
+      latest_y,
+      seeds,
+    );
+  }
+
+  late final _wire_construct_field_with_latestPtr = _lookup<
+          ffi.NativeFunction<
+              ffi.Void Function(ffi.Int64, ffi.Int32, ffi.Int32,
+                  ffi.Pointer<wire_uint_8_list>)>>(
+      'wire_construct_field_with_latest');
+  late final _wire_construct_field_with_latest =
+      _wire_construct_field_with_latestPtr.asFunction<
+          void Function(int, int, int, ffi.Pointer<wire_uint_8_list>)>();
 
   void wire_default_session_config(
     int port_,

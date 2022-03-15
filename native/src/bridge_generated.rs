@@ -94,6 +94,34 @@ pub extern "C" fn wire_empty_field(port_: i64) {
 }
 
 #[no_mangle]
+pub extern "C" fn wire_construct_field_with_latest(
+    port_: i64,
+    latest_x: i32,
+    latest_y: i32,
+    seeds: *mut wire_uint_8_list,
+) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "construct_field_with_latest",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || {
+            let api_latest_x = latest_x.wire2api();
+            let api_latest_y = latest_y.wire2api();
+            let api_seeds = seeds.wire2api();
+            move |task_callback| {
+                Ok(construct_field_with_latest(
+                    api_latest_x,
+                    api_latest_y,
+                    api_seeds,
+                ))
+            }
+        },
+    )
+}
+
+#[no_mangle]
 pub extern "C" fn wire_default_session_config(port_: i64) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {
@@ -371,6 +399,12 @@ impl Wire2Api<SessionConfig> for *mut wire_SessionConfig {
     }
 }
 
+impl Wire2Api<i32> for i32 {
+    fn wire2api(self) -> i32 {
+        self
+    }
+}
+
 impl Wire2Api<Messages> for wire_Messages {
     fn wire2api(self) -> Messages {
         match self.tag {
@@ -638,7 +672,6 @@ impl support::IntoDart for Field {
         vec![
             self.latest_x.into_dart(),
             self.latest_y.into_dart(),
-            self.latest_color.into_dart(),
             self.rows.into_dart(),
         ]
         .into_dart()

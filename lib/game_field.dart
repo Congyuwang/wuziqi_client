@@ -1,6 +1,9 @@
+import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rive/rive.dart';
+import 'theme.dart';
 import 'ffi.dart' as backend;
+import 'seed_animation.dart';
 
 const int fieldSize = 15;
 
@@ -8,11 +11,11 @@ class GameField extends StatefulWidget {
   const GameField(
       {required this.fieldUpdateStream,
       required this.tapCallback,
-      this.themeName = "basic",
+      this.gameTheme = GameTheme.basic,
       Key? key})
       : super(key: key);
 
-  final String themeName;
+  final GameTheme gameTheme;
   final Stream<backend.Field> fieldUpdateStream;
   final Function(int, int) tapCallback;
 
@@ -21,158 +24,110 @@ class GameField extends StatefulWidget {
 }
 
 class _GameFieldState extends State<GameField> {
-  late Widget blackSeedPop;
-  late Widget whiteSeedPop;
-  late Widget blackSeed;
-  late Widget whiteSeed;
-  backend.Field? latestField;
+  backend.Field? lastField;
+  late List<List<StreamController<SeedState>>> seedStateStreams;
+  late Widget seedsWidget;
 
-  // load assets
   @override
   void initState() {
     super.initState();
-    final String themeName = widget.themeName;
-    final String themeFolder = "./assets/game_field_themes/$themeName";
-    blackSeed = RiveAnimation.asset("$themeFolder/black_seed.riv");
-    whiteSeed = RiveAnimation.asset("$themeFolder/white_seed.riv");
-    blackSeedPop = RiveAnimation.asset("$themeFolder/black_seed_pop.riv");
-    whiteSeedPop = RiveAnimation.asset("$themeFolder/black_seed_pop.riv");
+    seedStateStreams = buildSeedStreams();
+    seedsWidget = buildSeedsWidget();
   }
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<backend.Field>(
       builder: (context, snap) {
-        if (snap.data != null) {
-          return AspectRatio(
-            aspectRatio: 1.0,
-            child: _drawField(snap.data!),
-          );
-        } else {
-          return AspectRatio(
-            aspectRatio: 1.0,
-            child: _emptyField(),
-          );
+        if (snap.hasData) {
+          onFieldUpdate(snap.data!);
         }
-      },
+        return AspectRatio(
+          aspectRatio: 1.0,
+          child: seedsWidget,
+        );
+        },
       stream: widget.fieldUpdateStream,
     );
   }
 
-  /// build a field based on a list of `FieldRow`
-  Widget _drawField(backend.Field field) {
-    final latestX = field.latestX ?? -1;
-    final latestY = field.latestY ?? -1;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: field.rows
-          .asMap()
-          .map((x, r) => MapEntry(
-              x,
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: r.columns
-                      .asMap()
-                      .map((y, e) => MapEntry(
-                          y,
-                          _buildSingleSeed(
-                              x: x,
-                              y: y,
-                              state: e,
-                              isLatest: latestX == x && latestY == y)))
-                      .values
-                      .toList(growable: false))))
-          .values
-          .toList(growable: false),
-    );
-  }
-
-  /// construct an empty field
-  Widget _emptyField() {
+  /// helper functions to build message channels for each cell
+  static List<List<StreamController<SeedState>>> buildSeedStreams() {
     final index = [
       for (var i = 0; i < fieldSize; i += 1)
         [
           for (var j = 0; j < fieldSize; j += 1) [i, j]
         ]
     ];
+    return index
+        .map((e) =>
+            e.map((e) => StreamController<SeedState>()).toList(growable: false))
+        .toList(growable: false);
+  }
+
+  /// construct the widget
+  Widget buildSeedsWidget() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: index
-          .map((r) => Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: r
-                  .map((p) => _buildSingleSeed(
-                      x: p.first,
-                      y: p.last,
-                      state: backend.SingleState.E,
-                      isLatest: false))
-                  .toList(growable: false)))
-          .toList(growable: false),
-    );
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: seedStateStreams
+            .asMap()
+            .map((x, row) => MapEntry(
+                x,
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: row
+                        .asMap()
+                        .map((y, s) => MapEntry(
+                            y,
+                              Seed(
+                                key: ObjectKey(100 * x + y),
+                                x: x,
+                                y: y,
+                                stateStream: s.stream,
+                                theme: widget.gameTheme,
+                                tapCallback: widget.tapCallback,
+                              ),))
+                        .values
+                        .toList(growable: false))))
+            .values
+            .toList(growable: false));
   }
 
-  /// draw a single state
-  Widget _buildSingleSeed({
-    required int x,
-    required int y,
-    required backend.SingleState state,
-    required bool isLatest,
-  }) {
-    switch (state) {
-      case backend.SingleState.B:
-        return Expanded(
-            child: AspectRatio(
-                aspectRatio: 1.0, child: isLatest ? blackSeedPop : blackSeed));
-      case backend.SingleState.W:
-        return Expanded(
-            child: AspectRatio(
-                aspectRatio: 1.0, child: isLatest ? whiteSeedPop : whiteSeed));
-      case backend.SingleState.E:
-        // allow tapping only for empty position
-        return SingleSeedTap(
-            x: x,
-            y: y,
-            inner: const Center(child: Text("E")),
-            tapCallback: widget.tapCallback);
+  /// compare with previous field to figure out which seeds are updated
+  void onFieldUpdate(backend.Field field) {
+    for (var x = 0; x < fieldSize; x += 1) {
+      for (var y = 0; y < fieldSize; y += 1) {
+        final state = field.rows[x].columns[y];
+        final latest = isLatest(field.latestX, field.latestY, x, y);
+        // in this case, the field is still empty
+        if (lastField == null) {
+          switch (state) {
+            case backend.SingleState.E:
+              // do nothing for empty state
+              break;
+            default:
+              // update seeds
+              seedStateStreams[x][y].add(SeedState(state, latest));
+              break;
+          }
+        } else {
+          final previous = lastField!;
+          final previousState = previous.rows[x].columns[y];
+          final previousLatest =
+              isLatest(previous.latestX, previous.latestY, x, y);
+          // update seed if state is updated
+          if (state != previousState || latest != previousLatest) {
+            seedStateStreams[x][y].add(SeedState(state, latest));
+          }
+        }
+      }
     }
-  }
-}
-
-/// This widget implement the tap callback for a single position.
-class SingleSeedTap extends StatelessWidget {
-  const SingleSeedTap(
-      {required this.x,
-      required this.y,
-      required this.inner,
-      required this.tapCallback,
-      Key? key})
-      : super(key: key);
-
-  final int x;
-  final int y;
-  final Widget inner;
-  final Function(int, int) tapCallback;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-        child: AspectRatio(
-      aspectRatio: 1,
-      child: GestureDetector(
-        onTap: _tryTap,
-        child: Tooltip(
-          message: "play($x, $y)",
-          child: inner,
-        ),
-      ),
-    ));
+    lastField = field;
   }
 
-  void _tryTap() {
-    tapCallback(x, y);
+  static bool isLatest(int? latestX, int? latestY, int x, int y) {
+    return (latestX ?? -1) == x && (latestY ?? -1) == y;
   }
 }

@@ -7,6 +7,7 @@ use async_std::sync::Mutex;
 use async_std::task;
 use async_std::task::block_on;
 use flutter_rust_bridge::StreamSink;
+use std::io::{Cursor, Read};
 use std::time::Duration;
 use wuziqi;
 use wuziqi::{Conn, Received};
@@ -61,7 +62,6 @@ pub fn empty_field() -> Field {
     Field {
         latest_x: None,
         latest_y: None,
-        latest_color: None,
         rows: vec![
             FieldRow {
                 columns: vec![SingleState::E; 15]
@@ -71,22 +71,32 @@ pub fn empty_field() -> Field {
     }
 }
 
-/// for flutter debug use only
-// pub fn modify_field_latest(
-//     mut field: Field,
-//     latest_x: i32,
-//     latest_y: i32,
-//     latest_color_black: bool,
-// ) -> Field {
-//     field.latest_x = Some(latest_x);
-//     field.latest_y = Some(latest_y);
-//     field.latest_color = Some(if latest_color_black {
-//         Color::Black
-//     } else {
-//         Color::White
-//     });
-//     field
-// }
+/// for flutter debug use only.
+/// 0 for empty, 1 for black, 2 for white
+/// ! do not use this in production
+pub fn construct_field_with_latest(latest_x: i32, latest_y: i32, seeds: Vec<u8>) -> Field {
+    assert_eq!(seeds.len(), 15 * 15);
+    let mut cursor = Cursor::new(seeds);
+    let mut row = [0u8; 15];
+    let mut rows = Vec::with_capacity(15);
+    for _ in 0..15 {
+        cursor.read_exact(&mut row).unwrap();
+        rows.push(FieldRow {
+            columns: row
+                .map(|i| match i {
+                    1 => SingleState::B,
+                    2 => SingleState::W,
+                    _ => SingleState::E,
+                })
+                .to_vec(),
+        });
+    }
+    Field {
+        latest_x: Some(latest_x),
+        latest_y: Some(latest_y),
+        rows,
+    }
+}
 
 pub fn default_session_config() -> SessionConfig {
     SessionConfig {
