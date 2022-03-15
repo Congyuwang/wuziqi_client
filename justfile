@@ -9,13 +9,16 @@ llvm_path := if os() == "macos" {
 default: gen lint
 
 gen:
+    dart pub get
+    flutter pub get
     flutter_rust_bridge_codegen {{llvm_path}} \
         --rust-input native/src/api.rs \
         --dart-output lib/bridge_generated.dart \
-        --c-output ios/Runner/bridge_generated.h
+        --c-output ios/Runner/bridge_generated.h \
+        --dart-root .
     cp ios/Runner/bridge_generated.h macos/Runner/bridge_generated.h
     # Uncomment this line to invoke build_runner as well
-    # flutter pub run build_runner build
+    flutter pub run build_runner build --delete-conflicting-outputs
 
 lint:
     cd native && cargo fmt

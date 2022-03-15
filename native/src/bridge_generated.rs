@@ -14,35 +14,315 @@ use flutter_rust_bridge::*;
 
 // Section: imports
 
+use crate::structs::Color;
+use crate::structs::ConnectionError;
+use crate::structs::ConnectionInitError;
+use crate::structs::Field;
+use crate::structs::FieldRow;
+use crate::structs::Messages;
+use crate::structs::Responses;
+use crate::structs::RoomState;
+use crate::structs::RoomToken;
+use crate::structs::SessionConfig;
+use crate::structs::SingleState;
+
 // Section: wire functions
 
 #[no_mangle]
-pub extern "C" fn wire_platform(port_: i64) {
+pub extern "C" fn wire_connect_to_server(
+    port_: i64,
+    a: u8,
+    b: u8,
+    c: u8,
+    d: u8,
+    server_port: u16,
+    user_name: *mut wire_uint_8_list,
+) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {
-            debug_name: "platform",
+            debug_name: "connect_to_server",
             port: Some(port_),
-            mode: FfiCallMode::Normal,
+            mode: FfiCallMode::Stream,
         },
-        move || move |task_callback| Ok(platform()),
+        move || {
+            let api_a = a.wire2api();
+            let api_b = b.wire2api();
+            let api_c = c.wire2api();
+            let api_d = d.wire2api();
+            let api_server_port = server_port.wire2api();
+            let api_user_name = user_name.wire2api();
+            move |task_callback| {
+                connect_to_server(
+                    task_callback.stream_sink(),
+                    api_a,
+                    api_b,
+                    api_c,
+                    api_d,
+                    api_server_port,
+                    api_user_name,
+                )
+            }
+        },
     )
 }
 
 #[no_mangle]
-pub extern "C" fn wire_rust_release_mode(port_: i64) {
+pub extern "C" fn wire_send(port_: i64, msg: *mut wire_Messages) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {
-            debug_name: "rust_release_mode",
+            debug_name: "send",
             port: Some(port_),
             mode: FfiCallMode::Normal,
         },
-        move || move |task_callback| Ok(rust_release_mode()),
+        move || {
+            let api_msg = msg.wire2api();
+            move |task_callback| send(api_msg)
+        },
+    )
+}
+
+#[no_mangle]
+pub extern "C" fn wire_empty_field(port_: i64) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "empty_field",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || move |task_callback| Ok(empty_field()),
+    )
+}
+
+#[no_mangle]
+pub extern "C" fn wire_default_session_config(port_: i64) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "default_session_config",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || move |task_callback| Ok(default_session_config()),
+    )
+}
+
+#[no_mangle]
+pub extern "C" fn wire_set_undo_request_timeout(
+    port_: i64,
+    config: *mut wire_SessionConfig,
+    secs: u64,
+) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "set_undo_request_timeout",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || {
+            let api_config = config.wire2api();
+            let api_secs = secs.wire2api();
+            move |task_callback| Ok(set_undo_request_timeout(api_config, api_secs))
+        },
+    )
+}
+
+#[no_mangle]
+pub extern "C" fn wire_set_undo_dialogue_extra_seconds(
+    port_: i64,
+    config: *mut wire_SessionConfig,
+    secs: u64,
+) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "set_undo_dialogue_extra_seconds",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || {
+            let api_config = config.wire2api();
+            let api_secs = secs.wire2api();
+            move |task_callback| Ok(set_undo_dialogue_extra_seconds(api_config, api_secs))
+        },
+    )
+}
+
+#[no_mangle]
+pub extern "C" fn wire_set_play_timeout(port_: i64, config: *mut wire_SessionConfig, secs: u64) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "set_play_timeout",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || {
+            let api_config = config.wire2api();
+            let api_secs = secs.wire2api();
+            move |task_callback| Ok(set_play_timeout(api_config, api_secs))
+        },
     )
 }
 
 // Section: wire structs
 
+#[repr(C)]
+#[derive(Clone)]
+pub struct wire_RoomToken {
+    field0: *mut wire_uint_8_list,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct wire_SessionConfig {
+    undo_request_timeout: u64,
+    undo_dialogue_extra_seconds: u64,
+    play_timeout: u64,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct wire_uint_8_list {
+    ptr: *mut u8,
+    len: i32,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct wire_Messages {
+    tag: i32,
+    kind: *mut MessagesKind,
+}
+
+#[repr(C)]
+pub union MessagesKind {
+    ToPlayer: *mut Messages_ToPlayer,
+    SearchOnlinePlayers: *mut Messages_SearchOnlinePlayers,
+    UserName: *mut Messages_UserName,
+    CreateRoom: *mut Messages_CreateRoom,
+    JoinRoom: *mut Messages_JoinRoom,
+    QuitRoom: *mut Messages_QuitRoom,
+    Ready: *mut Messages_Ready,
+    Unready: *mut Messages_Unready,
+    Play: *mut Messages_Play,
+    RequestUndo: *mut Messages_RequestUndo,
+    ApproveUndo: *mut Messages_ApproveUndo,
+    RejectUndo: *mut Messages_RejectUndo,
+    QuitGameSession: *mut Messages_QuitGameSession,
+    SendChatMessage: *mut Messages_SendChatMessage,
+    ExitGame: *mut Messages_ExitGame,
+    ClientError: *mut Messages_ClientError,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_ToPlayer {
+    name: *mut wire_uint_8_list,
+    msg: *mut wire_uint_8_list,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_SearchOnlinePlayers {
+    name: *mut wire_uint_8_list,
+    limit: u8,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_UserName {
+    field0: *mut wire_uint_8_list,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_CreateRoom {
+    field0: *mut wire_SessionConfig,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_JoinRoom {
+    field0: *mut wire_RoomToken,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_QuitRoom {}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_Ready {}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_Unready {}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_Play {
+    x: u8,
+    y: u8,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_RequestUndo {}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_ApproveUndo {}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_RejectUndo {}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_QuitGameSession {}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_SendChatMessage {
+    field0: *mut wire_uint_8_list,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_ExitGame {}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_ClientError {
+    field0: *mut wire_uint_8_list,
+}
+
+// Section: wrapper structs
+
+// Section: static checks
+
 // Section: allocate functions
+
+#[no_mangle]
+pub extern "C" fn new_box_autoadd_messages() -> *mut wire_Messages {
+    support::new_leak_box_ptr(wire_Messages::new_with_null_ptr())
+}
+
+#[no_mangle]
+pub extern "C" fn new_box_autoadd_room_token() -> *mut wire_RoomToken {
+    support::new_leak_box_ptr(wire_RoomToken::new_with_null_ptr())
+}
+
+#[no_mangle]
+pub extern "C" fn new_box_autoadd_session_config() -> *mut wire_SessionConfig {
+    support::new_leak_box_ptr(wire_SessionConfig::new_with_null_ptr())
+}
+
+#[no_mangle]
+pub extern "C" fn new_uint_8_list(len: i32) -> *mut wire_uint_8_list {
+    let ans = wire_uint_8_list {
+        ptr: support::new_leak_vec_ptr(Default::default(), len),
+        len,
+    };
+    support::new_leak_box_ptr(ans)
+}
 
 // Section: impl Wire2Api
 
@@ -63,6 +343,142 @@ where
     }
 }
 
+impl Wire2Api<String> for *mut wire_uint_8_list {
+    fn wire2api(self) -> String {
+        let vec: Vec<u8> = self.wire2api();
+        String::from_utf8_lossy(&vec).into_owned()
+    }
+}
+
+impl Wire2Api<Messages> for *mut wire_Messages {
+    fn wire2api(self) -> Messages {
+        let wrap = unsafe { support::box_from_leak_ptr(self) };
+        (*wrap).wire2api().into()
+    }
+}
+
+impl Wire2Api<RoomToken> for *mut wire_RoomToken {
+    fn wire2api(self) -> RoomToken {
+        let wrap = unsafe { support::box_from_leak_ptr(self) };
+        (*wrap).wire2api().into()
+    }
+}
+
+impl Wire2Api<SessionConfig> for *mut wire_SessionConfig {
+    fn wire2api(self) -> SessionConfig {
+        let wrap = unsafe { support::box_from_leak_ptr(self) };
+        (*wrap).wire2api().into()
+    }
+}
+
+impl Wire2Api<Messages> for wire_Messages {
+    fn wire2api(self) -> Messages {
+        match self.tag {
+            0 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.ToPlayer);
+                Messages::ToPlayer {
+                    name: ans.name.wire2api(),
+                    msg: ans.msg.wire2api(),
+                }
+            },
+            1 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.SearchOnlinePlayers);
+                Messages::SearchOnlinePlayers {
+                    name: ans.name.wire2api(),
+                    limit: ans.limit.wire2api(),
+                }
+            },
+            2 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.UserName);
+                Messages::UserName(ans.field0.wire2api())
+            },
+            3 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.CreateRoom);
+                Messages::CreateRoom(ans.field0.wire2api())
+            },
+            4 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.JoinRoom);
+                Messages::JoinRoom(ans.field0.wire2api())
+            },
+            5 => Messages::QuitRoom,
+            6 => Messages::Ready,
+            7 => Messages::Unready,
+            8 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.Play);
+                Messages::Play {
+                    x: ans.x.wire2api(),
+                    y: ans.y.wire2api(),
+                }
+            },
+            9 => Messages::RequestUndo,
+            10 => Messages::ApproveUndo,
+            11 => Messages::RejectUndo,
+            12 => Messages::QuitGameSession,
+            13 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.SendChatMessage);
+                Messages::SendChatMessage(ans.field0.wire2api())
+            },
+            14 => Messages::ExitGame,
+            15 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.ClientError);
+                Messages::ClientError(ans.field0.wire2api())
+            },
+            _ => unreachable!(),
+        }
+    }
+}
+
+impl Wire2Api<RoomToken> for wire_RoomToken {
+    fn wire2api(self) -> RoomToken {
+        RoomToken(self.field0.wire2api())
+    }
+}
+
+impl Wire2Api<SessionConfig> for wire_SessionConfig {
+    fn wire2api(self) -> SessionConfig {
+        SessionConfig {
+            undo_request_timeout: self.undo_request_timeout.wire2api(),
+            undo_dialogue_extra_seconds: self.undo_dialogue_extra_seconds.wire2api(),
+            play_timeout: self.play_timeout.wire2api(),
+        }
+    }
+}
+
+impl Wire2Api<u16> for u16 {
+    fn wire2api(self) -> u16 {
+        self
+    }
+}
+
+impl Wire2Api<u64> for u64 {
+    fn wire2api(self) -> u64 {
+        self
+    }
+}
+
+impl Wire2Api<u8> for u8 {
+    fn wire2api(self) -> u8 {
+        self
+    }
+}
+
+impl Wire2Api<Vec<u8>> for *mut wire_uint_8_list {
+    fn wire2api(self) -> Vec<u8> {
+        unsafe {
+            let wrap = support::box_from_leak_ptr(self);
+            support::vec_from_leak_ptr(wrap.ptr, wrap.len)
+        }
+    }
+}
+
 // Section: impl NewWithNullPtr
 
 pub trait NewWithNullPtr {
@@ -75,19 +491,252 @@ impl<T> NewWithNullPtr for *mut T {
     }
 }
 
+impl NewWithNullPtr for wire_Messages {
+    fn new_with_null_ptr() -> Self {
+        Self {
+            tag: -1,
+            kind: core::ptr::null_mut(),
+        }
+    }
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_ToPlayer() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        ToPlayer: support::new_leak_box_ptr(Messages_ToPlayer {
+            name: core::ptr::null_mut(),
+            msg: core::ptr::null_mut(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_SearchOnlinePlayers() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        SearchOnlinePlayers: support::new_leak_box_ptr(Messages_SearchOnlinePlayers {
+            name: core::ptr::null_mut(),
+            limit: Default::default(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_UserName() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        UserName: support::new_leak_box_ptr(Messages_UserName {
+            field0: core::ptr::null_mut(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_CreateRoom() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        CreateRoom: support::new_leak_box_ptr(Messages_CreateRoom {
+            field0: core::ptr::null_mut(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_JoinRoom() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        JoinRoom: support::new_leak_box_ptr(Messages_JoinRoom {
+            field0: core::ptr::null_mut(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_Play() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        Play: support::new_leak_box_ptr(Messages_Play {
+            x: Default::default(),
+            y: Default::default(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_SendChatMessage() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        SendChatMessage: support::new_leak_box_ptr(Messages_SendChatMessage {
+            field0: core::ptr::null_mut(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_ClientError() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        ClientError: support::new_leak_box_ptr(Messages_ClientError {
+            field0: core::ptr::null_mut(),
+        }),
+    })
+}
+
+impl NewWithNullPtr for wire_RoomToken {
+    fn new_with_null_ptr() -> Self {
+        Self {
+            field0: core::ptr::null_mut(),
+        }
+    }
+}
+
+impl NewWithNullPtr for wire_SessionConfig {
+    fn new_with_null_ptr() -> Self {
+        Self {
+            undo_request_timeout: Default::default(),
+            undo_dialogue_extra_seconds: Default::default(),
+            play_timeout: Default::default(),
+        }
+    }
+}
+
 // Section: impl IntoDart
 
-impl support::IntoDart for Platform {
+impl support::IntoDart for Color {
     fn into_dart(self) -> support::DartCObject {
         match self {
-            Self::Unknown => 0,
-            Self::Android => 1,
-            Self::Ios => 2,
-            Self::Windows => 3,
-            Self::Unix => 4,
-            Self::MacIntel => 5,
-            Self::MacApple => 6,
-            Self::Wasm => 7,
+            Self::Black => 0,
+            Self::White => 1,
+        }
+        .into_dart()
+    }
+}
+
+impl support::IntoDart for ConnectionError {
+    fn into_dart(self) -> support::DartCObject {
+        match self {
+            Self::MaxDataLengthExceeded => 0,
+            Self::UnknownMessageType => 1,
+            Self::DataCorrupted => 2,
+            Self::DecodeError => 3,
+            Self::UnknownError => 4,
+        }
+        .into_dart()
+    }
+}
+
+impl support::IntoDart for ConnectionInitError {
+    fn into_dart(self) -> support::DartCObject {
+        match self {
+            Self::IpMaxConnExceed => vec![0.into_dart()],
+            Self::ConnectionClosed => vec![1.into_dart()],
+            Self::UserNameNotReceived => vec![2.into_dart()],
+            Self::UserNameTooLong => vec![3.into_dart()],
+            Self::UserNameExists => vec![4.into_dart()],
+            Self::InvalidUserName => vec![5.into_dart()],
+            Self::NetworkError(field0) => vec![6.into_dart(), field0.into_dart()],
+        }
+        .into_dart()
+    }
+}
+
+impl support::IntoDart for Field {
+    fn into_dart(self) -> support::DartCObject {
+        vec![
+            self.latest_x.into_dart(),
+            self.latest_y.into_dart(),
+            self.latest_color.into_dart(),
+            self.rows.into_dart(),
+        ]
+        .into_dart()
+    }
+}
+impl support::IntoDartExceptPrimitive for Field {}
+
+impl support::IntoDart for FieldRow {
+    fn into_dart(self) -> support::DartCObject {
+        vec![self.columns.into_dart()].into_dart()
+    }
+}
+impl support::IntoDartExceptPrimitive for FieldRow {}
+
+impl support::IntoDart for Responses {
+    fn into_dart(self) -> support::DartCObject {
+        match self {
+            Self::FromPlayer { name, msg } => {
+                vec![0.into_dart(), name.into_dart(), msg.into_dart()]
+            }
+            Self::PlayerList(field0) => vec![1.into_dart(), field0.into_dart()],
+            Self::ConnectionSuccess => vec![2.into_dart()],
+            Self::ConnectionInitFailure(field0) => vec![3.into_dart(), field0.into_dart()],
+            Self::RoomCreated(field0) => vec![4.into_dart(), field0.into_dart()],
+            Self::JoinRoomSuccess { token, room_state } => {
+                vec![5.into_dart(), token.into_dart(), room_state.into_dart()]
+            }
+            Self::JoinRoomFailureTokenNotFound => vec![6.into_dart()],
+            Self::JoinRoomFailureRoomFull => vec![7.into_dart()],
+            Self::OpponentJoinRoom(field0) => vec![8.into_dart(), field0.into_dart()],
+            Self::OpponentQuitRoom => vec![9.into_dart()],
+            Self::OpponentReady => vec![10.into_dart()],
+            Self::OpponentUnready => vec![11.into_dart()],
+            Self::GameStarted(field0) => vec![12.into_dart(), field0.into_dart()],
+            Self::FieldUpdate(field0) => vec![13.into_dart(), field0.into_dart()],
+            Self::UndoRequest => vec![14.into_dart()],
+            Self::UndoTimeoutRejected => vec![15.into_dart()],
+            Self::UndoAutoRejected => vec![16.into_dart()],
+            Self::Undo(field0) => vec![17.into_dart(), field0.into_dart()],
+            Self::UndoRejectedByOpponent => vec![18.into_dart()],
+            Self::GameEndBlackTimeout => vec![19.into_dart()],
+            Self::GameEndWhiteTimeout => vec![20.into_dart()],
+            Self::GameEndBlackWins => vec![21.into_dart()],
+            Self::GameEndWhiteWins => vec![22.into_dart()],
+            Self::GameEndDraw => vec![23.into_dart()],
+            Self::RoomScores {
+                player1_name,
+                player1_score,
+                player2_name,
+                player2_score,
+            } => vec![
+                24.into_dart(),
+                player1_name.into_dart(),
+                player1_score.into_dart(),
+                player2_name.into_dart(),
+                player2_score.into_dart(),
+            ],
+            Self::OpponentQuitGameSession => vec![25.into_dart()],
+            Self::OpponentExitGame => vec![26.into_dart()],
+            Self::OpponentDisconnected => vec![27.into_dart()],
+            Self::GameSessionError(field0) => vec![28.into_dart(), field0.into_dart()],
+            Self::ChatMessage { name, msg } => {
+                vec![29.into_dart(), name.into_dart(), msg.into_dart()]
+            }
+        }
+        .into_dart()
+    }
+}
+
+impl support::IntoDart for RoomState {
+    fn into_dart(self) -> support::DartCObject {
+        match self {
+            Self::Empty => vec![0.into_dart()],
+            Self::OpponentIsReady(field0) => vec![1.into_dart(), field0.into_dart()],
+            Self::OpponentIsNotReady(field0) => vec![2.into_dart(), field0.into_dart()],
+        }
+        .into_dart()
+    }
+}
+
+impl support::IntoDart for SessionConfig {
+    fn into_dart(self) -> support::DartCObject {
+        vec![
+            self.undo_request_timeout.into_dart(),
+            self.undo_dialogue_extra_seconds.into_dart(),
+            self.play_timeout.into_dart(),
+        ]
+        .into_dart()
+    }
+}
+impl support::IntoDartExceptPrimitive for SessionConfig {}
+
+impl support::IntoDart for SingleState {
+    fn into_dart(self) -> support::DartCObject {
+        match self {
+            Self::B => 0,
+            Self::W => 1,
+            Self::E => 2,
         }
         .into_dart()
     }
