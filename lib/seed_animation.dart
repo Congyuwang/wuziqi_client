@@ -45,15 +45,15 @@ class _SeedState extends State<Seed> {
       alignment: Alignment.center,
       onInit: _onRiveInit,
     );
-    seedWidget = Expanded(child: AspectRatio(
-      aspectRatio: 1.0,
-        child: GestureDetector(
-        onTap: _onTap,
-        child: SeedStateListener(
-            onStateUpdate: _updateState,
-            stateStream: widget.stateStream,
-            inner: seedAnimation))
-    ));
+    seedWidget = Expanded(
+        child: AspectRatio(
+            aspectRatio: 1.0,
+            child: GestureDetector(
+                onTap: _onTap,
+                child: SeedStateListener(
+                    onStateUpdate: _updateState,
+                    stateStream: widget.stateStream,
+                    inner: seedAnimation))));
   }
 
   @override

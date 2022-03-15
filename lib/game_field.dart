@@ -27,28 +27,32 @@ class _GameFieldState extends State<GameField> {
   backend.Field? lastField;
   late List<List<StreamController<SeedState>>> seedStateStreams;
   late Widget seedsWidget;
+  late Widget fieldWidget;
 
   @override
   void initState() {
     super.initState();
     seedStateStreams = buildSeedStreams();
     seedsWidget = buildSeedsWidget();
+    fieldWidget = Expanded(
+      child: AspectRatio(
+        aspectRatio: 1.0,
+        child: StreamBuilder<backend.Field>(
+          builder: (context, snap) {
+            if (snap.hasData) {
+              onFieldUpdate(snap.data!);
+            }
+            return seedsWidget;
+          },
+          stream: widget.fieldUpdateStream,
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<backend.Field>(
-      builder: (context, snap) {
-        if (snap.hasData) {
-          onFieldUpdate(snap.data!);
-        }
-        return AspectRatio(
-          aspectRatio: 1.0,
-          child: seedsWidget,
-        );
-        },
-      stream: widget.fieldUpdateStream,
-    );
+    return fieldWidget;
   }
 
   /// helper functions to build message channels for each cell
@@ -80,7 +84,7 @@ class _GameFieldState extends State<GameField> {
                     children: row
                         .asMap()
                         .map((y, s) => MapEntry(
-                            y,
+                              y,
                               Seed(
                                 key: ObjectKey(100 * x + y),
                                 x: x,
@@ -88,7 +92,8 @@ class _GameFieldState extends State<GameField> {
                                 stateStream: s.stream,
                                 theme: widget.gameTheme,
                                 tapCallback: widget.tapCallback,
-                              ),))
+                              ),
+                            ))
                         .values
                         .toList(growable: false))))
             .values
