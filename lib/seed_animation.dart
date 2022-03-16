@@ -52,20 +52,17 @@ class _SeedState extends State<Seed> {
       alignment: Alignment.center,
       onInit: _onRiveInit,
     );
-    seedWidget = Expanded(
-        child: AspectRatio(
-            aspectRatio: 1.0,
-            child: GestureDetector(
-                onTap: _onTap,
-                child: StreamBuilder<SeedState>(
-                  stream: widget.stateStream,
-                  builder: (context, snap) {
-                    if (snap.data != null) {
-                      _updateState(snap.data!);
-                    }
-                    return seedAnimation;
-                  },
-                ))));
+    seedWidget = GestureDetector(
+        onTap: _onTap,
+        child: StreamBuilder<SeedState>(
+          stream: widget.stateStream,
+          builder: (context, snap) {
+            if (snap.data != null) {
+              _updateState(snap.data!);
+            }
+            return seedAnimation;
+          },
+        ));
   }
 
   @override

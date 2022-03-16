@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:flutter/cupertino.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'theme.dart';
 import 'ffi.dart' as backend;
@@ -7,6 +7,8 @@ import 'seed_animation.dart';
 
 const int fieldSize = 15;
 
+/// the GameField will try to maximize its size while still
+/// being entirely contained and keeps its aspect ratio.
 class GameField extends StatefulWidget {
   const GameField(
       {required this.fieldUpdateStream,
@@ -26,28 +28,14 @@ class GameField extends StatefulWidget {
 class _GameFieldState extends State<GameField> {
   backend.Field? lastField;
   late List<List<StreamController<SeedState>>> seedStateStreams;
-  late Widget seedsWidget;
   late Widget fieldWidget;
 
   @override
   void initState() {
     super.initState();
+    // the following three must be called in order
     seedStateStreams = buildSeedStreams();
-    seedsWidget = buildSeedsWidget();
-    fieldWidget = Expanded(
-      child: AspectRatio(
-        aspectRatio: 1.0,
-        child: StreamBuilder<backend.Field>(
-          builder: (context, snap) {
-            if (snap.hasData) {
-              onFieldUpdate(snap.data!);
-            }
-            return seedsWidget;
-          },
-          stream: widget.fieldUpdateStream,
-        ),
-      ),
-    );
+    fieldWidget = listenFieldUpdate(layoutSeeds(buildSeeds(seedStateStreams)));
   }
 
   @override
@@ -69,35 +57,66 @@ class _GameFieldState extends State<GameField> {
         .toList(growable: false);
   }
 
+  List<List<Seed>> buildSeeds(
+      List<List<StreamController<SeedState>>> seedStreams) {
+    return seedStreams
+        .asMap()
+        .map((x, row) => MapEntry(
+            x,
+            row
+                .asMap()
+                .map((y, s) => MapEntry(
+                      y,
+                      Seed(
+                        key: ObjectKey(100 * x + y),
+                        x: x,
+                        y: y,
+                        stateStream: s.stream,
+                        theme: widget.gameTheme,
+                        tapCallback: widget.tapCallback,
+                      ),
+                    ))
+                .values
+                .toList(growable: false)))
+        .values
+        .toList(growable: false);
+  }
+
   /// construct the widget
-  Widget buildSeedsWidget() {
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: seedStateStreams
-            .asMap()
-            .map((x, row) => MapEntry(
-                x,
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: row
-                        .asMap()
-                        .map((y, s) => MapEntry(
-                              y,
-                              Seed(
-                                key: ObjectKey(100 * x + y),
-                                x: x,
-                                y: y,
-                                stateStream: s.stream,
-                                theme: widget.gameTheme,
-                                tapCallback: widget.tapCallback,
-                              ),
-                            ))
-                        .values
-                        .toList(growable: false))))
-            .values
-            .toList(growable: false));
+  static Widget layoutSeeds(List<List<Seed>> allSeeds) {
+    return Expanded(child: LayoutBuilder(
+      builder: (context, constraints) {
+        final size = min(constraints.maxWidth, constraints.maxHeight);
+        final halfSize = size / 2;
+        final unitSize = size / fieldSize;
+        final leftPadding = constraints.maxWidth / 2 - halfSize;
+        final topPadding = constraints.maxHeight / 2 - halfSize;
+        return Stack(
+          children: allSeeds
+              .expand((i) => i)
+              .map((e) => Positioned(
+                    child: e,
+                    top: e.x * unitSize + topPadding,
+                    height: unitSize,
+                    left: e.y * unitSize + leftPadding,
+                    width: unitSize,
+                  ))
+              .toList(growable: false),
+        );
+      })
+    );
+  }
+
+  Widget listenFieldUpdate(Widget inner) {
+    return StreamBuilder<backend.Field>(
+      builder: (context, snap) {
+        if (snap.hasData) {
+          onFieldUpdate(snap.data!);
+        }
+        return inner;
+      },
+      stream: widget.fieldUpdateStream,
+    );
   }
 
   /// compare with previous field to figure out which seeds are updated
