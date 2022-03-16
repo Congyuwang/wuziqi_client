@@ -652,7 +652,7 @@ List<String> _wire2api_StringList(dynamic raw) {
 }
 
 ConnectionInitError _wire2api_box_autoadd_connection_init_error(dynamic raw) {
-  return raw as ConnectionInitError;
+  return _wire2api_connection_init_error(raw);
 }
 
 Field _wire2api_box_autoadd_field(dynamic raw) {
@@ -664,7 +664,7 @@ int _wire2api_box_autoadd_i32(dynamic raw) {
 }
 
 RoomState _wire2api_box_autoadd_room_state(dynamic raw) {
-  return raw as RoomState;
+  return _wire2api_room_state(raw);
 }
 
 Color _wire2api_color(dynamic raw) {

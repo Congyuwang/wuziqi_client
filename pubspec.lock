@@ -201,7 +201,7 @@ packages:
       name: flutter_rust_bridge
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.22.2"
+    version: "1.23.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -367,7 +367,7 @@ packages:
       name: rive
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.8.1"
+    version: "0.8.4"
   shelf:
     dependency: transitive
     description:

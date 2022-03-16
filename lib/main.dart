@@ -43,28 +43,27 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             isBlack ? const Text("playing black") : const Text("playing white"),
-            Expanded(
-              child: GameField(
-                  fieldUpdateStream: testController.stream,
-                  tapCallback: (x, y) {
-                    testController.addStream(testPlay(x, y,
-                        isBlack ? backend.Color.Black : backend.Color.White));
-                    // switch color
-                    setState(() {
-                      if (isBlack) {
-                        isBlack = false;
-                      } else {
-                        isBlack = true;
-                      }
-                    });
-                  }),
-            )
+            GameField(
+                fieldUpdateStream: testController.stream,
+                tapCallback: (x, y) {
+                  testController.addStream(testPlay(x, y,
+                      isBlack ? backend.Color.Black : backend.Color.White));
+                  // switch color
+                  setState(() {
+                    if (isBlack) {
+                      isBlack = false;
+                    } else {
+                      isBlack = true;
+                    }
+                  });
+                }),
           ],
         ),
       ),

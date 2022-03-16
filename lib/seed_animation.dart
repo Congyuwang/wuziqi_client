@@ -3,6 +3,13 @@ import 'package:rive/rive.dart';
 import 'theme.dart';
 import 'package:flutter/material.dart';
 
+/// state of a single seed
+class SeedState {
+  SeedState(this.state, this.isLatest);
+  final SingleState state;
+  final bool isLatest;
+}
+
 class Seed extends StatefulWidget {
   const Seed(
       {Key? key,
@@ -50,10 +57,15 @@ class _SeedState extends State<Seed> {
             aspectRatio: 1.0,
             child: GestureDetector(
                 onTap: _onTap,
-                child: SeedStateListener(
-                    onStateUpdate: _updateState,
-                    stateStream: widget.stateStream,
-                    inner: seedAnimation))));
+                child: StreamBuilder<SeedState>(
+                  stream: widget.stateStream,
+                  builder: (context, snap) {
+                    if (snap.data != null) {
+                      _updateState(snap.data!);
+                    }
+                    return seedAnimation;
+                  },
+                ))));
   }
 
   @override
@@ -98,39 +110,5 @@ class _SeedState extends State<Seed> {
       case SingleState.E:
         return 0.0;
     }
-  }
-}
-
-/// state of a single seed
-class SeedState {
-  SeedState(this.state, this.isLatest);
-  final SingleState state;
-  final bool isLatest;
-}
-
-/// widget that listens to seed state update
-class SeedStateListener extends StatelessWidget {
-  const SeedStateListener(
-      {Key? key,
-      required this.onStateUpdate,
-      required this.stateStream,
-      required this.inner})
-      : super(key: key);
-
-  final void Function(SeedState) onStateUpdate;
-  final Stream<SeedState> stateStream;
-  final Widget inner;
-
-  @override
-  Widget build(BuildContext context) {
-    return StreamBuilder<SeedState>(
-      stream: stateStream,
-      builder: (context, snap) {
-        if (snap.data != null) {
-          onStateUpdate(snap.data!);
-        }
-        return inner;
-      },
-    );
   }
 }
