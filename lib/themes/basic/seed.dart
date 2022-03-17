@@ -1,36 +1,22 @@
-import 'ffi.dart';
+import '../../ffi.dart';
 import 'package:rive/rive.dart';
-import 'theme.dart';
+import '../seed.dart';
 import 'package:flutter/material.dart';
 
-/// state of a single seed
-class SeedState {
-  SeedState(this.state, this.isLatest);
-  final SingleState state;
-  final bool isLatest;
-}
+class BasicSeed extends Seed {
 
-class Seed extends StatefulWidget {
-  const Seed(
-      {Key? key,
-      required this.theme,
-      required this.x,
-      required this.y,
-      required this.stateStream,
-      required this.tapCallback})
-      : super(key: key);
+  static String themeFolder = "./assets/themes/basic";
+  static String pathToRive = "$themeFolder/seed.riv";
+  final Stream<SeedState> seedStates;
+  final void Function() onTap;
 
-  final GameTheme theme;
-  final int x;
-  final int y;
-  final Stream<SeedState> stateStream;
-  final void Function(int, int) tapCallback;
+  const BasicSeed({required this.seedStates, required this.onTap, Key? key}) : super(seedStates: seedStates, onTap: onTap, key: key);
 
   @override
-  State<Seed> createState() => _SeedState();
+  State<BasicSeed> createState() => _BasicSeedState();
 }
 
-class _SeedState extends State<Seed> {
+class _BasicSeedState extends State<BasicSeed> {
   static const seedStateMachine = 'Seed';
   static const stateController = 'state';
   static const activeController = 'active';
@@ -46,7 +32,7 @@ class _SeedState extends State<Seed> {
   void initState() {
     super.initState();
     final seedAnimation = RiveAnimation.asset(
-      ThemeFactory(widget.theme).getProvider().seedRivePath,
+      BasicSeed.pathToRive,
       stateMachines: const [seedStateMachine],
       fit: BoxFit.contain,
       alignment: Alignment.center,
@@ -55,7 +41,7 @@ class _SeedState extends State<Seed> {
     seedWidget = GestureDetector(
         onTap: _onTap,
         child: StreamBuilder<SeedState>(
-          stream: widget.stateStream,
+          stream: widget.seedStates,
           builder: (context, snap) {
             if (snap.data != null) {
               _updateState(snap.data!);
@@ -74,7 +60,7 @@ class _SeedState extends State<Seed> {
   void _onTap() {
     switch (seedState) {
       case SingleState.E:
-        widget.tapCallback(widget.x, widget.y);
+        widget.onTap();
         break;
       default:
         break;

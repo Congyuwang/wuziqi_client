@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
+import 'package:wuziqi/pages/game_page/game_field.dart';
+import 'package:wuziqi/themes/theme.dart';
 import 'ffi.dart' as backend;
-import 'game_field.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,9 +24,12 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage(
+      {Key? key, required this.title, this.gameTheme = GameTheme.basic})
+      : super(key: key);
 
   final String title;
+  final GameTheme gameTheme;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -37,6 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
       StreamController<backend.Field>();
   Future<backend.Field> testField = backend.api.emptyField();
   bool isBlack = true;
+  late ThemeProvider builders;
+
+  @override
+  void initState() {
+    super.initState();
+    builders = ThemeFactory(widget.gameTheme).getProvider();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       isBlack = true;
                     }
                   });
-                }),
+                },
+                gameTheme: builders),
           ],
         ),
       ),

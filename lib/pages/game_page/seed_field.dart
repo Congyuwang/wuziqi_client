@@ -1,31 +1,31 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'theme.dart';
-import 'ffi.dart' as backend;
-import 'seed_animation.dart';
+import '../../themes/seed.dart';
+import '../../themes/theme.dart';
+import '../../ffi.dart' as backend;
 
 const int fieldSize = 15;
 
 /// the GameField will try to maximize its size while still
 /// being entirely contained and keeps its aspect ratio.
-class GameField extends StatefulWidget {
-  const GameField(
+class SeedField extends StatefulWidget {
+  const SeedField(
       {required this.fieldUpdateStream,
       required this.tapCallback,
-      this.gameTheme = GameTheme.basic,
+      required this.gameTheme,
       Key? key})
       : super(key: key);
 
-  final GameTheme gameTheme;
+  final ThemeProvider gameTheme;
   final Stream<backend.Field> fieldUpdateStream;
   final Function(int, int) tapCallback;
 
   @override
-  State<GameField> createState() => _GameFieldState();
+  State<SeedField> createState() => _SeedFieldState();
 }
 
-class _GameFieldState extends State<GameField> {
+class _SeedFieldState extends State<SeedField> {
   backend.Field? lastField;
   late List<List<StreamController<SeedState>>> seedStateStreams;
   late Widget fieldWidget;
@@ -67,13 +67,10 @@ class _GameFieldState extends State<GameField> {
                 .asMap()
                 .map((y, s) => MapEntry(
                       y,
-                      Seed(
-                        key: ObjectKey(100 * x + y),
-                        x: x,
-                        y: y,
-                        stateStream: s.stream,
-                        theme: widget.gameTheme,
-                        tapCallback: widget.tapCallback,
+                      widget.gameTheme.seedBuilder(
+                        s.stream,
+                        () => widget.tapCallback(x, y),
+                        ObjectKey(100 * x + y),
                       ),
                     ))
                 .values
@@ -84,27 +81,33 @@ class _GameFieldState extends State<GameField> {
 
   /// construct the widget
   static Widget layoutSeeds(List<List<Seed>> allSeeds) {
-    return Expanded(child: LayoutBuilder(
-      builder: (context, constraints) {
-        final size = min(constraints.maxWidth, constraints.maxHeight);
-        final halfSize = size / 2;
-        final unitSize = size / fieldSize;
-        final leftPadding = constraints.maxWidth / 2 - halfSize;
-        final topPadding = constraints.maxHeight / 2 - halfSize;
-        return Stack(
+    return LayoutBuilder(builder: (context, constraints) {
+      final size = min(constraints.maxWidth, constraints.maxHeight);
+      final halfSize = size / 2;
+      final unitSize = size / fieldSize;
+      final leftPadding = constraints.maxWidth / 2 - halfSize;
+      final topPadding = constraints.maxHeight / 2 - halfSize;
+      return Stack(
           children: allSeeds
+              .asMap()
+              .map((x, row) => MapEntry(
+                  x,
+                  row
+                      .asMap()
+                      .map((y, s) => MapEntry(
+                          y,
+                          Positioned(
+                            child: s,
+                            top: x * unitSize + topPadding,
+                            height: unitSize,
+                            left: y * unitSize + leftPadding,
+                            width: unitSize,
+                          )))
+                      .values))
+              .values
               .expand((i) => i)
-              .map((e) => Positioned(
-                    child: e,
-                    top: e.x * unitSize + topPadding,
-                    height: unitSize,
-                    left: e.y * unitSize + leftPadding,
-                    width: unitSize,
-                  ))
-              .toList(growable: false),
-        );
-      })
-    );
+              .toList(growable: false));
+    });
   }
 
   Widget listenFieldUpdate(Widget inner) {
