@@ -13,7 +13,7 @@ class BasicFieldBackground extends FieldBackground {
 
 class _BasicFieldBackgroundState extends State<BasicFieldBackground> {
   static Widget backGround = SvgPicture.asset(
-      BasicFieldBackground.gameFieldSVG,
+    BasicFieldBackground.gameFieldSVG,
     fit: BoxFit.contain,
     alignment: Alignment.center,
   );

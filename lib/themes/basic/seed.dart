@@ -4,13 +4,13 @@ import '../seed.dart';
 import 'package:flutter/material.dart';
 
 class BasicSeed extends Seed {
-
   static String themeFolder = "./assets/themes/basic";
   static String pathToRive = "$themeFolder/seed.riv";
   final Stream<SeedState> seedStates;
   final void Function() onTap;
 
-  const BasicSeed({required this.seedStates, required this.onTap, Key? key}) : super(seedStates: seedStates, onTap: onTap, key: key);
+  const BasicSeed({required this.seedStates, required this.onTap, Key? key})
+      : super(seedStates: seedStates, onTap: onTap, key: key);
 
   @override
   State<BasicSeed> createState() => _BasicSeedState();

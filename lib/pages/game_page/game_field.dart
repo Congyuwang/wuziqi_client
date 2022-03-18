@@ -38,31 +38,36 @@ class _GameFieldState extends State<GameField> {
         tapCallback: widget.tapCallback,
         gameTheme: widget.gameTheme);
     background = widget.gameTheme.fieldBackgroundBuilder();
-    gameField = Expanded(child: LayoutBuilder(builder: (context, constraints) {
-      final size = min(constraints.maxWidth, constraints.maxHeight);
-      final halfSize = size / 2;
-      final leftPadding = constraints.maxWidth / 2 - halfSize;
-      final topPadding = constraints.maxHeight / 2 - halfSize;
-      final paddingSize = paddingRatio * size;
-      return Stack(
-        children: [
-          Positioned(
-            child: background,
-            left: leftPadding,
-            top: topPadding,
-            height: size,
-            width: size,
-          ),
-          Positioned(
-            child: seedField,
-            left: leftPadding + paddingSize,
-            top: topPadding + paddingSize,
-            height: size - 2 * paddingSize,
-            width: size - 2 * paddingSize,
-          ),
-        ],
-      );
-    }));
+    gameField = Expanded(
+        child: InteractiveViewer(
+            minScale: 1.0,
+            maxScale: 2.0,
+            boundaryMargin: EdgeInsets.zero,
+            child: LayoutBuilder(builder: (context, constraints) {
+              final size = min(constraints.maxWidth, constraints.maxHeight);
+              final halfSize = size / 2;
+              final leftPadding = constraints.maxWidth / 2 - halfSize;
+              final topPadding = constraints.maxHeight / 2 - halfSize;
+              final paddingSize = paddingRatio * size;
+              return Stack(
+                children: [
+                  Positioned(
+                    child: background,
+                    left: leftPadding,
+                    top: topPadding,
+                    height: size,
+                    width: size,
+                  ),
+                  Positioned(
+                    child: seedField,
+                    left: leftPadding + paddingSize,
+                    top: topPadding + paddingSize,
+                    height: size - 2 * paddingSize,
+                    width: size - 2 * paddingSize,
+                  ),
+                ],
+              );
+            })));
     super.initState();
   }
 
