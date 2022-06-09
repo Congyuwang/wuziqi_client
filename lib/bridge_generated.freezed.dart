@@ -42,6 +42,10 @@ class _$ConnectionInitErrorTearOff {
     return const InvalidUserName();
   }
 
+  TlsError tlsError() {
+    return const TlsError();
+  }
+
   NetworkError networkError(ConnectionError field0) {
     return NetworkError(
       field0,
@@ -62,6 +66,7 @@ mixin _$ConnectionInitError {
     required TResult Function() userNameTooLong,
     required TResult Function() userNameExists,
     required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
     required TResult Function(ConnectionError field0) networkError,
   }) =>
       throw _privateConstructorUsedError;
@@ -73,6 +78,7 @@ mixin _$ConnectionInitError {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
   }) =>
       throw _privateConstructorUsedError;
@@ -84,6 +90,7 @@ mixin _$ConnectionInitError {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
     required TResult orElse(),
   }) =>
@@ -96,6 +103,7 @@ mixin _$ConnectionInitError {
     required TResult Function(UserNameTooLong value) userNameTooLong,
     required TResult Function(UserNameExists value) userNameExists,
     required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
     required TResult Function(NetworkError value) networkError,
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +115,7 @@ mixin _$ConnectionInitError {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
   }) =>
       throw _privateConstructorUsedError;
@@ -118,6 +127,7 @@ mixin _$ConnectionInitError {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
     required TResult orElse(),
   }) =>
@@ -188,6 +198,7 @@ class _$IpMaxConnExceed implements IpMaxConnExceed {
     required TResult Function() userNameTooLong,
     required TResult Function() userNameExists,
     required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
     required TResult Function(ConnectionError field0) networkError,
   }) {
     return ipMaxConnExceed();
@@ -202,6 +213,7 @@ class _$IpMaxConnExceed implements IpMaxConnExceed {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
   }) {
     return ipMaxConnExceed?.call();
@@ -216,6 +228,7 @@ class _$IpMaxConnExceed implements IpMaxConnExceed {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
     required TResult orElse(),
   }) {
@@ -234,6 +247,7 @@ class _$IpMaxConnExceed implements IpMaxConnExceed {
     required TResult Function(UserNameTooLong value) userNameTooLong,
     required TResult Function(UserNameExists value) userNameExists,
     required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
     required TResult Function(NetworkError value) networkError,
   }) {
     return ipMaxConnExceed(this);
@@ -248,6 +262,7 @@ class _$IpMaxConnExceed implements IpMaxConnExceed {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
   }) {
     return ipMaxConnExceed?.call(this);
@@ -262,6 +277,7 @@ class _$IpMaxConnExceed implements IpMaxConnExceed {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
     required TResult orElse(),
   }) {
@@ -323,6 +339,7 @@ class _$ConnectionClosed implements ConnectionClosed {
     required TResult Function() userNameTooLong,
     required TResult Function() userNameExists,
     required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
     required TResult Function(ConnectionError field0) networkError,
   }) {
     return connectionClosed();
@@ -337,6 +354,7 @@ class _$ConnectionClosed implements ConnectionClosed {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
   }) {
     return connectionClosed?.call();
@@ -351,6 +369,7 @@ class _$ConnectionClosed implements ConnectionClosed {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
     required TResult orElse(),
   }) {
@@ -369,6 +388,7 @@ class _$ConnectionClosed implements ConnectionClosed {
     required TResult Function(UserNameTooLong value) userNameTooLong,
     required TResult Function(UserNameExists value) userNameExists,
     required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
     required TResult Function(NetworkError value) networkError,
   }) {
     return connectionClosed(this);
@@ -383,6 +403,7 @@ class _$ConnectionClosed implements ConnectionClosed {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
   }) {
     return connectionClosed?.call(this);
@@ -397,6 +418,7 @@ class _$ConnectionClosed implements ConnectionClosed {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
     required TResult orElse(),
   }) {
@@ -458,6 +480,7 @@ class _$UserNameNotReceived implements UserNameNotReceived {
     required TResult Function() userNameTooLong,
     required TResult Function() userNameExists,
     required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
     required TResult Function(ConnectionError field0) networkError,
   }) {
     return userNameNotReceived();
@@ -472,6 +495,7 @@ class _$UserNameNotReceived implements UserNameNotReceived {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
   }) {
     return userNameNotReceived?.call();
@@ -486,6 +510,7 @@ class _$UserNameNotReceived implements UserNameNotReceived {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
     required TResult orElse(),
   }) {
@@ -504,6 +529,7 @@ class _$UserNameNotReceived implements UserNameNotReceived {
     required TResult Function(UserNameTooLong value) userNameTooLong,
     required TResult Function(UserNameExists value) userNameExists,
     required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
     required TResult Function(NetworkError value) networkError,
   }) {
     return userNameNotReceived(this);
@@ -518,6 +544,7 @@ class _$UserNameNotReceived implements UserNameNotReceived {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
   }) {
     return userNameNotReceived?.call(this);
@@ -532,6 +559,7 @@ class _$UserNameNotReceived implements UserNameNotReceived {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
     required TResult orElse(),
   }) {
@@ -593,6 +621,7 @@ class _$UserNameTooLong implements UserNameTooLong {
     required TResult Function() userNameTooLong,
     required TResult Function() userNameExists,
     required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
     required TResult Function(ConnectionError field0) networkError,
   }) {
     return userNameTooLong();
@@ -607,6 +636,7 @@ class _$UserNameTooLong implements UserNameTooLong {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
   }) {
     return userNameTooLong?.call();
@@ -621,6 +651,7 @@ class _$UserNameTooLong implements UserNameTooLong {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
     required TResult orElse(),
   }) {
@@ -639,6 +670,7 @@ class _$UserNameTooLong implements UserNameTooLong {
     required TResult Function(UserNameTooLong value) userNameTooLong,
     required TResult Function(UserNameExists value) userNameExists,
     required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
     required TResult Function(NetworkError value) networkError,
   }) {
     return userNameTooLong(this);
@@ -653,6 +685,7 @@ class _$UserNameTooLong implements UserNameTooLong {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
   }) {
     return userNameTooLong?.call(this);
@@ -667,6 +700,7 @@ class _$UserNameTooLong implements UserNameTooLong {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
     required TResult orElse(),
   }) {
@@ -728,6 +762,7 @@ class _$UserNameExists implements UserNameExists {
     required TResult Function() userNameTooLong,
     required TResult Function() userNameExists,
     required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
     required TResult Function(ConnectionError field0) networkError,
   }) {
     return userNameExists();
@@ -742,6 +777,7 @@ class _$UserNameExists implements UserNameExists {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
   }) {
     return userNameExists?.call();
@@ -756,6 +792,7 @@ class _$UserNameExists implements UserNameExists {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
     required TResult orElse(),
   }) {
@@ -774,6 +811,7 @@ class _$UserNameExists implements UserNameExists {
     required TResult Function(UserNameTooLong value) userNameTooLong,
     required TResult Function(UserNameExists value) userNameExists,
     required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
     required TResult Function(NetworkError value) networkError,
   }) {
     return userNameExists(this);
@@ -788,6 +826,7 @@ class _$UserNameExists implements UserNameExists {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
   }) {
     return userNameExists?.call(this);
@@ -802,6 +841,7 @@ class _$UserNameExists implements UserNameExists {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
     required TResult orElse(),
   }) {
@@ -863,6 +903,7 @@ class _$InvalidUserName implements InvalidUserName {
     required TResult Function() userNameTooLong,
     required TResult Function() userNameExists,
     required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
     required TResult Function(ConnectionError field0) networkError,
   }) {
     return invalidUserName();
@@ -877,6 +918,7 @@ class _$InvalidUserName implements InvalidUserName {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
   }) {
     return invalidUserName?.call();
@@ -891,6 +933,7 @@ class _$InvalidUserName implements InvalidUserName {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
     required TResult orElse(),
   }) {
@@ -909,6 +952,7 @@ class _$InvalidUserName implements InvalidUserName {
     required TResult Function(UserNameTooLong value) userNameTooLong,
     required TResult Function(UserNameExists value) userNameExists,
     required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
     required TResult Function(NetworkError value) networkError,
   }) {
     return invalidUserName(this);
@@ -923,6 +967,7 @@ class _$InvalidUserName implements InvalidUserName {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
   }) {
     return invalidUserName?.call(this);
@@ -937,6 +982,7 @@ class _$InvalidUserName implements InvalidUserName {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
     required TResult orElse(),
   }) {
@@ -949,6 +995,145 @@ class _$InvalidUserName implements InvalidUserName {
 
 abstract class InvalidUserName implements ConnectionInitError {
   const factory InvalidUserName() = _$InvalidUserName;
+}
+
+/// @nodoc
+abstract class $TlsErrorCopyWith<$Res> {
+  factory $TlsErrorCopyWith(TlsError value, $Res Function(TlsError) then) =
+      _$TlsErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$TlsErrorCopyWithImpl<$Res>
+    extends _$ConnectionInitErrorCopyWithImpl<$Res>
+    implements $TlsErrorCopyWith<$Res> {
+  _$TlsErrorCopyWithImpl(TlsError _value, $Res Function(TlsError) _then)
+      : super(_value, (v) => _then(v as TlsError));
+
+  @override
+  TlsError get _value => super._value as TlsError;
+}
+
+/// @nodoc
+
+class _$TlsError implements TlsError {
+  const _$TlsError();
+
+  @override
+  String toString() {
+    return 'ConnectionInitError.tlsError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is TlsError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() ipMaxConnExceed,
+    required TResult Function() connectionClosed,
+    required TResult Function() userNameNotReceived,
+    required TResult Function() userNameTooLong,
+    required TResult Function() userNameExists,
+    required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
+    required TResult Function(ConnectionError field0) networkError,
+  }) {
+    return tlsError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? ipMaxConnExceed,
+    TResult Function()? connectionClosed,
+    TResult Function()? userNameNotReceived,
+    TResult Function()? userNameTooLong,
+    TResult Function()? userNameExists,
+    TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
+    TResult Function(ConnectionError field0)? networkError,
+  }) {
+    return tlsError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? ipMaxConnExceed,
+    TResult Function()? connectionClosed,
+    TResult Function()? userNameNotReceived,
+    TResult Function()? userNameTooLong,
+    TResult Function()? userNameExists,
+    TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
+    TResult Function(ConnectionError field0)? networkError,
+    required TResult orElse(),
+  }) {
+    if (tlsError != null) {
+      return tlsError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(IpMaxConnExceed value) ipMaxConnExceed,
+    required TResult Function(ConnectionClosed value) connectionClosed,
+    required TResult Function(UserNameNotReceived value) userNameNotReceived,
+    required TResult Function(UserNameTooLong value) userNameTooLong,
+    required TResult Function(UserNameExists value) userNameExists,
+    required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
+    required TResult Function(NetworkError value) networkError,
+  }) {
+    return tlsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(IpMaxConnExceed value)? ipMaxConnExceed,
+    TResult Function(ConnectionClosed value)? connectionClosed,
+    TResult Function(UserNameNotReceived value)? userNameNotReceived,
+    TResult Function(UserNameTooLong value)? userNameTooLong,
+    TResult Function(UserNameExists value)? userNameExists,
+    TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
+    TResult Function(NetworkError value)? networkError,
+  }) {
+    return tlsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(IpMaxConnExceed value)? ipMaxConnExceed,
+    TResult Function(ConnectionClosed value)? connectionClosed,
+    TResult Function(UserNameNotReceived value)? userNameNotReceived,
+    TResult Function(UserNameTooLong value)? userNameTooLong,
+    TResult Function(UserNameExists value)? userNameExists,
+    TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
+    TResult Function(NetworkError value)? networkError,
+    required TResult orElse(),
+  }) {
+    if (tlsError != null) {
+      return tlsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TlsError implements ConnectionInitError {
+  const factory TlsError() = _$TlsError;
 }
 
 /// @nodoc
@@ -1022,6 +1207,7 @@ class _$NetworkError implements NetworkError {
     required TResult Function() userNameTooLong,
     required TResult Function() userNameExists,
     required TResult Function() invalidUserName,
+    required TResult Function() tlsError,
     required TResult Function(ConnectionError field0) networkError,
   }) {
     return networkError(field0);
@@ -1036,6 +1222,7 @@ class _$NetworkError implements NetworkError {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
   }) {
     return networkError?.call(field0);
@@ -1050,6 +1237,7 @@ class _$NetworkError implements NetworkError {
     TResult Function()? userNameTooLong,
     TResult Function()? userNameExists,
     TResult Function()? invalidUserName,
+    TResult Function()? tlsError,
     TResult Function(ConnectionError field0)? networkError,
     required TResult orElse(),
   }) {
@@ -1068,6 +1256,7 @@ class _$NetworkError implements NetworkError {
     required TResult Function(UserNameTooLong value) userNameTooLong,
     required TResult Function(UserNameExists value) userNameExists,
     required TResult Function(InvalidUserName value) invalidUserName,
+    required TResult Function(TlsError value) tlsError,
     required TResult Function(NetworkError value) networkError,
   }) {
     return networkError(this);
@@ -1082,6 +1271,7 @@ class _$NetworkError implements NetworkError {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
   }) {
     return networkError?.call(this);
@@ -1096,6 +1286,7 @@ class _$NetworkError implements NetworkError {
     TResult Function(UserNameTooLong value)? userNameTooLong,
     TResult Function(UserNameExists value)? userNameExists,
     TResult Function(InvalidUserName value)? invalidUserName,
+    TResult Function(TlsError value)? tlsError,
     TResult Function(NetworkError value)? networkError,
     required TResult orElse(),
   }) {
@@ -1119,6 +1310,32 @@ abstract class NetworkError implements ConnectionInitError {
 class _$MessagesTearOff {
   const _$MessagesTearOff();
 
+  Login login({required String name, required String password}) {
+    return Login(
+      name: name,
+      password: password,
+    );
+  }
+
+  UpdateAccount updateAccount(
+      {required String name,
+      required String oldPassword,
+      required String newPassword}) {
+    return UpdateAccount(
+      name: name,
+      oldPassword: oldPassword,
+      newPassword: newPassword,
+    );
+  }
+
+  CreateAccount createAccount(
+      {required String name, required String password}) {
+    return CreateAccount(
+      name: name,
+      password: password,
+    );
+  }
+
   ToPlayer toPlayer({required String name, required Uint8List msg}) {
     return ToPlayer(
       name: name,
@@ -1130,12 +1347,6 @@ class _$MessagesTearOff {
     return SearchOnlinePlayers(
       name: name,
       limit: limit,
-    );
-  }
-
-  UserName userName(String field0) {
-    return UserName(
-      field0,
     );
   }
 
@@ -1210,9 +1421,13 @@ const $Messages = _$MessagesTearOff();
 mixin _$Messages {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -1230,9 +1445,12 @@ mixin _$Messages {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -1250,9 +1468,12 @@ mixin _$Messages {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -1271,9 +1492,11 @@ mixin _$Messages {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -1291,9 +1514,11 @@ mixin _$Messages {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -1311,9 +1536,11 @@ mixin _$Messages {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -1345,6 +1572,755 @@ class _$MessagesCopyWithImpl<$Res> implements $MessagesCopyWith<$Res> {
   final Messages _value;
   // ignore: unused_field
   final $Res Function(Messages) _then;
+}
+
+/// @nodoc
+abstract class $LoginCopyWith<$Res> {
+  factory $LoginCopyWith(Login value, $Res Function(Login) then) =
+      _$LoginCopyWithImpl<$Res>;
+  $Res call({String name, String password});
+}
+
+/// @nodoc
+class _$LoginCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements $LoginCopyWith<$Res> {
+  _$LoginCopyWithImpl(Login _value, $Res Function(Login) _then)
+      : super(_value, (v) => _then(v as Login));
+
+  @override
+  Login get _value => super._value as Login;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? password = freezed,
+  }) {
+    return _then(Login(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Login implements Login {
+  const _$Login({required this.name, required this.password});
+
+  @override
+  final String name;
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'Messages.login(name: $name, password: $password)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Login &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.password, password));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(password));
+
+  @JsonKey(ignore: true)
+  @override
+  $LoginCopyWith<Login> get copyWith =>
+      _$LoginCopyWithImpl<Login>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
+    required TResult Function(String name, Uint8List msg) toPlayer,
+    required TResult Function(String? name, int limit) searchOnlinePlayers,
+    required TResult Function(SessionConfig field0) createRoom,
+    required TResult Function(RoomToken field0) joinRoom,
+    required TResult Function() quitRoom,
+    required TResult Function() ready,
+    required TResult Function() unready,
+    required TResult Function(int x, int y) play,
+    required TResult Function() requestUndo,
+    required TResult Function() approveUndo,
+    required TResult Function() rejectUndo,
+    required TResult Function() quitGameSession,
+    required TResult Function(String field0) sendChatMessage,
+    required TResult Function() exitGame,
+    required TResult Function(String field0) clientError,
+  }) {
+    return login(name, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
+    TResult Function(String name, Uint8List msg)? toPlayer,
+    TResult Function(String? name, int limit)? searchOnlinePlayers,
+    TResult Function(SessionConfig field0)? createRoom,
+    TResult Function(RoomToken field0)? joinRoom,
+    TResult Function()? quitRoom,
+    TResult Function()? ready,
+    TResult Function()? unready,
+    TResult Function(int x, int y)? play,
+    TResult Function()? requestUndo,
+    TResult Function()? approveUndo,
+    TResult Function()? rejectUndo,
+    TResult Function()? quitGameSession,
+    TResult Function(String field0)? sendChatMessage,
+    TResult Function()? exitGame,
+    TResult Function(String field0)? clientError,
+  }) {
+    return login?.call(name, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
+    TResult Function(String name, Uint8List msg)? toPlayer,
+    TResult Function(String? name, int limit)? searchOnlinePlayers,
+    TResult Function(SessionConfig field0)? createRoom,
+    TResult Function(RoomToken field0)? joinRoom,
+    TResult Function()? quitRoom,
+    TResult Function()? ready,
+    TResult Function()? unready,
+    TResult Function(int x, int y)? play,
+    TResult Function()? requestUndo,
+    TResult Function()? approveUndo,
+    TResult Function()? rejectUndo,
+    TResult Function()? quitGameSession,
+    TResult Function(String field0)? sendChatMessage,
+    TResult Function()? exitGame,
+    TResult Function(String field0)? clientError,
+    required TResult orElse(),
+  }) {
+    if (login != null) {
+      return login(name, password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
+    required TResult Function(ToPlayer value) toPlayer,
+    required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
+    required TResult Function(CreateRoom value) createRoom,
+    required TResult Function(JoinRoom value) joinRoom,
+    required TResult Function(QuitRoom value) quitRoom,
+    required TResult Function(Ready value) ready,
+    required TResult Function(Unready value) unready,
+    required TResult Function(Play value) play,
+    required TResult Function(RequestUndo value) requestUndo,
+    required TResult Function(ApproveUndo value) approveUndo,
+    required TResult Function(RejectUndo value) rejectUndo,
+    required TResult Function(QuitGameSession value) quitGameSession,
+    required TResult Function(SendChatMessage value) sendChatMessage,
+    required TResult Function(ExitGame value) exitGame,
+    required TResult Function(ClientError value) clientError,
+  }) {
+    return login(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
+    TResult Function(ToPlayer value)? toPlayer,
+    TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
+    TResult Function(CreateRoom value)? createRoom,
+    TResult Function(JoinRoom value)? joinRoom,
+    TResult Function(QuitRoom value)? quitRoom,
+    TResult Function(Ready value)? ready,
+    TResult Function(Unready value)? unready,
+    TResult Function(Play value)? play,
+    TResult Function(RequestUndo value)? requestUndo,
+    TResult Function(ApproveUndo value)? approveUndo,
+    TResult Function(RejectUndo value)? rejectUndo,
+    TResult Function(QuitGameSession value)? quitGameSession,
+    TResult Function(SendChatMessage value)? sendChatMessage,
+    TResult Function(ExitGame value)? exitGame,
+    TResult Function(ClientError value)? clientError,
+  }) {
+    return login?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
+    TResult Function(ToPlayer value)? toPlayer,
+    TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
+    TResult Function(CreateRoom value)? createRoom,
+    TResult Function(JoinRoom value)? joinRoom,
+    TResult Function(QuitRoom value)? quitRoom,
+    TResult Function(Ready value)? ready,
+    TResult Function(Unready value)? unready,
+    TResult Function(Play value)? play,
+    TResult Function(RequestUndo value)? requestUndo,
+    TResult Function(ApproveUndo value)? approveUndo,
+    TResult Function(RejectUndo value)? rejectUndo,
+    TResult Function(QuitGameSession value)? quitGameSession,
+    TResult Function(SendChatMessage value)? sendChatMessage,
+    TResult Function(ExitGame value)? exitGame,
+    TResult Function(ClientError value)? clientError,
+    required TResult orElse(),
+  }) {
+    if (login != null) {
+      return login(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Login implements Messages {
+  const factory Login({required String name, required String password}) =
+      _$Login;
+
+  String get name;
+  String get password;
+  @JsonKey(ignore: true)
+  $LoginCopyWith<Login> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UpdateAccountCopyWith<$Res> {
+  factory $UpdateAccountCopyWith(
+          UpdateAccount value, $Res Function(UpdateAccount) then) =
+      _$UpdateAccountCopyWithImpl<$Res>;
+  $Res call({String name, String oldPassword, String newPassword});
+}
+
+/// @nodoc
+class _$UpdateAccountCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements $UpdateAccountCopyWith<$Res> {
+  _$UpdateAccountCopyWithImpl(
+      UpdateAccount _value, $Res Function(UpdateAccount) _then)
+      : super(_value, (v) => _then(v as UpdateAccount));
+
+  @override
+  UpdateAccount get _value => super._value as UpdateAccount;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? oldPassword = freezed,
+    Object? newPassword = freezed,
+  }) {
+    return _then(UpdateAccount(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      oldPassword: oldPassword == freezed
+          ? _value.oldPassword
+          : oldPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      newPassword: newPassword == freezed
+          ? _value.newPassword
+          : newPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateAccount implements UpdateAccount {
+  const _$UpdateAccount(
+      {required this.name,
+      required this.oldPassword,
+      required this.newPassword});
+
+  @override
+  final String name;
+  @override
+  final String oldPassword;
+  @override
+  final String newPassword;
+
+  @override
+  String toString() {
+    return 'Messages.updateAccount(name: $name, oldPassword: $oldPassword, newPassword: $newPassword)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is UpdateAccount &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.oldPassword, oldPassword) &&
+            const DeepCollectionEquality()
+                .equals(other.newPassword, newPassword));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(oldPassword),
+      const DeepCollectionEquality().hash(newPassword));
+
+  @JsonKey(ignore: true)
+  @override
+  $UpdateAccountCopyWith<UpdateAccount> get copyWith =>
+      _$UpdateAccountCopyWithImpl<UpdateAccount>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
+    required TResult Function(String name, Uint8List msg) toPlayer,
+    required TResult Function(String? name, int limit) searchOnlinePlayers,
+    required TResult Function(SessionConfig field0) createRoom,
+    required TResult Function(RoomToken field0) joinRoom,
+    required TResult Function() quitRoom,
+    required TResult Function() ready,
+    required TResult Function() unready,
+    required TResult Function(int x, int y) play,
+    required TResult Function() requestUndo,
+    required TResult Function() approveUndo,
+    required TResult Function() rejectUndo,
+    required TResult Function() quitGameSession,
+    required TResult Function(String field0) sendChatMessage,
+    required TResult Function() exitGame,
+    required TResult Function(String field0) clientError,
+  }) {
+    return updateAccount(name, oldPassword, newPassword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
+    TResult Function(String name, Uint8List msg)? toPlayer,
+    TResult Function(String? name, int limit)? searchOnlinePlayers,
+    TResult Function(SessionConfig field0)? createRoom,
+    TResult Function(RoomToken field0)? joinRoom,
+    TResult Function()? quitRoom,
+    TResult Function()? ready,
+    TResult Function()? unready,
+    TResult Function(int x, int y)? play,
+    TResult Function()? requestUndo,
+    TResult Function()? approveUndo,
+    TResult Function()? rejectUndo,
+    TResult Function()? quitGameSession,
+    TResult Function(String field0)? sendChatMessage,
+    TResult Function()? exitGame,
+    TResult Function(String field0)? clientError,
+  }) {
+    return updateAccount?.call(name, oldPassword, newPassword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
+    TResult Function(String name, Uint8List msg)? toPlayer,
+    TResult Function(String? name, int limit)? searchOnlinePlayers,
+    TResult Function(SessionConfig field0)? createRoom,
+    TResult Function(RoomToken field0)? joinRoom,
+    TResult Function()? quitRoom,
+    TResult Function()? ready,
+    TResult Function()? unready,
+    TResult Function(int x, int y)? play,
+    TResult Function()? requestUndo,
+    TResult Function()? approveUndo,
+    TResult Function()? rejectUndo,
+    TResult Function()? quitGameSession,
+    TResult Function(String field0)? sendChatMessage,
+    TResult Function()? exitGame,
+    TResult Function(String field0)? clientError,
+    required TResult orElse(),
+  }) {
+    if (updateAccount != null) {
+      return updateAccount(name, oldPassword, newPassword);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
+    required TResult Function(ToPlayer value) toPlayer,
+    required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
+    required TResult Function(CreateRoom value) createRoom,
+    required TResult Function(JoinRoom value) joinRoom,
+    required TResult Function(QuitRoom value) quitRoom,
+    required TResult Function(Ready value) ready,
+    required TResult Function(Unready value) unready,
+    required TResult Function(Play value) play,
+    required TResult Function(RequestUndo value) requestUndo,
+    required TResult Function(ApproveUndo value) approveUndo,
+    required TResult Function(RejectUndo value) rejectUndo,
+    required TResult Function(QuitGameSession value) quitGameSession,
+    required TResult Function(SendChatMessage value) sendChatMessage,
+    required TResult Function(ExitGame value) exitGame,
+    required TResult Function(ClientError value) clientError,
+  }) {
+    return updateAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
+    TResult Function(ToPlayer value)? toPlayer,
+    TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
+    TResult Function(CreateRoom value)? createRoom,
+    TResult Function(JoinRoom value)? joinRoom,
+    TResult Function(QuitRoom value)? quitRoom,
+    TResult Function(Ready value)? ready,
+    TResult Function(Unready value)? unready,
+    TResult Function(Play value)? play,
+    TResult Function(RequestUndo value)? requestUndo,
+    TResult Function(ApproveUndo value)? approveUndo,
+    TResult Function(RejectUndo value)? rejectUndo,
+    TResult Function(QuitGameSession value)? quitGameSession,
+    TResult Function(SendChatMessage value)? sendChatMessage,
+    TResult Function(ExitGame value)? exitGame,
+    TResult Function(ClientError value)? clientError,
+  }) {
+    return updateAccount?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
+    TResult Function(ToPlayer value)? toPlayer,
+    TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
+    TResult Function(CreateRoom value)? createRoom,
+    TResult Function(JoinRoom value)? joinRoom,
+    TResult Function(QuitRoom value)? quitRoom,
+    TResult Function(Ready value)? ready,
+    TResult Function(Unready value)? unready,
+    TResult Function(Play value)? play,
+    TResult Function(RequestUndo value)? requestUndo,
+    TResult Function(ApproveUndo value)? approveUndo,
+    TResult Function(RejectUndo value)? rejectUndo,
+    TResult Function(QuitGameSession value)? quitGameSession,
+    TResult Function(SendChatMessage value)? sendChatMessage,
+    TResult Function(ExitGame value)? exitGame,
+    TResult Function(ClientError value)? clientError,
+    required TResult orElse(),
+  }) {
+    if (updateAccount != null) {
+      return updateAccount(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateAccount implements Messages {
+  const factory UpdateAccount(
+      {required String name,
+      required String oldPassword,
+      required String newPassword}) = _$UpdateAccount;
+
+  String get name;
+  String get oldPassword;
+  String get newPassword;
+  @JsonKey(ignore: true)
+  $UpdateAccountCopyWith<UpdateAccount> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CreateAccountCopyWith<$Res> {
+  factory $CreateAccountCopyWith(
+          CreateAccount value, $Res Function(CreateAccount) then) =
+      _$CreateAccountCopyWithImpl<$Res>;
+  $Res call({String name, String password});
+}
+
+/// @nodoc
+class _$CreateAccountCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements $CreateAccountCopyWith<$Res> {
+  _$CreateAccountCopyWithImpl(
+      CreateAccount _value, $Res Function(CreateAccount) _then)
+      : super(_value, (v) => _then(v as CreateAccount));
+
+  @override
+  CreateAccount get _value => super._value as CreateAccount;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? password = freezed,
+  }) {
+    return _then(CreateAccount(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateAccount implements CreateAccount {
+  const _$CreateAccount({required this.name, required this.password});
+
+  @override
+  final String name;
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'Messages.createAccount(name: $name, password: $password)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CreateAccount &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.password, password));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(password));
+
+  @JsonKey(ignore: true)
+  @override
+  $CreateAccountCopyWith<CreateAccount> get copyWith =>
+      _$CreateAccountCopyWithImpl<CreateAccount>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
+    required TResult Function(String name, Uint8List msg) toPlayer,
+    required TResult Function(String? name, int limit) searchOnlinePlayers,
+    required TResult Function(SessionConfig field0) createRoom,
+    required TResult Function(RoomToken field0) joinRoom,
+    required TResult Function() quitRoom,
+    required TResult Function() ready,
+    required TResult Function() unready,
+    required TResult Function(int x, int y) play,
+    required TResult Function() requestUndo,
+    required TResult Function() approveUndo,
+    required TResult Function() rejectUndo,
+    required TResult Function() quitGameSession,
+    required TResult Function(String field0) sendChatMessage,
+    required TResult Function() exitGame,
+    required TResult Function(String field0) clientError,
+  }) {
+    return createAccount(name, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
+    TResult Function(String name, Uint8List msg)? toPlayer,
+    TResult Function(String? name, int limit)? searchOnlinePlayers,
+    TResult Function(SessionConfig field0)? createRoom,
+    TResult Function(RoomToken field0)? joinRoom,
+    TResult Function()? quitRoom,
+    TResult Function()? ready,
+    TResult Function()? unready,
+    TResult Function(int x, int y)? play,
+    TResult Function()? requestUndo,
+    TResult Function()? approveUndo,
+    TResult Function()? rejectUndo,
+    TResult Function()? quitGameSession,
+    TResult Function(String field0)? sendChatMessage,
+    TResult Function()? exitGame,
+    TResult Function(String field0)? clientError,
+  }) {
+    return createAccount?.call(name, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
+    TResult Function(String name, Uint8List msg)? toPlayer,
+    TResult Function(String? name, int limit)? searchOnlinePlayers,
+    TResult Function(SessionConfig field0)? createRoom,
+    TResult Function(RoomToken field0)? joinRoom,
+    TResult Function()? quitRoom,
+    TResult Function()? ready,
+    TResult Function()? unready,
+    TResult Function(int x, int y)? play,
+    TResult Function()? requestUndo,
+    TResult Function()? approveUndo,
+    TResult Function()? rejectUndo,
+    TResult Function()? quitGameSession,
+    TResult Function(String field0)? sendChatMessage,
+    TResult Function()? exitGame,
+    TResult Function(String field0)? clientError,
+    required TResult orElse(),
+  }) {
+    if (createAccount != null) {
+      return createAccount(name, password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
+    required TResult Function(ToPlayer value) toPlayer,
+    required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
+    required TResult Function(CreateRoom value) createRoom,
+    required TResult Function(JoinRoom value) joinRoom,
+    required TResult Function(QuitRoom value) quitRoom,
+    required TResult Function(Ready value) ready,
+    required TResult Function(Unready value) unready,
+    required TResult Function(Play value) play,
+    required TResult Function(RequestUndo value) requestUndo,
+    required TResult Function(ApproveUndo value) approveUndo,
+    required TResult Function(RejectUndo value) rejectUndo,
+    required TResult Function(QuitGameSession value) quitGameSession,
+    required TResult Function(SendChatMessage value) sendChatMessage,
+    required TResult Function(ExitGame value) exitGame,
+    required TResult Function(ClientError value) clientError,
+  }) {
+    return createAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
+    TResult Function(ToPlayer value)? toPlayer,
+    TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
+    TResult Function(CreateRoom value)? createRoom,
+    TResult Function(JoinRoom value)? joinRoom,
+    TResult Function(QuitRoom value)? quitRoom,
+    TResult Function(Ready value)? ready,
+    TResult Function(Unready value)? unready,
+    TResult Function(Play value)? play,
+    TResult Function(RequestUndo value)? requestUndo,
+    TResult Function(ApproveUndo value)? approveUndo,
+    TResult Function(RejectUndo value)? rejectUndo,
+    TResult Function(QuitGameSession value)? quitGameSession,
+    TResult Function(SendChatMessage value)? sendChatMessage,
+    TResult Function(ExitGame value)? exitGame,
+    TResult Function(ClientError value)? clientError,
+  }) {
+    return createAccount?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
+    TResult Function(ToPlayer value)? toPlayer,
+    TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
+    TResult Function(CreateRoom value)? createRoom,
+    TResult Function(JoinRoom value)? joinRoom,
+    TResult Function(QuitRoom value)? quitRoom,
+    TResult Function(Ready value)? ready,
+    TResult Function(Unready value)? unready,
+    TResult Function(Play value)? play,
+    TResult Function(RequestUndo value)? requestUndo,
+    TResult Function(ApproveUndo value)? approveUndo,
+    TResult Function(RejectUndo value)? rejectUndo,
+    TResult Function(QuitGameSession value)? quitGameSession,
+    TResult Function(SendChatMessage value)? sendChatMessage,
+    TResult Function(ExitGame value)? exitGame,
+    TResult Function(ClientError value)? clientError,
+    required TResult orElse(),
+  }) {
+    if (createAccount != null) {
+      return createAccount(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateAccount implements Messages {
+  const factory CreateAccount(
+      {required String name, required String password}) = _$CreateAccount;
+
+  String get name;
+  String get password;
+  @JsonKey(ignore: true)
+  $CreateAccountCopyWith<CreateAccount> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1419,9 +2395,13 @@ class _$ToPlayer implements ToPlayer {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -1442,9 +2422,12 @@ class _$ToPlayer implements ToPlayer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -1465,9 +2448,12 @@ class _$ToPlayer implements ToPlayer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -1492,9 +2478,11 @@ class _$ToPlayer implements ToPlayer {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -1515,9 +2503,11 @@ class _$ToPlayer implements ToPlayer {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -1538,9 +2528,11 @@ class _$ToPlayer implements ToPlayer {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -1649,9 +2641,13 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -1672,9 +2668,12 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -1695,9 +2694,12 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -1722,9 +2724,11 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -1745,9 +2749,11 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -1768,9 +2774,11 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -1801,221 +2809,6 @@ abstract class SearchOnlinePlayers implements Messages {
   int get limit;
   @JsonKey(ignore: true)
   $SearchOnlinePlayersCopyWith<SearchOnlinePlayers> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $UserNameCopyWith<$Res> {
-  factory $UserNameCopyWith(UserName value, $Res Function(UserName) then) =
-      _$UserNameCopyWithImpl<$Res>;
-  $Res call({String field0});
-}
-
-/// @nodoc
-class _$UserNameCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $UserNameCopyWith<$Res> {
-  _$UserNameCopyWithImpl(UserName _value, $Res Function(UserName) _then)
-      : super(_value, (v) => _then(v as UserName));
-
-  @override
-  UserName get _value => super._value as UserName;
-
-  @override
-  $Res call({
-    Object? field0 = freezed,
-  }) {
-    return _then(UserName(
-      field0 == freezed
-          ? _value.field0
-          : field0 // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UserName implements UserName {
-  const _$UserName(this.field0);
-
-  @override
-  final String field0;
-
-  @override
-  String toString() {
-    return 'Messages.userName(field0: $field0)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is UserName &&
-            const DeepCollectionEquality().equals(other.field0, field0));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(field0));
-
-  @JsonKey(ignore: true)
-  @override
-  $UserNameCopyWith<UserName> get copyWith =>
-      _$UserNameCopyWithImpl<UserName>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String name, Uint8List msg) toPlayer,
-    required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
-    required TResult Function(SessionConfig field0) createRoom,
-    required TResult Function(RoomToken field0) joinRoom,
-    required TResult Function() quitRoom,
-    required TResult Function() ready,
-    required TResult Function() unready,
-    required TResult Function(int x, int y) play,
-    required TResult Function() requestUndo,
-    required TResult Function() approveUndo,
-    required TResult Function() rejectUndo,
-    required TResult Function() quitGameSession,
-    required TResult Function(String field0) sendChatMessage,
-    required TResult Function() exitGame,
-    required TResult Function(String field0) clientError,
-  }) {
-    return userName(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String name, Uint8List msg)? toPlayer,
-    TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
-    TResult Function(SessionConfig field0)? createRoom,
-    TResult Function(RoomToken field0)? joinRoom,
-    TResult Function()? quitRoom,
-    TResult Function()? ready,
-    TResult Function()? unready,
-    TResult Function(int x, int y)? play,
-    TResult Function()? requestUndo,
-    TResult Function()? approveUndo,
-    TResult Function()? rejectUndo,
-    TResult Function()? quitGameSession,
-    TResult Function(String field0)? sendChatMessage,
-    TResult Function()? exitGame,
-    TResult Function(String field0)? clientError,
-  }) {
-    return userName?.call(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String name, Uint8List msg)? toPlayer,
-    TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
-    TResult Function(SessionConfig field0)? createRoom,
-    TResult Function(RoomToken field0)? joinRoom,
-    TResult Function()? quitRoom,
-    TResult Function()? ready,
-    TResult Function()? unready,
-    TResult Function(int x, int y)? play,
-    TResult Function()? requestUndo,
-    TResult Function()? approveUndo,
-    TResult Function()? rejectUndo,
-    TResult Function()? quitGameSession,
-    TResult Function(String field0)? sendChatMessage,
-    TResult Function()? exitGame,
-    TResult Function(String field0)? clientError,
-    required TResult orElse(),
-  }) {
-    if (userName != null) {
-      return userName(field0);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ToPlayer value) toPlayer,
-    required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
-    required TResult Function(CreateRoom value) createRoom,
-    required TResult Function(JoinRoom value) joinRoom,
-    required TResult Function(QuitRoom value) quitRoom,
-    required TResult Function(Ready value) ready,
-    required TResult Function(Unready value) unready,
-    required TResult Function(Play value) play,
-    required TResult Function(RequestUndo value) requestUndo,
-    required TResult Function(ApproveUndo value) approveUndo,
-    required TResult Function(RejectUndo value) rejectUndo,
-    required TResult Function(QuitGameSession value) quitGameSession,
-    required TResult Function(SendChatMessage value) sendChatMessage,
-    required TResult Function(ExitGame value) exitGame,
-    required TResult Function(ClientError value) clientError,
-  }) {
-    return userName(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ToPlayer value)? toPlayer,
-    TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
-    TResult Function(CreateRoom value)? createRoom,
-    TResult Function(JoinRoom value)? joinRoom,
-    TResult Function(QuitRoom value)? quitRoom,
-    TResult Function(Ready value)? ready,
-    TResult Function(Unready value)? unready,
-    TResult Function(Play value)? play,
-    TResult Function(RequestUndo value)? requestUndo,
-    TResult Function(ApproveUndo value)? approveUndo,
-    TResult Function(RejectUndo value)? rejectUndo,
-    TResult Function(QuitGameSession value)? quitGameSession,
-    TResult Function(SendChatMessage value)? sendChatMessage,
-    TResult Function(ExitGame value)? exitGame,
-    TResult Function(ClientError value)? clientError,
-  }) {
-    return userName?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ToPlayer value)? toPlayer,
-    TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
-    TResult Function(CreateRoom value)? createRoom,
-    TResult Function(JoinRoom value)? joinRoom,
-    TResult Function(QuitRoom value)? quitRoom,
-    TResult Function(Ready value)? ready,
-    TResult Function(Unready value)? unready,
-    TResult Function(Play value)? play,
-    TResult Function(RequestUndo value)? requestUndo,
-    TResult Function(ApproveUndo value)? approveUndo,
-    TResult Function(RejectUndo value)? rejectUndo,
-    TResult Function(QuitGameSession value)? quitGameSession,
-    TResult Function(SendChatMessage value)? sendChatMessage,
-    TResult Function(ExitGame value)? exitGame,
-    TResult Function(ClientError value)? clientError,
-    required TResult orElse(),
-  }) {
-    if (userName != null) {
-      return userName(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UserName implements Messages {
-  const factory UserName(String field0) = _$UserName;
-
-  String get field0;
-  @JsonKey(ignore: true)
-  $UserNameCopyWith<UserName> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2082,9 +2875,13 @@ class _$CreateRoom implements CreateRoom {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -2105,9 +2902,12 @@ class _$CreateRoom implements CreateRoom {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2128,9 +2928,12 @@ class _$CreateRoom implements CreateRoom {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2155,9 +2958,11 @@ class _$CreateRoom implements CreateRoom {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -2178,9 +2983,11 @@ class _$CreateRoom implements CreateRoom {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2201,9 +3008,11 @@ class _$CreateRoom implements CreateRoom {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2297,9 +3106,13 @@ class _$JoinRoom implements JoinRoom {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -2320,9 +3133,12 @@ class _$JoinRoom implements JoinRoom {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2343,9 +3159,12 @@ class _$JoinRoom implements JoinRoom {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2370,9 +3189,11 @@ class _$JoinRoom implements JoinRoom {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -2393,9 +3214,11 @@ class _$JoinRoom implements JoinRoom {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2416,9 +3239,11 @@ class _$JoinRoom implements JoinRoom {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2488,9 +3313,13 @@ class _$QuitRoom implements QuitRoom {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -2511,9 +3340,12 @@ class _$QuitRoom implements QuitRoom {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2534,9 +3366,12 @@ class _$QuitRoom implements QuitRoom {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2561,9 +3396,11 @@ class _$QuitRoom implements QuitRoom {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -2584,9 +3421,11 @@ class _$QuitRoom implements QuitRoom {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2607,9 +3446,11 @@ class _$QuitRoom implements QuitRoom {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2674,9 +3515,13 @@ class _$Ready implements Ready {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -2697,9 +3542,12 @@ class _$Ready implements Ready {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2720,9 +3568,12 @@ class _$Ready implements Ready {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2747,9 +3598,11 @@ class _$Ready implements Ready {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -2770,9 +3623,11 @@ class _$Ready implements Ready {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2793,9 +3648,11 @@ class _$Ready implements Ready {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2860,9 +3717,13 @@ class _$Unready implements Unready {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -2883,9 +3744,12 @@ class _$Unready implements Unready {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2906,9 +3770,12 @@ class _$Unready implements Unready {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -2933,9 +3800,11 @@ class _$Unready implements Unready {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -2956,9 +3825,11 @@ class _$Unready implements Unready {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -2979,9 +3850,11 @@ class _$Unready implements Unready {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3080,9 +3953,13 @@ class _$Play implements Play {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -3103,9 +3980,12 @@ class _$Play implements Play {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3126,9 +4006,12 @@ class _$Play implements Play {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3153,9 +4036,11 @@ class _$Play implements Play {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -3176,9 +4061,11 @@ class _$Play implements Play {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3199,9 +4086,11 @@ class _$Play implements Play {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3273,9 +4162,13 @@ class _$RequestUndo implements RequestUndo {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -3296,9 +4189,12 @@ class _$RequestUndo implements RequestUndo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3319,9 +4215,12 @@ class _$RequestUndo implements RequestUndo {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3346,9 +4245,11 @@ class _$RequestUndo implements RequestUndo {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -3369,9 +4270,11 @@ class _$RequestUndo implements RequestUndo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3392,9 +4295,11 @@ class _$RequestUndo implements RequestUndo {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3461,9 +4366,13 @@ class _$ApproveUndo implements ApproveUndo {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -3484,9 +4393,12 @@ class _$ApproveUndo implements ApproveUndo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3507,9 +4419,12 @@ class _$ApproveUndo implements ApproveUndo {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3534,9 +4449,11 @@ class _$ApproveUndo implements ApproveUndo {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -3557,9 +4474,11 @@ class _$ApproveUndo implements ApproveUndo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3580,9 +4499,11 @@ class _$ApproveUndo implements ApproveUndo {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3648,9 +4569,13 @@ class _$RejectUndo implements RejectUndo {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -3671,9 +4596,12 @@ class _$RejectUndo implements RejectUndo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3694,9 +4622,12 @@ class _$RejectUndo implements RejectUndo {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3721,9 +4652,11 @@ class _$RejectUndo implements RejectUndo {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -3744,9 +4677,11 @@ class _$RejectUndo implements RejectUndo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3767,9 +4702,11 @@ class _$RejectUndo implements RejectUndo {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3836,9 +4773,13 @@ class _$QuitGameSession implements QuitGameSession {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -3859,9 +4800,12 @@ class _$QuitGameSession implements QuitGameSession {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3882,9 +4826,12 @@ class _$QuitGameSession implements QuitGameSession {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -3909,9 +4856,11 @@ class _$QuitGameSession implements QuitGameSession {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -3932,9 +4881,11 @@ class _$QuitGameSession implements QuitGameSession {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -3955,9 +4906,11 @@ class _$QuitGameSession implements QuitGameSession {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -4048,9 +5001,13 @@ class _$SendChatMessage implements SendChatMessage {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -4071,9 +5028,12 @@ class _$SendChatMessage implements SendChatMessage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -4094,9 +5054,12 @@ class _$SendChatMessage implements SendChatMessage {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -4121,9 +5084,11 @@ class _$SendChatMessage implements SendChatMessage {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -4144,9 +5109,11 @@ class _$SendChatMessage implements SendChatMessage {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -4167,9 +5134,11 @@ class _$SendChatMessage implements SendChatMessage {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -4239,9 +5208,13 @@ class _$ExitGame implements ExitGame {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -4262,9 +5235,12 @@ class _$ExitGame implements ExitGame {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -4285,9 +5261,12 @@ class _$ExitGame implements ExitGame {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -4312,9 +5291,11 @@ class _$ExitGame implements ExitGame {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -4335,9 +5316,11 @@ class _$ExitGame implements ExitGame {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -4358,9 +5341,11 @@ class _$ExitGame implements ExitGame {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -4451,9 +5436,13 @@ class _$ClientError implements ClientError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String name, String password) login,
+    required TResult Function(
+            String name, String oldPassword, String newPassword)
+        updateAccount,
+    required TResult Function(String name, String password) createAccount,
     required TResult Function(String name, Uint8List msg) toPlayer,
     required TResult Function(String? name, int limit) searchOnlinePlayers,
-    required TResult Function(String field0) userName,
     required TResult Function(SessionConfig field0) createRoom,
     required TResult Function(RoomToken field0) joinRoom,
     required TResult Function() quitRoom,
@@ -4474,9 +5463,12 @@ class _$ClientError implements ClientError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -4497,9 +5489,12 @@ class _$ClientError implements ClientError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, String password)? login,
+    TResult Function(String name, String oldPassword, String newPassword)?
+        updateAccount,
+    TResult Function(String name, String password)? createAccount,
     TResult Function(String name, Uint8List msg)? toPlayer,
     TResult Function(String? name, int limit)? searchOnlinePlayers,
-    TResult Function(String field0)? userName,
     TResult Function(SessionConfig field0)? createRoom,
     TResult Function(RoomToken field0)? joinRoom,
     TResult Function()? quitRoom,
@@ -4524,9 +5519,11 @@ class _$ClientError implements ClientError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Login value) login,
+    required TResult Function(UpdateAccount value) updateAccount,
+    required TResult Function(CreateAccount value) createAccount,
     required TResult Function(ToPlayer value) toPlayer,
     required TResult Function(SearchOnlinePlayers value) searchOnlinePlayers,
-    required TResult Function(UserName value) userName,
     required TResult Function(CreateRoom value) createRoom,
     required TResult Function(JoinRoom value) joinRoom,
     required TResult Function(QuitRoom value) quitRoom,
@@ -4547,9 +5544,11 @@ class _$ClientError implements ClientError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -4570,9 +5569,11 @@ class _$ClientError implements ClientError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Login value)? login,
+    TResult Function(UpdateAccount value)? updateAccount,
+    TResult Function(CreateAccount value)? createAccount,
     TResult Function(ToPlayer value)? toPlayer,
     TResult Function(SearchOnlinePlayers value)? searchOnlinePlayers,
-    TResult Function(UserName value)? userName,
     TResult Function(CreateRoom value)? createRoom,
     TResult Function(JoinRoom value)? joinRoom,
     TResult Function(QuitRoom value)? quitRoom,
@@ -4619,10 +5620,6 @@ class _$ResponsesTearOff {
     return PlayerList(
       field0,
     );
-  }
-
-  ConnectionSuccess connectionSuccess() {
-    return const ConnectionSuccess();
   }
 
   ConnectionInitFailure connectionInitFailure(ConnectionInitError field0) {
@@ -4762,6 +5759,54 @@ class _$ResponsesTearOff {
       msg: msg,
     );
   }
+
+  CreateAccountFailure createAccountFailure(String field0) {
+    return CreateAccountFailure(
+      field0,
+    );
+  }
+
+  LoginFailure loginFailure(String field0) {
+    return LoginFailure(
+      field0,
+    );
+  }
+
+  UpdateAccountFailure updateAccountFailure(String field0) {
+    return UpdateAccountFailure(
+      field0,
+    );
+  }
+
+  CreateAccountSuccess createAccountSuccess(
+      {required String name, required String password}) {
+    return CreateAccountSuccess(
+      name: name,
+      password: password,
+    );
+  }
+
+  UpdateAccountSuccess updateAccountSuccess(
+      {required String name, required String password}) {
+    return UpdateAccountSuccess(
+      name: name,
+      password: password,
+    );
+  }
+
+  LoginSuccess loginSuccess(String field0) {
+    return LoginSuccess(
+      field0,
+    );
+  }
+
+  QuitRoomSuccess quitRoomSuccess() {
+    return const QuitRoomSuccess();
+  }
+
+  QuitGameSessionSuccess quitGameSessionSuccess() {
+    return const QuitGameSessionSuccess();
+  }
 }
 
 /// @nodoc
@@ -4773,7 +5818,6 @@ mixin _$Responses {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -4804,13 +5848,22 @@ mixin _$Responses {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -4840,13 +5893,20 @@ mixin _$Responses {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -4876,6 +5936,14 @@ mixin _$Responses {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -4883,7 +5951,6 @@ mixin _$Responses {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -4916,13 +5983,21 @@ mixin _$Responses {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -4951,13 +6026,20 @@ mixin _$Responses {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -4986,6 +6068,14 @@ mixin _$Responses {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -5081,7 +6171,6 @@ class _$FromPlayer implements FromPlayer {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -5112,6 +6201,16 @@ class _$FromPlayer implements FromPlayer {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return fromPlayer(name, msg);
   }
@@ -5121,7 +6220,6 @@ class _$FromPlayer implements FromPlayer {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -5151,6 +6249,14 @@ class _$FromPlayer implements FromPlayer {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return fromPlayer?.call(name, msg);
   }
@@ -5160,7 +6266,6 @@ class _$FromPlayer implements FromPlayer {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -5190,6 +6295,14 @@ class _$FromPlayer implements FromPlayer {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (fromPlayer != null) {
@@ -5203,7 +6316,6 @@ class _$FromPlayer implements FromPlayer {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -5236,6 +6348,15 @@ class _$FromPlayer implements FromPlayer {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return fromPlayer(this);
   }
@@ -5245,7 +6366,6 @@ class _$FromPlayer implements FromPlayer {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -5274,6 +6394,14 @@ class _$FromPlayer implements FromPlayer {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return fromPlayer?.call(this);
   }
@@ -5283,7 +6411,6 @@ class _$FromPlayer implements FromPlayer {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -5312,6 +6439,14 @@ class _$FromPlayer implements FromPlayer {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (fromPlayer != null) {
@@ -5397,7 +6532,6 @@ class _$PlayerList implements PlayerList {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -5428,6 +6562,16 @@ class _$PlayerList implements PlayerList {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return playerList(field0);
   }
@@ -5437,7 +6581,6 @@ class _$PlayerList implements PlayerList {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -5467,6 +6610,14 @@ class _$PlayerList implements PlayerList {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return playerList?.call(field0);
   }
@@ -5476,7 +6627,6 @@ class _$PlayerList implements PlayerList {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -5506,6 +6656,14 @@ class _$PlayerList implements PlayerList {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (playerList != null) {
@@ -5519,7 +6677,6 @@ class _$PlayerList implements PlayerList {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -5552,6 +6709,15 @@ class _$PlayerList implements PlayerList {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return playerList(this);
   }
@@ -5561,7 +6727,6 @@ class _$PlayerList implements PlayerList {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -5590,6 +6755,14 @@ class _$PlayerList implements PlayerList {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return playerList?.call(this);
   }
@@ -5599,7 +6772,6 @@ class _$PlayerList implements PlayerList {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -5628,6 +6800,14 @@ class _$PlayerList implements PlayerList {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (playerList != null) {
@@ -5644,293 +6824,6 @@ abstract class PlayerList implements Responses {
   @JsonKey(ignore: true)
   $PlayerListCopyWith<PlayerList> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ConnectionSuccessCopyWith<$Res> {
-  factory $ConnectionSuccessCopyWith(
-          ConnectionSuccess value, $Res Function(ConnectionSuccess) then) =
-      _$ConnectionSuccessCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$ConnectionSuccessCopyWithImpl<$Res>
-    extends _$ResponsesCopyWithImpl<$Res>
-    implements $ConnectionSuccessCopyWith<$Res> {
-  _$ConnectionSuccessCopyWithImpl(
-      ConnectionSuccess _value, $Res Function(ConnectionSuccess) _then)
-      : super(_value, (v) => _then(v as ConnectionSuccess));
-
-  @override
-  ConnectionSuccess get _value => super._value as ConnectionSuccess;
-}
-
-/// @nodoc
-
-class _$ConnectionSuccess implements ConnectionSuccess {
-  const _$ConnectionSuccess();
-
-  @override
-  String toString() {
-    return 'Responses.connectionSuccess()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ConnectionSuccess);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String name, Uint8List msg) fromPlayer,
-    required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
-    required TResult Function(ConnectionInitError field0) connectionInitFailure,
-    required TResult Function(String field0) roomCreated,
-    required TResult Function(String token, RoomState roomState)
-        joinRoomSuccess,
-    required TResult Function() joinRoomFailureTokenNotFound,
-    required TResult Function() joinRoomFailureRoomFull,
-    required TResult Function(String field0) opponentJoinRoom,
-    required TResult Function() opponentQuitRoom,
-    required TResult Function() opponentReady,
-    required TResult Function() opponentUnready,
-    required TResult Function(Color field0) gameStarted,
-    required TResult Function(Field field0) fieldUpdate,
-    required TResult Function() undoRequest,
-    required TResult Function() undoTimeoutRejected,
-    required TResult Function() undoAutoRejected,
-    required TResult Function(Field field0) undo,
-    required TResult Function() undoRejectedByOpponent,
-    required TResult Function() gameEndBlackTimeout,
-    required TResult Function() gameEndWhiteTimeout,
-    required TResult Function() gameEndBlackWins,
-    required TResult Function() gameEndWhiteWins,
-    required TResult Function() gameEndDraw,
-    required TResult Function(String player1Name, int player1Score,
-            String player2Name, int player2Score)
-        roomScores,
-    required TResult Function() opponentQuitGameSession,
-    required TResult Function() opponentExitGame,
-    required TResult Function() opponentDisconnected,
-    required TResult Function(String field0) gameSessionError,
-    required TResult Function(String name, String msg) chatMessage,
-  }) {
-    return connectionSuccess();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String name, Uint8List msg)? fromPlayer,
-    TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
-    TResult Function(ConnectionInitError field0)? connectionInitFailure,
-    TResult Function(String field0)? roomCreated,
-    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
-    TResult Function()? joinRoomFailureTokenNotFound,
-    TResult Function()? joinRoomFailureRoomFull,
-    TResult Function(String field0)? opponentJoinRoom,
-    TResult Function()? opponentQuitRoom,
-    TResult Function()? opponentReady,
-    TResult Function()? opponentUnready,
-    TResult Function(Color field0)? gameStarted,
-    TResult Function(Field field0)? fieldUpdate,
-    TResult Function()? undoRequest,
-    TResult Function()? undoTimeoutRejected,
-    TResult Function()? undoAutoRejected,
-    TResult Function(Field field0)? undo,
-    TResult Function()? undoRejectedByOpponent,
-    TResult Function()? gameEndBlackTimeout,
-    TResult Function()? gameEndWhiteTimeout,
-    TResult Function()? gameEndBlackWins,
-    TResult Function()? gameEndWhiteWins,
-    TResult Function()? gameEndDraw,
-    TResult Function(String player1Name, int player1Score, String player2Name,
-            int player2Score)?
-        roomScores,
-    TResult Function()? opponentQuitGameSession,
-    TResult Function()? opponentExitGame,
-    TResult Function()? opponentDisconnected,
-    TResult Function(String field0)? gameSessionError,
-    TResult Function(String name, String msg)? chatMessage,
-  }) {
-    return connectionSuccess?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String name, Uint8List msg)? fromPlayer,
-    TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
-    TResult Function(ConnectionInitError field0)? connectionInitFailure,
-    TResult Function(String field0)? roomCreated,
-    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
-    TResult Function()? joinRoomFailureTokenNotFound,
-    TResult Function()? joinRoomFailureRoomFull,
-    TResult Function(String field0)? opponentJoinRoom,
-    TResult Function()? opponentQuitRoom,
-    TResult Function()? opponentReady,
-    TResult Function()? opponentUnready,
-    TResult Function(Color field0)? gameStarted,
-    TResult Function(Field field0)? fieldUpdate,
-    TResult Function()? undoRequest,
-    TResult Function()? undoTimeoutRejected,
-    TResult Function()? undoAutoRejected,
-    TResult Function(Field field0)? undo,
-    TResult Function()? undoRejectedByOpponent,
-    TResult Function()? gameEndBlackTimeout,
-    TResult Function()? gameEndWhiteTimeout,
-    TResult Function()? gameEndBlackWins,
-    TResult Function()? gameEndWhiteWins,
-    TResult Function()? gameEndDraw,
-    TResult Function(String player1Name, int player1Score, String player2Name,
-            int player2Score)?
-        roomScores,
-    TResult Function()? opponentQuitGameSession,
-    TResult Function()? opponentExitGame,
-    TResult Function()? opponentDisconnected,
-    TResult Function(String field0)? gameSessionError,
-    TResult Function(String name, String msg)? chatMessage,
-    required TResult orElse(),
-  }) {
-    if (connectionSuccess != null) {
-      return connectionSuccess();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(FromPlayer value) fromPlayer,
-    required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
-    required TResult Function(ConnectionInitFailure value)
-        connectionInitFailure,
-    required TResult Function(RoomCreated value) roomCreated,
-    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
-    required TResult Function(JoinRoomFailureTokenNotFound value)
-        joinRoomFailureTokenNotFound,
-    required TResult Function(JoinRoomFailureRoomFull value)
-        joinRoomFailureRoomFull,
-    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
-    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
-    required TResult Function(OpponentReady value) opponentReady,
-    required TResult Function(OpponentUnready value) opponentUnready,
-    required TResult Function(GameStarted value) gameStarted,
-    required TResult Function(FieldUpdate value) fieldUpdate,
-    required TResult Function(UndoRequest value) undoRequest,
-    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
-    required TResult Function(UndoAutoRejected value) undoAutoRejected,
-    required TResult Function(Undo value) undo,
-    required TResult Function(UndoRejectedByOpponent value)
-        undoRejectedByOpponent,
-    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
-    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
-    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
-    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
-    required TResult Function(GameEndDraw value) gameEndDraw,
-    required TResult Function(RoomScores value) roomScores,
-    required TResult Function(OpponentQuitGameSession value)
-        opponentQuitGameSession,
-    required TResult Function(OpponentExitGame value) opponentExitGame,
-    required TResult Function(OpponentDisconnected value) opponentDisconnected,
-    required TResult Function(GameSessionError value) gameSessionError,
-    required TResult Function(ChatMessage value) chatMessage,
-  }) {
-    return connectionSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FromPlayer value)? fromPlayer,
-    TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
-    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
-    TResult Function(RoomCreated value)? roomCreated,
-    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
-    TResult Function(JoinRoomFailureTokenNotFound value)?
-        joinRoomFailureTokenNotFound,
-    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
-    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
-    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
-    TResult Function(OpponentReady value)? opponentReady,
-    TResult Function(OpponentUnready value)? opponentUnready,
-    TResult Function(GameStarted value)? gameStarted,
-    TResult Function(FieldUpdate value)? fieldUpdate,
-    TResult Function(UndoRequest value)? undoRequest,
-    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
-    TResult Function(UndoAutoRejected value)? undoAutoRejected,
-    TResult Function(Undo value)? undo,
-    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
-    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
-    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
-    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
-    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
-    TResult Function(GameEndDraw value)? gameEndDraw,
-    TResult Function(RoomScores value)? roomScores,
-    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
-    TResult Function(OpponentExitGame value)? opponentExitGame,
-    TResult Function(OpponentDisconnected value)? opponentDisconnected,
-    TResult Function(GameSessionError value)? gameSessionError,
-    TResult Function(ChatMessage value)? chatMessage,
-  }) {
-    return connectionSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(FromPlayer value)? fromPlayer,
-    TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
-    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
-    TResult Function(RoomCreated value)? roomCreated,
-    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
-    TResult Function(JoinRoomFailureTokenNotFound value)?
-        joinRoomFailureTokenNotFound,
-    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
-    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
-    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
-    TResult Function(OpponentReady value)? opponentReady,
-    TResult Function(OpponentUnready value)? opponentUnready,
-    TResult Function(GameStarted value)? gameStarted,
-    TResult Function(FieldUpdate value)? fieldUpdate,
-    TResult Function(UndoRequest value)? undoRequest,
-    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
-    TResult Function(UndoAutoRejected value)? undoAutoRejected,
-    TResult Function(Undo value)? undo,
-    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
-    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
-    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
-    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
-    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
-    TResult Function(GameEndDraw value)? gameEndDraw,
-    TResult Function(RoomScores value)? roomScores,
-    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
-    TResult Function(OpponentExitGame value)? opponentExitGame,
-    TResult Function(OpponentDisconnected value)? opponentDisconnected,
-    TResult Function(GameSessionError value)? gameSessionError,
-    TResult Function(ChatMessage value)? chatMessage,
-    required TResult orElse(),
-  }) {
-    if (connectionSuccess != null) {
-      return connectionSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ConnectionSuccess implements Responses {
-  const factory ConnectionSuccess() = _$ConnectionSuccess;
 }
 
 /// @nodoc
@@ -6010,7 +6903,6 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -6041,6 +6933,16 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return connectionInitFailure(field0);
   }
@@ -6050,7 +6952,6 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -6080,6 +6981,14 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return connectionInitFailure?.call(field0);
   }
@@ -6089,7 +6998,6 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -6119,6 +7027,14 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (connectionInitFailure != null) {
@@ -6132,7 +7048,6 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -6165,6 +7080,15 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return connectionInitFailure(this);
   }
@@ -6174,7 +7098,6 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -6203,6 +7126,14 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return connectionInitFailure?.call(this);
   }
@@ -6212,7 +7143,6 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -6241,6 +7171,14 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (connectionInitFailure != null) {
@@ -6326,7 +7264,6 @@ class _$RoomCreated implements RoomCreated {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -6357,6 +7294,16 @@ class _$RoomCreated implements RoomCreated {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return roomCreated(field0);
   }
@@ -6366,7 +7313,6 @@ class _$RoomCreated implements RoomCreated {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -6396,6 +7342,14 @@ class _$RoomCreated implements RoomCreated {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return roomCreated?.call(field0);
   }
@@ -6405,7 +7359,6 @@ class _$RoomCreated implements RoomCreated {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -6435,6 +7388,14 @@ class _$RoomCreated implements RoomCreated {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (roomCreated != null) {
@@ -6448,7 +7409,6 @@ class _$RoomCreated implements RoomCreated {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -6481,6 +7441,15 @@ class _$RoomCreated implements RoomCreated {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return roomCreated(this);
   }
@@ -6490,7 +7459,6 @@ class _$RoomCreated implements RoomCreated {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -6519,6 +7487,14 @@ class _$RoomCreated implements RoomCreated {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return roomCreated?.call(this);
   }
@@ -6528,7 +7504,6 @@ class _$RoomCreated implements RoomCreated {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -6557,6 +7532,14 @@ class _$RoomCreated implements RoomCreated {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (roomCreated != null) {
@@ -6660,7 +7643,6 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -6691,6 +7673,16 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return joinRoomSuccess(token, roomState);
   }
@@ -6700,7 +7692,6 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -6730,6 +7721,14 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return joinRoomSuccess?.call(token, roomState);
   }
@@ -6739,7 +7738,6 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -6769,6 +7767,14 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (joinRoomSuccess != null) {
@@ -6782,7 +7788,6 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -6815,6 +7820,15 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return joinRoomSuccess(this);
   }
@@ -6824,7 +7838,6 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -6853,6 +7866,14 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return joinRoomSuccess?.call(this);
   }
@@ -6862,7 +7883,6 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -6891,6 +7911,14 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (joinRoomSuccess != null) {
@@ -6959,7 +7987,6 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -6990,6 +8017,16 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return joinRoomFailureTokenNotFound();
   }
@@ -6999,7 +8036,6 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -7029,6 +8065,14 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return joinRoomFailureTokenNotFound?.call();
   }
@@ -7038,7 +8082,6 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -7068,6 +8111,14 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (joinRoomFailureTokenNotFound != null) {
@@ -7081,7 +8132,6 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -7114,6 +8164,15 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return joinRoomFailureTokenNotFound(this);
   }
@@ -7123,7 +8182,6 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -7152,6 +8210,14 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return joinRoomFailureTokenNotFound?.call(this);
   }
@@ -7161,7 +8227,6 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -7190,6 +8255,14 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (joinRoomFailureTokenNotFound != null) {
@@ -7246,7 +8319,6 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -7277,6 +8349,16 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return joinRoomFailureRoomFull();
   }
@@ -7286,7 +8368,6 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -7316,6 +8397,14 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return joinRoomFailureRoomFull?.call();
   }
@@ -7325,7 +8414,6 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -7355,6 +8443,14 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (joinRoomFailureRoomFull != null) {
@@ -7368,7 +8464,6 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -7401,6 +8496,15 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return joinRoomFailureRoomFull(this);
   }
@@ -7410,7 +8514,6 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -7439,6 +8542,14 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return joinRoomFailureRoomFull?.call(this);
   }
@@ -7448,7 +8559,6 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -7477,6 +8587,14 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (joinRoomFailureRoomFull != null) {
@@ -7556,7 +8674,6 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -7587,6 +8704,16 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return opponentJoinRoom(field0);
   }
@@ -7596,7 +8723,6 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -7626,6 +8752,14 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return opponentJoinRoom?.call(field0);
   }
@@ -7635,7 +8769,6 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -7665,6 +8798,14 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentJoinRoom != null) {
@@ -7678,7 +8819,6 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -7711,6 +8851,15 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return opponentJoinRoom(this);
   }
@@ -7720,7 +8869,6 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -7749,6 +8897,14 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return opponentJoinRoom?.call(this);
   }
@@ -7758,7 +8914,6 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -7787,6 +8942,14 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentJoinRoom != null) {
@@ -7847,7 +9010,6 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -7878,6 +9040,16 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return opponentQuitRoom();
   }
@@ -7887,7 +9059,6 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -7917,6 +9088,14 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return opponentQuitRoom?.call();
   }
@@ -7926,7 +9105,6 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -7956,6 +9134,14 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentQuitRoom != null) {
@@ -7969,7 +9155,6 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -8002,6 +9187,15 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return opponentQuitRoom(this);
   }
@@ -8011,7 +9205,6 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -8040,6 +9233,14 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return opponentQuitRoom?.call(this);
   }
@@ -8049,7 +9250,6 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -8078,6 +9278,14 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentQuitRoom != null) {
@@ -8133,7 +9341,6 @@ class _$OpponentReady implements OpponentReady {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -8164,6 +9371,16 @@ class _$OpponentReady implements OpponentReady {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return opponentReady();
   }
@@ -8173,7 +9390,6 @@ class _$OpponentReady implements OpponentReady {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -8203,6 +9419,14 @@ class _$OpponentReady implements OpponentReady {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return opponentReady?.call();
   }
@@ -8212,7 +9436,6 @@ class _$OpponentReady implements OpponentReady {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -8242,6 +9465,14 @@ class _$OpponentReady implements OpponentReady {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentReady != null) {
@@ -8255,7 +9486,6 @@ class _$OpponentReady implements OpponentReady {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -8288,6 +9518,15 @@ class _$OpponentReady implements OpponentReady {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return opponentReady(this);
   }
@@ -8297,7 +9536,6 @@ class _$OpponentReady implements OpponentReady {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -8326,6 +9564,14 @@ class _$OpponentReady implements OpponentReady {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return opponentReady?.call(this);
   }
@@ -8335,7 +9581,6 @@ class _$OpponentReady implements OpponentReady {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -8364,6 +9609,14 @@ class _$OpponentReady implements OpponentReady {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentReady != null) {
@@ -8419,7 +9672,6 @@ class _$OpponentUnready implements OpponentUnready {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -8450,6 +9702,16 @@ class _$OpponentUnready implements OpponentUnready {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return opponentUnready();
   }
@@ -8459,7 +9721,6 @@ class _$OpponentUnready implements OpponentUnready {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -8489,6 +9750,14 @@ class _$OpponentUnready implements OpponentUnready {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return opponentUnready?.call();
   }
@@ -8498,7 +9767,6 @@ class _$OpponentUnready implements OpponentUnready {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -8528,6 +9796,14 @@ class _$OpponentUnready implements OpponentUnready {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentUnready != null) {
@@ -8541,7 +9817,6 @@ class _$OpponentUnready implements OpponentUnready {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -8574,6 +9849,15 @@ class _$OpponentUnready implements OpponentUnready {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return opponentUnready(this);
   }
@@ -8583,7 +9867,6 @@ class _$OpponentUnready implements OpponentUnready {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -8612,6 +9895,14 @@ class _$OpponentUnready implements OpponentUnready {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return opponentUnready?.call(this);
   }
@@ -8621,7 +9912,6 @@ class _$OpponentUnready implements OpponentUnready {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -8650,6 +9940,14 @@ class _$OpponentUnready implements OpponentUnready {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentUnready != null) {
@@ -8729,7 +10027,6 @@ class _$GameStarted implements GameStarted {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -8760,6 +10057,16 @@ class _$GameStarted implements GameStarted {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return gameStarted(field0);
   }
@@ -8769,7 +10076,6 @@ class _$GameStarted implements GameStarted {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -8799,6 +10105,14 @@ class _$GameStarted implements GameStarted {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return gameStarted?.call(field0);
   }
@@ -8808,7 +10122,6 @@ class _$GameStarted implements GameStarted {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -8838,6 +10151,14 @@ class _$GameStarted implements GameStarted {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameStarted != null) {
@@ -8851,7 +10172,6 @@ class _$GameStarted implements GameStarted {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -8884,6 +10204,15 @@ class _$GameStarted implements GameStarted {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return gameStarted(this);
   }
@@ -8893,7 +10222,6 @@ class _$GameStarted implements GameStarted {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -8922,6 +10250,14 @@ class _$GameStarted implements GameStarted {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return gameStarted?.call(this);
   }
@@ -8931,7 +10267,6 @@ class _$GameStarted implements GameStarted {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -8960,6 +10295,14 @@ class _$GameStarted implements GameStarted {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameStarted != null) {
@@ -9044,7 +10387,6 @@ class _$FieldUpdate implements FieldUpdate {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -9075,6 +10417,16 @@ class _$FieldUpdate implements FieldUpdate {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return fieldUpdate(field0);
   }
@@ -9084,7 +10436,6 @@ class _$FieldUpdate implements FieldUpdate {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -9114,6 +10465,14 @@ class _$FieldUpdate implements FieldUpdate {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return fieldUpdate?.call(field0);
   }
@@ -9123,7 +10482,6 @@ class _$FieldUpdate implements FieldUpdate {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -9153,6 +10511,14 @@ class _$FieldUpdate implements FieldUpdate {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (fieldUpdate != null) {
@@ -9166,7 +10532,6 @@ class _$FieldUpdate implements FieldUpdate {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -9199,6 +10564,15 @@ class _$FieldUpdate implements FieldUpdate {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return fieldUpdate(this);
   }
@@ -9208,7 +10582,6 @@ class _$FieldUpdate implements FieldUpdate {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -9237,6 +10610,14 @@ class _$FieldUpdate implements FieldUpdate {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return fieldUpdate?.call(this);
   }
@@ -9246,7 +10627,6 @@ class _$FieldUpdate implements FieldUpdate {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -9275,6 +10655,14 @@ class _$FieldUpdate implements FieldUpdate {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (fieldUpdate != null) {
@@ -9335,7 +10723,6 @@ class _$UndoRequest implements UndoRequest {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -9366,6 +10753,16 @@ class _$UndoRequest implements UndoRequest {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return undoRequest();
   }
@@ -9375,7 +10772,6 @@ class _$UndoRequest implements UndoRequest {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -9405,6 +10801,14 @@ class _$UndoRequest implements UndoRequest {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return undoRequest?.call();
   }
@@ -9414,7 +10818,6 @@ class _$UndoRequest implements UndoRequest {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -9444,6 +10847,14 @@ class _$UndoRequest implements UndoRequest {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undoRequest != null) {
@@ -9457,7 +10868,6 @@ class _$UndoRequest implements UndoRequest {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -9490,6 +10900,15 @@ class _$UndoRequest implements UndoRequest {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return undoRequest(this);
   }
@@ -9499,7 +10918,6 @@ class _$UndoRequest implements UndoRequest {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -9528,6 +10946,14 @@ class _$UndoRequest implements UndoRequest {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return undoRequest?.call(this);
   }
@@ -9537,7 +10963,6 @@ class _$UndoRequest implements UndoRequest {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -9566,6 +10991,14 @@ class _$UndoRequest implements UndoRequest {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undoRequest != null) {
@@ -9622,7 +11055,6 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -9653,6 +11085,16 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return undoTimeoutRejected();
   }
@@ -9662,7 +11104,6 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -9692,6 +11133,14 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return undoTimeoutRejected?.call();
   }
@@ -9701,7 +11150,6 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -9731,6 +11179,14 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undoTimeoutRejected != null) {
@@ -9744,7 +11200,6 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -9777,6 +11232,15 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return undoTimeoutRejected(this);
   }
@@ -9786,7 +11250,6 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -9815,6 +11278,14 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return undoTimeoutRejected?.call(this);
   }
@@ -9824,7 +11295,6 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -9853,6 +11323,14 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undoTimeoutRejected != null) {
@@ -9908,7 +11386,6 @@ class _$UndoAutoRejected implements UndoAutoRejected {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -9939,6 +11416,16 @@ class _$UndoAutoRejected implements UndoAutoRejected {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return undoAutoRejected();
   }
@@ -9948,7 +11435,6 @@ class _$UndoAutoRejected implements UndoAutoRejected {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -9978,6 +11464,14 @@ class _$UndoAutoRejected implements UndoAutoRejected {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return undoAutoRejected?.call();
   }
@@ -9987,7 +11481,6 @@ class _$UndoAutoRejected implements UndoAutoRejected {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -10017,6 +11510,14 @@ class _$UndoAutoRejected implements UndoAutoRejected {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undoAutoRejected != null) {
@@ -10030,7 +11531,6 @@ class _$UndoAutoRejected implements UndoAutoRejected {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -10063,6 +11563,15 @@ class _$UndoAutoRejected implements UndoAutoRejected {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return undoAutoRejected(this);
   }
@@ -10072,7 +11581,6 @@ class _$UndoAutoRejected implements UndoAutoRejected {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -10101,6 +11609,14 @@ class _$UndoAutoRejected implements UndoAutoRejected {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return undoAutoRejected?.call(this);
   }
@@ -10110,7 +11626,6 @@ class _$UndoAutoRejected implements UndoAutoRejected {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -10139,6 +11654,14 @@ class _$UndoAutoRejected implements UndoAutoRejected {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undoAutoRejected != null) {
@@ -10216,7 +11739,6 @@ class _$Undo implements Undo {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -10247,6 +11769,16 @@ class _$Undo implements Undo {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return undo(field0);
   }
@@ -10256,7 +11788,6 @@ class _$Undo implements Undo {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -10286,6 +11817,14 @@ class _$Undo implements Undo {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return undo?.call(field0);
   }
@@ -10295,7 +11834,6 @@ class _$Undo implements Undo {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -10325,6 +11863,14 @@ class _$Undo implements Undo {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undo != null) {
@@ -10338,7 +11884,6 @@ class _$Undo implements Undo {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -10371,6 +11916,15 @@ class _$Undo implements Undo {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return undo(this);
   }
@@ -10380,7 +11934,6 @@ class _$Undo implements Undo {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -10409,6 +11962,14 @@ class _$Undo implements Undo {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return undo?.call(this);
   }
@@ -10418,7 +11979,6 @@ class _$Undo implements Undo {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -10447,6 +12007,14 @@ class _$Undo implements Undo {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undo != null) {
@@ -10507,7 +12075,6 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -10538,6 +12105,16 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return undoRejectedByOpponent();
   }
@@ -10547,7 +12124,6 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -10577,6 +12153,14 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return undoRejectedByOpponent?.call();
   }
@@ -10586,7 +12170,6 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -10616,6 +12199,14 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undoRejectedByOpponent != null) {
@@ -10629,7 +12220,6 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -10662,6 +12252,15 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return undoRejectedByOpponent(this);
   }
@@ -10671,7 +12270,6 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -10700,6 +12298,14 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return undoRejectedByOpponent?.call(this);
   }
@@ -10709,7 +12315,6 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -10738,6 +12343,14 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (undoRejectedByOpponent != null) {
@@ -10794,7 +12407,6 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -10825,6 +12437,16 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return gameEndBlackTimeout();
   }
@@ -10834,7 +12456,6 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -10864,6 +12485,14 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return gameEndBlackTimeout?.call();
   }
@@ -10873,7 +12502,6 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -10903,6 +12531,14 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndBlackTimeout != null) {
@@ -10916,7 +12552,6 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -10949,6 +12584,15 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return gameEndBlackTimeout(this);
   }
@@ -10958,7 +12602,6 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -10987,6 +12630,14 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return gameEndBlackTimeout?.call(this);
   }
@@ -10996,7 +12647,6 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -11025,6 +12675,14 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndBlackTimeout != null) {
@@ -11081,7 +12739,6 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -11112,6 +12769,16 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return gameEndWhiteTimeout();
   }
@@ -11121,7 +12788,6 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -11151,6 +12817,14 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return gameEndWhiteTimeout?.call();
   }
@@ -11160,7 +12834,6 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -11190,6 +12863,14 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndWhiteTimeout != null) {
@@ -11203,7 +12884,6 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -11236,6 +12916,15 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return gameEndWhiteTimeout(this);
   }
@@ -11245,7 +12934,6 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -11274,6 +12962,14 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return gameEndWhiteTimeout?.call(this);
   }
@@ -11283,7 +12979,6 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -11312,6 +13007,14 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndWhiteTimeout != null) {
@@ -11367,7 +13070,6 @@ class _$GameEndBlackWins implements GameEndBlackWins {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -11398,6 +13100,16 @@ class _$GameEndBlackWins implements GameEndBlackWins {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return gameEndBlackWins();
   }
@@ -11407,7 +13119,6 @@ class _$GameEndBlackWins implements GameEndBlackWins {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -11437,6 +13148,14 @@ class _$GameEndBlackWins implements GameEndBlackWins {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return gameEndBlackWins?.call();
   }
@@ -11446,7 +13165,6 @@ class _$GameEndBlackWins implements GameEndBlackWins {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -11476,6 +13194,14 @@ class _$GameEndBlackWins implements GameEndBlackWins {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndBlackWins != null) {
@@ -11489,7 +13215,6 @@ class _$GameEndBlackWins implements GameEndBlackWins {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -11522,6 +13247,15 @@ class _$GameEndBlackWins implements GameEndBlackWins {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return gameEndBlackWins(this);
   }
@@ -11531,7 +13265,6 @@ class _$GameEndBlackWins implements GameEndBlackWins {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -11560,6 +13293,14 @@ class _$GameEndBlackWins implements GameEndBlackWins {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return gameEndBlackWins?.call(this);
   }
@@ -11569,7 +13310,6 @@ class _$GameEndBlackWins implements GameEndBlackWins {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -11598,6 +13338,14 @@ class _$GameEndBlackWins implements GameEndBlackWins {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndBlackWins != null) {
@@ -11653,7 +13401,6 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -11684,6 +13431,16 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return gameEndWhiteWins();
   }
@@ -11693,7 +13450,6 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -11723,6 +13479,14 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return gameEndWhiteWins?.call();
   }
@@ -11732,7 +13496,6 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -11762,6 +13525,14 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndWhiteWins != null) {
@@ -11775,7 +13546,6 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -11808,6 +13578,15 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return gameEndWhiteWins(this);
   }
@@ -11817,7 +13596,6 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -11846,6 +13624,14 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return gameEndWhiteWins?.call(this);
   }
@@ -11855,7 +13641,6 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -11884,6 +13669,14 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndWhiteWins != null) {
@@ -11939,7 +13732,6 @@ class _$GameEndDraw implements GameEndDraw {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -11970,6 +13762,16 @@ class _$GameEndDraw implements GameEndDraw {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return gameEndDraw();
   }
@@ -11979,7 +13781,6 @@ class _$GameEndDraw implements GameEndDraw {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -12009,6 +13810,14 @@ class _$GameEndDraw implements GameEndDraw {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return gameEndDraw?.call();
   }
@@ -12018,7 +13827,6 @@ class _$GameEndDraw implements GameEndDraw {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -12048,6 +13856,14 @@ class _$GameEndDraw implements GameEndDraw {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndDraw != null) {
@@ -12061,7 +13877,6 @@ class _$GameEndDraw implements GameEndDraw {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -12094,6 +13909,15 @@ class _$GameEndDraw implements GameEndDraw {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return gameEndDraw(this);
   }
@@ -12103,7 +13927,6 @@ class _$GameEndDraw implements GameEndDraw {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -12132,6 +13955,14 @@ class _$GameEndDraw implements GameEndDraw {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return gameEndDraw?.call(this);
   }
@@ -12141,7 +13972,6 @@ class _$GameEndDraw implements GameEndDraw {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -12170,6 +14000,14 @@ class _$GameEndDraw implements GameEndDraw {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameEndDraw != null) {
@@ -12288,7 +14126,6 @@ class _$RoomScores implements RoomScores {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -12319,6 +14156,16 @@ class _$RoomScores implements RoomScores {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return roomScores(player1Name, player1Score, player2Name, player2Score);
   }
@@ -12328,7 +14175,6 @@ class _$RoomScores implements RoomScores {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -12358,6 +14204,14 @@ class _$RoomScores implements RoomScores {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return roomScores?.call(
         player1Name, player1Score, player2Name, player2Score);
@@ -12368,7 +14222,6 @@ class _$RoomScores implements RoomScores {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -12398,6 +14251,14 @@ class _$RoomScores implements RoomScores {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (roomScores != null) {
@@ -12411,7 +14272,6 @@ class _$RoomScores implements RoomScores {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -12444,6 +14304,15 @@ class _$RoomScores implements RoomScores {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return roomScores(this);
   }
@@ -12453,7 +14322,6 @@ class _$RoomScores implements RoomScores {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -12482,6 +14350,14 @@ class _$RoomScores implements RoomScores {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return roomScores?.call(this);
   }
@@ -12491,7 +14367,6 @@ class _$RoomScores implements RoomScores {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -12520,6 +14395,14 @@ class _$RoomScores implements RoomScores {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (roomScores != null) {
@@ -12588,7 +14471,6 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -12619,6 +14501,16 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return opponentQuitGameSession();
   }
@@ -12628,7 +14520,6 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -12658,6 +14549,14 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return opponentQuitGameSession?.call();
   }
@@ -12667,7 +14566,6 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -12697,6 +14595,14 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentQuitGameSession != null) {
@@ -12710,7 +14616,6 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -12743,6 +14648,15 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return opponentQuitGameSession(this);
   }
@@ -12752,7 +14666,6 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -12781,6 +14694,14 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return opponentQuitGameSession?.call(this);
   }
@@ -12790,7 +14711,6 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -12819,6 +14739,14 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentQuitGameSession != null) {
@@ -12874,7 +14802,6 @@ class _$OpponentExitGame implements OpponentExitGame {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -12905,6 +14832,16 @@ class _$OpponentExitGame implements OpponentExitGame {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return opponentExitGame();
   }
@@ -12914,7 +14851,6 @@ class _$OpponentExitGame implements OpponentExitGame {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -12944,6 +14880,14 @@ class _$OpponentExitGame implements OpponentExitGame {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return opponentExitGame?.call();
   }
@@ -12953,7 +14897,6 @@ class _$OpponentExitGame implements OpponentExitGame {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -12983,6 +14926,14 @@ class _$OpponentExitGame implements OpponentExitGame {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentExitGame != null) {
@@ -12996,7 +14947,6 @@ class _$OpponentExitGame implements OpponentExitGame {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -13029,6 +14979,15 @@ class _$OpponentExitGame implements OpponentExitGame {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return opponentExitGame(this);
   }
@@ -13038,7 +14997,6 @@ class _$OpponentExitGame implements OpponentExitGame {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -13067,6 +15025,14 @@ class _$OpponentExitGame implements OpponentExitGame {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return opponentExitGame?.call(this);
   }
@@ -13076,7 +15042,6 @@ class _$OpponentExitGame implements OpponentExitGame {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -13105,6 +15070,14 @@ class _$OpponentExitGame implements OpponentExitGame {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentExitGame != null) {
@@ -13161,7 +15134,6 @@ class _$OpponentDisconnected implements OpponentDisconnected {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -13192,6 +15164,16 @@ class _$OpponentDisconnected implements OpponentDisconnected {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return opponentDisconnected();
   }
@@ -13201,7 +15183,6 @@ class _$OpponentDisconnected implements OpponentDisconnected {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -13231,6 +15212,14 @@ class _$OpponentDisconnected implements OpponentDisconnected {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return opponentDisconnected?.call();
   }
@@ -13240,7 +15229,6 @@ class _$OpponentDisconnected implements OpponentDisconnected {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -13270,6 +15258,14 @@ class _$OpponentDisconnected implements OpponentDisconnected {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentDisconnected != null) {
@@ -13283,7 +15279,6 @@ class _$OpponentDisconnected implements OpponentDisconnected {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -13316,6 +15311,15 @@ class _$OpponentDisconnected implements OpponentDisconnected {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return opponentDisconnected(this);
   }
@@ -13325,7 +15329,6 @@ class _$OpponentDisconnected implements OpponentDisconnected {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -13354,6 +15357,14 @@ class _$OpponentDisconnected implements OpponentDisconnected {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return opponentDisconnected?.call(this);
   }
@@ -13363,7 +15374,6 @@ class _$OpponentDisconnected implements OpponentDisconnected {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -13392,6 +15402,14 @@ class _$OpponentDisconnected implements OpponentDisconnected {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (opponentDisconnected != null) {
@@ -13471,7 +15489,6 @@ class _$GameSessionError implements GameSessionError {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -13502,6 +15519,16 @@ class _$GameSessionError implements GameSessionError {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return gameSessionError(field0);
   }
@@ -13511,7 +15538,6 @@ class _$GameSessionError implements GameSessionError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -13541,6 +15567,14 @@ class _$GameSessionError implements GameSessionError {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return gameSessionError?.call(field0);
   }
@@ -13550,7 +15584,6 @@ class _$GameSessionError implements GameSessionError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -13580,6 +15613,14 @@ class _$GameSessionError implements GameSessionError {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameSessionError != null) {
@@ -13593,7 +15634,6 @@ class _$GameSessionError implements GameSessionError {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -13626,6 +15666,15 @@ class _$GameSessionError implements GameSessionError {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return gameSessionError(this);
   }
@@ -13635,7 +15684,6 @@ class _$GameSessionError implements GameSessionError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -13664,6 +15712,14 @@ class _$GameSessionError implements GameSessionError {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return gameSessionError?.call(this);
   }
@@ -13673,7 +15729,6 @@ class _$GameSessionError implements GameSessionError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -13702,6 +15757,14 @@ class _$GameSessionError implements GameSessionError {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (gameSessionError != null) {
@@ -13796,7 +15859,6 @@ class _$ChatMessage implements ChatMessage {
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Uint8List msg) fromPlayer,
     required TResult Function(List<String> field0) playerList,
-    required TResult Function() connectionSuccess,
     required TResult Function(ConnectionInitError field0) connectionInitFailure,
     required TResult Function(String field0) roomCreated,
     required TResult Function(String token, RoomState roomState)
@@ -13827,6 +15889,16 @@ class _$ChatMessage implements ChatMessage {
     required TResult Function() opponentDisconnected,
     required TResult Function(String field0) gameSessionError,
     required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
   }) {
     return chatMessage(name, msg);
   }
@@ -13836,7 +15908,6 @@ class _$ChatMessage implements ChatMessage {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -13866,6 +15937,14 @@ class _$ChatMessage implements ChatMessage {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
   }) {
     return chatMessage?.call(name, msg);
   }
@@ -13875,7 +15954,6 @@ class _$ChatMessage implements ChatMessage {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Uint8List msg)? fromPlayer,
     TResult Function(List<String> field0)? playerList,
-    TResult Function()? connectionSuccess,
     TResult Function(ConnectionInitError field0)? connectionInitFailure,
     TResult Function(String field0)? roomCreated,
     TResult Function(String token, RoomState roomState)? joinRoomSuccess,
@@ -13905,6 +15983,14 @@ class _$ChatMessage implements ChatMessage {
     TResult Function()? opponentDisconnected,
     TResult Function(String field0)? gameSessionError,
     TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (chatMessage != null) {
@@ -13918,7 +16004,6 @@ class _$ChatMessage implements ChatMessage {
   TResult map<TResult extends Object?>({
     required TResult Function(FromPlayer value) fromPlayer,
     required TResult Function(PlayerList value) playerList,
-    required TResult Function(ConnectionSuccess value) connectionSuccess,
     required TResult Function(ConnectionInitFailure value)
         connectionInitFailure,
     required TResult Function(RoomCreated value) roomCreated,
@@ -13951,6 +16036,15 @@ class _$ChatMessage implements ChatMessage {
     required TResult Function(OpponentDisconnected value) opponentDisconnected,
     required TResult Function(GameSessionError value) gameSessionError,
     required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
   }) {
     return chatMessage(this);
   }
@@ -13960,7 +16054,6 @@ class _$ChatMessage implements ChatMessage {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -13989,6 +16082,14 @@ class _$ChatMessage implements ChatMessage {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
   }) {
     return chatMessage?.call(this);
   }
@@ -13998,7 +16099,6 @@ class _$ChatMessage implements ChatMessage {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FromPlayer value)? fromPlayer,
     TResult Function(PlayerList value)? playerList,
-    TResult Function(ConnectionSuccess value)? connectionSuccess,
     TResult Function(ConnectionInitFailure value)? connectionInitFailure,
     TResult Function(RoomCreated value)? roomCreated,
     TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
@@ -14027,6 +16127,14 @@ class _$ChatMessage implements ChatMessage {
     TResult Function(OpponentDisconnected value)? opponentDisconnected,
     TResult Function(GameSessionError value)? gameSessionError,
     TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
     required TResult orElse(),
   }) {
     if (chatMessage != null) {
@@ -14045,6 +16153,2863 @@ abstract class ChatMessage implements Responses {
   @JsonKey(ignore: true)
   $ChatMessageCopyWith<ChatMessage> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CreateAccountFailureCopyWith<$Res> {
+  factory $CreateAccountFailureCopyWith(CreateAccountFailure value,
+          $Res Function(CreateAccountFailure) then) =
+      _$CreateAccountFailureCopyWithImpl<$Res>;
+  $Res call({String field0});
+}
+
+/// @nodoc
+class _$CreateAccountFailureCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements $CreateAccountFailureCopyWith<$Res> {
+  _$CreateAccountFailureCopyWithImpl(
+      CreateAccountFailure _value, $Res Function(CreateAccountFailure) _then)
+      : super(_value, (v) => _then(v as CreateAccountFailure));
+
+  @override
+  CreateAccountFailure get _value => super._value as CreateAccountFailure;
+
+  @override
+  $Res call({
+    Object? field0 = freezed,
+  }) {
+    return _then(CreateAccountFailure(
+      field0 == freezed
+          ? _value.field0
+          : field0 // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateAccountFailure implements CreateAccountFailure {
+  const _$CreateAccountFailure(this.field0);
+
+  @override
+  final String field0;
+
+  @override
+  String toString() {
+    return 'Responses.createAccountFailure(field0: $field0)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CreateAccountFailure &&
+            const DeepCollectionEquality().equals(other.field0, field0));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(field0));
+
+  @JsonKey(ignore: true)
+  @override
+  $CreateAccountFailureCopyWith<CreateAccountFailure> get copyWith =>
+      _$CreateAccountFailureCopyWithImpl<CreateAccountFailure>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, Uint8List msg) fromPlayer,
+    required TResult Function(List<String> field0) playerList,
+    required TResult Function(ConnectionInitError field0) connectionInitFailure,
+    required TResult Function(String field0) roomCreated,
+    required TResult Function(String token, RoomState roomState)
+        joinRoomSuccess,
+    required TResult Function() joinRoomFailureTokenNotFound,
+    required TResult Function() joinRoomFailureRoomFull,
+    required TResult Function(String field0) opponentJoinRoom,
+    required TResult Function() opponentQuitRoom,
+    required TResult Function() opponentReady,
+    required TResult Function() opponentUnready,
+    required TResult Function(Color field0) gameStarted,
+    required TResult Function(Field field0) fieldUpdate,
+    required TResult Function() undoRequest,
+    required TResult Function() undoTimeoutRejected,
+    required TResult Function() undoAutoRejected,
+    required TResult Function(Field field0) undo,
+    required TResult Function() undoRejectedByOpponent,
+    required TResult Function() gameEndBlackTimeout,
+    required TResult Function() gameEndWhiteTimeout,
+    required TResult Function() gameEndBlackWins,
+    required TResult Function() gameEndWhiteWins,
+    required TResult Function() gameEndDraw,
+    required TResult Function(String player1Name, int player1Score,
+            String player2Name, int player2Score)
+        roomScores,
+    required TResult Function() opponentQuitGameSession,
+    required TResult Function() opponentExitGame,
+    required TResult Function() opponentDisconnected,
+    required TResult Function(String field0) gameSessionError,
+    required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
+  }) {
+    return createAccountFailure(field0);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+  }) {
+    return createAccountFailure?.call(field0);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (createAccountFailure != null) {
+      return createAccountFailure(field0);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FromPlayer value) fromPlayer,
+    required TResult Function(PlayerList value) playerList,
+    required TResult Function(ConnectionInitFailure value)
+        connectionInitFailure,
+    required TResult Function(RoomCreated value) roomCreated,
+    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
+    required TResult Function(JoinRoomFailureTokenNotFound value)
+        joinRoomFailureTokenNotFound,
+    required TResult Function(JoinRoomFailureRoomFull value)
+        joinRoomFailureRoomFull,
+    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
+    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
+    required TResult Function(OpponentReady value) opponentReady,
+    required TResult Function(OpponentUnready value) opponentUnready,
+    required TResult Function(GameStarted value) gameStarted,
+    required TResult Function(FieldUpdate value) fieldUpdate,
+    required TResult Function(UndoRequest value) undoRequest,
+    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
+    required TResult Function(UndoAutoRejected value) undoAutoRejected,
+    required TResult Function(Undo value) undo,
+    required TResult Function(UndoRejectedByOpponent value)
+        undoRejectedByOpponent,
+    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
+    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
+    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
+    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
+    required TResult Function(GameEndDraw value) gameEndDraw,
+    required TResult Function(RoomScores value) roomScores,
+    required TResult Function(OpponentQuitGameSession value)
+        opponentQuitGameSession,
+    required TResult Function(OpponentExitGame value) opponentExitGame,
+    required TResult Function(OpponentDisconnected value) opponentDisconnected,
+    required TResult Function(GameSessionError value) gameSessionError,
+    required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
+  }) {
+    return createAccountFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+  }) {
+    return createAccountFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (createAccountFailure != null) {
+      return createAccountFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateAccountFailure implements Responses {
+  const factory CreateAccountFailure(String field0) = _$CreateAccountFailure;
+
+  String get field0;
+  @JsonKey(ignore: true)
+  $CreateAccountFailureCopyWith<CreateAccountFailure> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LoginFailureCopyWith<$Res> {
+  factory $LoginFailureCopyWith(
+          LoginFailure value, $Res Function(LoginFailure) then) =
+      _$LoginFailureCopyWithImpl<$Res>;
+  $Res call({String field0});
+}
+
+/// @nodoc
+class _$LoginFailureCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements $LoginFailureCopyWith<$Res> {
+  _$LoginFailureCopyWithImpl(
+      LoginFailure _value, $Res Function(LoginFailure) _then)
+      : super(_value, (v) => _then(v as LoginFailure));
+
+  @override
+  LoginFailure get _value => super._value as LoginFailure;
+
+  @override
+  $Res call({
+    Object? field0 = freezed,
+  }) {
+    return _then(LoginFailure(
+      field0 == freezed
+          ? _value.field0
+          : field0 // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoginFailure implements LoginFailure {
+  const _$LoginFailure(this.field0);
+
+  @override
+  final String field0;
+
+  @override
+  String toString() {
+    return 'Responses.loginFailure(field0: $field0)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is LoginFailure &&
+            const DeepCollectionEquality().equals(other.field0, field0));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(field0));
+
+  @JsonKey(ignore: true)
+  @override
+  $LoginFailureCopyWith<LoginFailure> get copyWith =>
+      _$LoginFailureCopyWithImpl<LoginFailure>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, Uint8List msg) fromPlayer,
+    required TResult Function(List<String> field0) playerList,
+    required TResult Function(ConnectionInitError field0) connectionInitFailure,
+    required TResult Function(String field0) roomCreated,
+    required TResult Function(String token, RoomState roomState)
+        joinRoomSuccess,
+    required TResult Function() joinRoomFailureTokenNotFound,
+    required TResult Function() joinRoomFailureRoomFull,
+    required TResult Function(String field0) opponentJoinRoom,
+    required TResult Function() opponentQuitRoom,
+    required TResult Function() opponentReady,
+    required TResult Function() opponentUnready,
+    required TResult Function(Color field0) gameStarted,
+    required TResult Function(Field field0) fieldUpdate,
+    required TResult Function() undoRequest,
+    required TResult Function() undoTimeoutRejected,
+    required TResult Function() undoAutoRejected,
+    required TResult Function(Field field0) undo,
+    required TResult Function() undoRejectedByOpponent,
+    required TResult Function() gameEndBlackTimeout,
+    required TResult Function() gameEndWhiteTimeout,
+    required TResult Function() gameEndBlackWins,
+    required TResult Function() gameEndWhiteWins,
+    required TResult Function() gameEndDraw,
+    required TResult Function(String player1Name, int player1Score,
+            String player2Name, int player2Score)
+        roomScores,
+    required TResult Function() opponentQuitGameSession,
+    required TResult Function() opponentExitGame,
+    required TResult Function() opponentDisconnected,
+    required TResult Function(String field0) gameSessionError,
+    required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
+  }) {
+    return loginFailure(field0);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+  }) {
+    return loginFailure?.call(field0);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (loginFailure != null) {
+      return loginFailure(field0);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FromPlayer value) fromPlayer,
+    required TResult Function(PlayerList value) playerList,
+    required TResult Function(ConnectionInitFailure value)
+        connectionInitFailure,
+    required TResult Function(RoomCreated value) roomCreated,
+    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
+    required TResult Function(JoinRoomFailureTokenNotFound value)
+        joinRoomFailureTokenNotFound,
+    required TResult Function(JoinRoomFailureRoomFull value)
+        joinRoomFailureRoomFull,
+    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
+    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
+    required TResult Function(OpponentReady value) opponentReady,
+    required TResult Function(OpponentUnready value) opponentUnready,
+    required TResult Function(GameStarted value) gameStarted,
+    required TResult Function(FieldUpdate value) fieldUpdate,
+    required TResult Function(UndoRequest value) undoRequest,
+    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
+    required TResult Function(UndoAutoRejected value) undoAutoRejected,
+    required TResult Function(Undo value) undo,
+    required TResult Function(UndoRejectedByOpponent value)
+        undoRejectedByOpponent,
+    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
+    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
+    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
+    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
+    required TResult Function(GameEndDraw value) gameEndDraw,
+    required TResult Function(RoomScores value) roomScores,
+    required TResult Function(OpponentQuitGameSession value)
+        opponentQuitGameSession,
+    required TResult Function(OpponentExitGame value) opponentExitGame,
+    required TResult Function(OpponentDisconnected value) opponentDisconnected,
+    required TResult Function(GameSessionError value) gameSessionError,
+    required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
+  }) {
+    return loginFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+  }) {
+    return loginFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (loginFailure != null) {
+      return loginFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoginFailure implements Responses {
+  const factory LoginFailure(String field0) = _$LoginFailure;
+
+  String get field0;
+  @JsonKey(ignore: true)
+  $LoginFailureCopyWith<LoginFailure> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UpdateAccountFailureCopyWith<$Res> {
+  factory $UpdateAccountFailureCopyWith(UpdateAccountFailure value,
+          $Res Function(UpdateAccountFailure) then) =
+      _$UpdateAccountFailureCopyWithImpl<$Res>;
+  $Res call({String field0});
+}
+
+/// @nodoc
+class _$UpdateAccountFailureCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements $UpdateAccountFailureCopyWith<$Res> {
+  _$UpdateAccountFailureCopyWithImpl(
+      UpdateAccountFailure _value, $Res Function(UpdateAccountFailure) _then)
+      : super(_value, (v) => _then(v as UpdateAccountFailure));
+
+  @override
+  UpdateAccountFailure get _value => super._value as UpdateAccountFailure;
+
+  @override
+  $Res call({
+    Object? field0 = freezed,
+  }) {
+    return _then(UpdateAccountFailure(
+      field0 == freezed
+          ? _value.field0
+          : field0 // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateAccountFailure implements UpdateAccountFailure {
+  const _$UpdateAccountFailure(this.field0);
+
+  @override
+  final String field0;
+
+  @override
+  String toString() {
+    return 'Responses.updateAccountFailure(field0: $field0)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is UpdateAccountFailure &&
+            const DeepCollectionEquality().equals(other.field0, field0));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(field0));
+
+  @JsonKey(ignore: true)
+  @override
+  $UpdateAccountFailureCopyWith<UpdateAccountFailure> get copyWith =>
+      _$UpdateAccountFailureCopyWithImpl<UpdateAccountFailure>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, Uint8List msg) fromPlayer,
+    required TResult Function(List<String> field0) playerList,
+    required TResult Function(ConnectionInitError field0) connectionInitFailure,
+    required TResult Function(String field0) roomCreated,
+    required TResult Function(String token, RoomState roomState)
+        joinRoomSuccess,
+    required TResult Function() joinRoomFailureTokenNotFound,
+    required TResult Function() joinRoomFailureRoomFull,
+    required TResult Function(String field0) opponentJoinRoom,
+    required TResult Function() opponentQuitRoom,
+    required TResult Function() opponentReady,
+    required TResult Function() opponentUnready,
+    required TResult Function(Color field0) gameStarted,
+    required TResult Function(Field field0) fieldUpdate,
+    required TResult Function() undoRequest,
+    required TResult Function() undoTimeoutRejected,
+    required TResult Function() undoAutoRejected,
+    required TResult Function(Field field0) undo,
+    required TResult Function() undoRejectedByOpponent,
+    required TResult Function() gameEndBlackTimeout,
+    required TResult Function() gameEndWhiteTimeout,
+    required TResult Function() gameEndBlackWins,
+    required TResult Function() gameEndWhiteWins,
+    required TResult Function() gameEndDraw,
+    required TResult Function(String player1Name, int player1Score,
+            String player2Name, int player2Score)
+        roomScores,
+    required TResult Function() opponentQuitGameSession,
+    required TResult Function() opponentExitGame,
+    required TResult Function() opponentDisconnected,
+    required TResult Function(String field0) gameSessionError,
+    required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
+  }) {
+    return updateAccountFailure(field0);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+  }) {
+    return updateAccountFailure?.call(field0);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateAccountFailure != null) {
+      return updateAccountFailure(field0);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FromPlayer value) fromPlayer,
+    required TResult Function(PlayerList value) playerList,
+    required TResult Function(ConnectionInitFailure value)
+        connectionInitFailure,
+    required TResult Function(RoomCreated value) roomCreated,
+    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
+    required TResult Function(JoinRoomFailureTokenNotFound value)
+        joinRoomFailureTokenNotFound,
+    required TResult Function(JoinRoomFailureRoomFull value)
+        joinRoomFailureRoomFull,
+    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
+    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
+    required TResult Function(OpponentReady value) opponentReady,
+    required TResult Function(OpponentUnready value) opponentUnready,
+    required TResult Function(GameStarted value) gameStarted,
+    required TResult Function(FieldUpdate value) fieldUpdate,
+    required TResult Function(UndoRequest value) undoRequest,
+    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
+    required TResult Function(UndoAutoRejected value) undoAutoRejected,
+    required TResult Function(Undo value) undo,
+    required TResult Function(UndoRejectedByOpponent value)
+        undoRejectedByOpponent,
+    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
+    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
+    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
+    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
+    required TResult Function(GameEndDraw value) gameEndDraw,
+    required TResult Function(RoomScores value) roomScores,
+    required TResult Function(OpponentQuitGameSession value)
+        opponentQuitGameSession,
+    required TResult Function(OpponentExitGame value) opponentExitGame,
+    required TResult Function(OpponentDisconnected value) opponentDisconnected,
+    required TResult Function(GameSessionError value) gameSessionError,
+    required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
+  }) {
+    return updateAccountFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+  }) {
+    return updateAccountFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateAccountFailure != null) {
+      return updateAccountFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateAccountFailure implements Responses {
+  const factory UpdateAccountFailure(String field0) = _$UpdateAccountFailure;
+
+  String get field0;
+  @JsonKey(ignore: true)
+  $UpdateAccountFailureCopyWith<UpdateAccountFailure> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CreateAccountSuccessCopyWith<$Res> {
+  factory $CreateAccountSuccessCopyWith(CreateAccountSuccess value,
+          $Res Function(CreateAccountSuccess) then) =
+      _$CreateAccountSuccessCopyWithImpl<$Res>;
+  $Res call({String name, String password});
+}
+
+/// @nodoc
+class _$CreateAccountSuccessCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements $CreateAccountSuccessCopyWith<$Res> {
+  _$CreateAccountSuccessCopyWithImpl(
+      CreateAccountSuccess _value, $Res Function(CreateAccountSuccess) _then)
+      : super(_value, (v) => _then(v as CreateAccountSuccess));
+
+  @override
+  CreateAccountSuccess get _value => super._value as CreateAccountSuccess;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? password = freezed,
+  }) {
+    return _then(CreateAccountSuccess(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateAccountSuccess implements CreateAccountSuccess {
+  const _$CreateAccountSuccess({required this.name, required this.password});
+
+  @override
+  final String name;
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'Responses.createAccountSuccess(name: $name, password: $password)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CreateAccountSuccess &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.password, password));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(password));
+
+  @JsonKey(ignore: true)
+  @override
+  $CreateAccountSuccessCopyWith<CreateAccountSuccess> get copyWith =>
+      _$CreateAccountSuccessCopyWithImpl<CreateAccountSuccess>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, Uint8List msg) fromPlayer,
+    required TResult Function(List<String> field0) playerList,
+    required TResult Function(ConnectionInitError field0) connectionInitFailure,
+    required TResult Function(String field0) roomCreated,
+    required TResult Function(String token, RoomState roomState)
+        joinRoomSuccess,
+    required TResult Function() joinRoomFailureTokenNotFound,
+    required TResult Function() joinRoomFailureRoomFull,
+    required TResult Function(String field0) opponentJoinRoom,
+    required TResult Function() opponentQuitRoom,
+    required TResult Function() opponentReady,
+    required TResult Function() opponentUnready,
+    required TResult Function(Color field0) gameStarted,
+    required TResult Function(Field field0) fieldUpdate,
+    required TResult Function() undoRequest,
+    required TResult Function() undoTimeoutRejected,
+    required TResult Function() undoAutoRejected,
+    required TResult Function(Field field0) undo,
+    required TResult Function() undoRejectedByOpponent,
+    required TResult Function() gameEndBlackTimeout,
+    required TResult Function() gameEndWhiteTimeout,
+    required TResult Function() gameEndBlackWins,
+    required TResult Function() gameEndWhiteWins,
+    required TResult Function() gameEndDraw,
+    required TResult Function(String player1Name, int player1Score,
+            String player2Name, int player2Score)
+        roomScores,
+    required TResult Function() opponentQuitGameSession,
+    required TResult Function() opponentExitGame,
+    required TResult Function() opponentDisconnected,
+    required TResult Function(String field0) gameSessionError,
+    required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
+  }) {
+    return createAccountSuccess(name, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+  }) {
+    return createAccountSuccess?.call(name, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (createAccountSuccess != null) {
+      return createAccountSuccess(name, password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FromPlayer value) fromPlayer,
+    required TResult Function(PlayerList value) playerList,
+    required TResult Function(ConnectionInitFailure value)
+        connectionInitFailure,
+    required TResult Function(RoomCreated value) roomCreated,
+    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
+    required TResult Function(JoinRoomFailureTokenNotFound value)
+        joinRoomFailureTokenNotFound,
+    required TResult Function(JoinRoomFailureRoomFull value)
+        joinRoomFailureRoomFull,
+    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
+    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
+    required TResult Function(OpponentReady value) opponentReady,
+    required TResult Function(OpponentUnready value) opponentUnready,
+    required TResult Function(GameStarted value) gameStarted,
+    required TResult Function(FieldUpdate value) fieldUpdate,
+    required TResult Function(UndoRequest value) undoRequest,
+    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
+    required TResult Function(UndoAutoRejected value) undoAutoRejected,
+    required TResult Function(Undo value) undo,
+    required TResult Function(UndoRejectedByOpponent value)
+        undoRejectedByOpponent,
+    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
+    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
+    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
+    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
+    required TResult Function(GameEndDraw value) gameEndDraw,
+    required TResult Function(RoomScores value) roomScores,
+    required TResult Function(OpponentQuitGameSession value)
+        opponentQuitGameSession,
+    required TResult Function(OpponentExitGame value) opponentExitGame,
+    required TResult Function(OpponentDisconnected value) opponentDisconnected,
+    required TResult Function(GameSessionError value) gameSessionError,
+    required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
+  }) {
+    return createAccountSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+  }) {
+    return createAccountSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (createAccountSuccess != null) {
+      return createAccountSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateAccountSuccess implements Responses {
+  const factory CreateAccountSuccess(
+      {required String name,
+      required String password}) = _$CreateAccountSuccess;
+
+  String get name;
+  String get password;
+  @JsonKey(ignore: true)
+  $CreateAccountSuccessCopyWith<CreateAccountSuccess> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UpdateAccountSuccessCopyWith<$Res> {
+  factory $UpdateAccountSuccessCopyWith(UpdateAccountSuccess value,
+          $Res Function(UpdateAccountSuccess) then) =
+      _$UpdateAccountSuccessCopyWithImpl<$Res>;
+  $Res call({String name, String password});
+}
+
+/// @nodoc
+class _$UpdateAccountSuccessCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements $UpdateAccountSuccessCopyWith<$Res> {
+  _$UpdateAccountSuccessCopyWithImpl(
+      UpdateAccountSuccess _value, $Res Function(UpdateAccountSuccess) _then)
+      : super(_value, (v) => _then(v as UpdateAccountSuccess));
+
+  @override
+  UpdateAccountSuccess get _value => super._value as UpdateAccountSuccess;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? password = freezed,
+  }) {
+    return _then(UpdateAccountSuccess(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateAccountSuccess implements UpdateAccountSuccess {
+  const _$UpdateAccountSuccess({required this.name, required this.password});
+
+  @override
+  final String name;
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'Responses.updateAccountSuccess(name: $name, password: $password)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is UpdateAccountSuccess &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.password, password));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(password));
+
+  @JsonKey(ignore: true)
+  @override
+  $UpdateAccountSuccessCopyWith<UpdateAccountSuccess> get copyWith =>
+      _$UpdateAccountSuccessCopyWithImpl<UpdateAccountSuccess>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, Uint8List msg) fromPlayer,
+    required TResult Function(List<String> field0) playerList,
+    required TResult Function(ConnectionInitError field0) connectionInitFailure,
+    required TResult Function(String field0) roomCreated,
+    required TResult Function(String token, RoomState roomState)
+        joinRoomSuccess,
+    required TResult Function() joinRoomFailureTokenNotFound,
+    required TResult Function() joinRoomFailureRoomFull,
+    required TResult Function(String field0) opponentJoinRoom,
+    required TResult Function() opponentQuitRoom,
+    required TResult Function() opponentReady,
+    required TResult Function() opponentUnready,
+    required TResult Function(Color field0) gameStarted,
+    required TResult Function(Field field0) fieldUpdate,
+    required TResult Function() undoRequest,
+    required TResult Function() undoTimeoutRejected,
+    required TResult Function() undoAutoRejected,
+    required TResult Function(Field field0) undo,
+    required TResult Function() undoRejectedByOpponent,
+    required TResult Function() gameEndBlackTimeout,
+    required TResult Function() gameEndWhiteTimeout,
+    required TResult Function() gameEndBlackWins,
+    required TResult Function() gameEndWhiteWins,
+    required TResult Function() gameEndDraw,
+    required TResult Function(String player1Name, int player1Score,
+            String player2Name, int player2Score)
+        roomScores,
+    required TResult Function() opponentQuitGameSession,
+    required TResult Function() opponentExitGame,
+    required TResult Function() opponentDisconnected,
+    required TResult Function(String field0) gameSessionError,
+    required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
+  }) {
+    return updateAccountSuccess(name, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+  }) {
+    return updateAccountSuccess?.call(name, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateAccountSuccess != null) {
+      return updateAccountSuccess(name, password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FromPlayer value) fromPlayer,
+    required TResult Function(PlayerList value) playerList,
+    required TResult Function(ConnectionInitFailure value)
+        connectionInitFailure,
+    required TResult Function(RoomCreated value) roomCreated,
+    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
+    required TResult Function(JoinRoomFailureTokenNotFound value)
+        joinRoomFailureTokenNotFound,
+    required TResult Function(JoinRoomFailureRoomFull value)
+        joinRoomFailureRoomFull,
+    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
+    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
+    required TResult Function(OpponentReady value) opponentReady,
+    required TResult Function(OpponentUnready value) opponentUnready,
+    required TResult Function(GameStarted value) gameStarted,
+    required TResult Function(FieldUpdate value) fieldUpdate,
+    required TResult Function(UndoRequest value) undoRequest,
+    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
+    required TResult Function(UndoAutoRejected value) undoAutoRejected,
+    required TResult Function(Undo value) undo,
+    required TResult Function(UndoRejectedByOpponent value)
+        undoRejectedByOpponent,
+    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
+    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
+    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
+    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
+    required TResult Function(GameEndDraw value) gameEndDraw,
+    required TResult Function(RoomScores value) roomScores,
+    required TResult Function(OpponentQuitGameSession value)
+        opponentQuitGameSession,
+    required TResult Function(OpponentExitGame value) opponentExitGame,
+    required TResult Function(OpponentDisconnected value) opponentDisconnected,
+    required TResult Function(GameSessionError value) gameSessionError,
+    required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
+  }) {
+    return updateAccountSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+  }) {
+    return updateAccountSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateAccountSuccess != null) {
+      return updateAccountSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateAccountSuccess implements Responses {
+  const factory UpdateAccountSuccess(
+      {required String name,
+      required String password}) = _$UpdateAccountSuccess;
+
+  String get name;
+  String get password;
+  @JsonKey(ignore: true)
+  $UpdateAccountSuccessCopyWith<UpdateAccountSuccess> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LoginSuccessCopyWith<$Res> {
+  factory $LoginSuccessCopyWith(
+          LoginSuccess value, $Res Function(LoginSuccess) then) =
+      _$LoginSuccessCopyWithImpl<$Res>;
+  $Res call({String field0});
+}
+
+/// @nodoc
+class _$LoginSuccessCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements $LoginSuccessCopyWith<$Res> {
+  _$LoginSuccessCopyWithImpl(
+      LoginSuccess _value, $Res Function(LoginSuccess) _then)
+      : super(_value, (v) => _then(v as LoginSuccess));
+
+  @override
+  LoginSuccess get _value => super._value as LoginSuccess;
+
+  @override
+  $Res call({
+    Object? field0 = freezed,
+  }) {
+    return _then(LoginSuccess(
+      field0 == freezed
+          ? _value.field0
+          : field0 // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoginSuccess implements LoginSuccess {
+  const _$LoginSuccess(this.field0);
+
+  @override
+  final String field0;
+
+  @override
+  String toString() {
+    return 'Responses.loginSuccess(field0: $field0)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is LoginSuccess &&
+            const DeepCollectionEquality().equals(other.field0, field0));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(field0));
+
+  @JsonKey(ignore: true)
+  @override
+  $LoginSuccessCopyWith<LoginSuccess> get copyWith =>
+      _$LoginSuccessCopyWithImpl<LoginSuccess>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, Uint8List msg) fromPlayer,
+    required TResult Function(List<String> field0) playerList,
+    required TResult Function(ConnectionInitError field0) connectionInitFailure,
+    required TResult Function(String field0) roomCreated,
+    required TResult Function(String token, RoomState roomState)
+        joinRoomSuccess,
+    required TResult Function() joinRoomFailureTokenNotFound,
+    required TResult Function() joinRoomFailureRoomFull,
+    required TResult Function(String field0) opponentJoinRoom,
+    required TResult Function() opponentQuitRoom,
+    required TResult Function() opponentReady,
+    required TResult Function() opponentUnready,
+    required TResult Function(Color field0) gameStarted,
+    required TResult Function(Field field0) fieldUpdate,
+    required TResult Function() undoRequest,
+    required TResult Function() undoTimeoutRejected,
+    required TResult Function() undoAutoRejected,
+    required TResult Function(Field field0) undo,
+    required TResult Function() undoRejectedByOpponent,
+    required TResult Function() gameEndBlackTimeout,
+    required TResult Function() gameEndWhiteTimeout,
+    required TResult Function() gameEndBlackWins,
+    required TResult Function() gameEndWhiteWins,
+    required TResult Function() gameEndDraw,
+    required TResult Function(String player1Name, int player1Score,
+            String player2Name, int player2Score)
+        roomScores,
+    required TResult Function() opponentQuitGameSession,
+    required TResult Function() opponentExitGame,
+    required TResult Function() opponentDisconnected,
+    required TResult Function(String field0) gameSessionError,
+    required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
+  }) {
+    return loginSuccess(field0);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+  }) {
+    return loginSuccess?.call(field0);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (loginSuccess != null) {
+      return loginSuccess(field0);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FromPlayer value) fromPlayer,
+    required TResult Function(PlayerList value) playerList,
+    required TResult Function(ConnectionInitFailure value)
+        connectionInitFailure,
+    required TResult Function(RoomCreated value) roomCreated,
+    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
+    required TResult Function(JoinRoomFailureTokenNotFound value)
+        joinRoomFailureTokenNotFound,
+    required TResult Function(JoinRoomFailureRoomFull value)
+        joinRoomFailureRoomFull,
+    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
+    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
+    required TResult Function(OpponentReady value) opponentReady,
+    required TResult Function(OpponentUnready value) opponentUnready,
+    required TResult Function(GameStarted value) gameStarted,
+    required TResult Function(FieldUpdate value) fieldUpdate,
+    required TResult Function(UndoRequest value) undoRequest,
+    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
+    required TResult Function(UndoAutoRejected value) undoAutoRejected,
+    required TResult Function(Undo value) undo,
+    required TResult Function(UndoRejectedByOpponent value)
+        undoRejectedByOpponent,
+    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
+    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
+    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
+    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
+    required TResult Function(GameEndDraw value) gameEndDraw,
+    required TResult Function(RoomScores value) roomScores,
+    required TResult Function(OpponentQuitGameSession value)
+        opponentQuitGameSession,
+    required TResult Function(OpponentExitGame value) opponentExitGame,
+    required TResult Function(OpponentDisconnected value) opponentDisconnected,
+    required TResult Function(GameSessionError value) gameSessionError,
+    required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
+  }) {
+    return loginSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+  }) {
+    return loginSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (loginSuccess != null) {
+      return loginSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoginSuccess implements Responses {
+  const factory LoginSuccess(String field0) = _$LoginSuccess;
+
+  String get field0;
+  @JsonKey(ignore: true)
+  $LoginSuccessCopyWith<LoginSuccess> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $QuitRoomSuccessCopyWith<$Res> {
+  factory $QuitRoomSuccessCopyWith(
+          QuitRoomSuccess value, $Res Function(QuitRoomSuccess) then) =
+      _$QuitRoomSuccessCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$QuitRoomSuccessCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements $QuitRoomSuccessCopyWith<$Res> {
+  _$QuitRoomSuccessCopyWithImpl(
+      QuitRoomSuccess _value, $Res Function(QuitRoomSuccess) _then)
+      : super(_value, (v) => _then(v as QuitRoomSuccess));
+
+  @override
+  QuitRoomSuccess get _value => super._value as QuitRoomSuccess;
+}
+
+/// @nodoc
+
+class _$QuitRoomSuccess implements QuitRoomSuccess {
+  const _$QuitRoomSuccess();
+
+  @override
+  String toString() {
+    return 'Responses.quitRoomSuccess()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is QuitRoomSuccess);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, Uint8List msg) fromPlayer,
+    required TResult Function(List<String> field0) playerList,
+    required TResult Function(ConnectionInitError field0) connectionInitFailure,
+    required TResult Function(String field0) roomCreated,
+    required TResult Function(String token, RoomState roomState)
+        joinRoomSuccess,
+    required TResult Function() joinRoomFailureTokenNotFound,
+    required TResult Function() joinRoomFailureRoomFull,
+    required TResult Function(String field0) opponentJoinRoom,
+    required TResult Function() opponentQuitRoom,
+    required TResult Function() opponentReady,
+    required TResult Function() opponentUnready,
+    required TResult Function(Color field0) gameStarted,
+    required TResult Function(Field field0) fieldUpdate,
+    required TResult Function() undoRequest,
+    required TResult Function() undoTimeoutRejected,
+    required TResult Function() undoAutoRejected,
+    required TResult Function(Field field0) undo,
+    required TResult Function() undoRejectedByOpponent,
+    required TResult Function() gameEndBlackTimeout,
+    required TResult Function() gameEndWhiteTimeout,
+    required TResult Function() gameEndBlackWins,
+    required TResult Function() gameEndWhiteWins,
+    required TResult Function() gameEndDraw,
+    required TResult Function(String player1Name, int player1Score,
+            String player2Name, int player2Score)
+        roomScores,
+    required TResult Function() opponentQuitGameSession,
+    required TResult Function() opponentExitGame,
+    required TResult Function() opponentDisconnected,
+    required TResult Function(String field0) gameSessionError,
+    required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
+  }) {
+    return quitRoomSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+  }) {
+    return quitRoomSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (quitRoomSuccess != null) {
+      return quitRoomSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FromPlayer value) fromPlayer,
+    required TResult Function(PlayerList value) playerList,
+    required TResult Function(ConnectionInitFailure value)
+        connectionInitFailure,
+    required TResult Function(RoomCreated value) roomCreated,
+    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
+    required TResult Function(JoinRoomFailureTokenNotFound value)
+        joinRoomFailureTokenNotFound,
+    required TResult Function(JoinRoomFailureRoomFull value)
+        joinRoomFailureRoomFull,
+    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
+    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
+    required TResult Function(OpponentReady value) opponentReady,
+    required TResult Function(OpponentUnready value) opponentUnready,
+    required TResult Function(GameStarted value) gameStarted,
+    required TResult Function(FieldUpdate value) fieldUpdate,
+    required TResult Function(UndoRequest value) undoRequest,
+    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
+    required TResult Function(UndoAutoRejected value) undoAutoRejected,
+    required TResult Function(Undo value) undo,
+    required TResult Function(UndoRejectedByOpponent value)
+        undoRejectedByOpponent,
+    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
+    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
+    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
+    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
+    required TResult Function(GameEndDraw value) gameEndDraw,
+    required TResult Function(RoomScores value) roomScores,
+    required TResult Function(OpponentQuitGameSession value)
+        opponentQuitGameSession,
+    required TResult Function(OpponentExitGame value) opponentExitGame,
+    required TResult Function(OpponentDisconnected value) opponentDisconnected,
+    required TResult Function(GameSessionError value) gameSessionError,
+    required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
+  }) {
+    return quitRoomSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+  }) {
+    return quitRoomSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (quitRoomSuccess != null) {
+      return quitRoomSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class QuitRoomSuccess implements Responses {
+  const factory QuitRoomSuccess() = _$QuitRoomSuccess;
+}
+
+/// @nodoc
+abstract class $QuitGameSessionSuccessCopyWith<$Res> {
+  factory $QuitGameSessionSuccessCopyWith(QuitGameSessionSuccess value,
+          $Res Function(QuitGameSessionSuccess) then) =
+      _$QuitGameSessionSuccessCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$QuitGameSessionSuccessCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements $QuitGameSessionSuccessCopyWith<$Res> {
+  _$QuitGameSessionSuccessCopyWithImpl(QuitGameSessionSuccess _value,
+      $Res Function(QuitGameSessionSuccess) _then)
+      : super(_value, (v) => _then(v as QuitGameSessionSuccess));
+
+  @override
+  QuitGameSessionSuccess get _value => super._value as QuitGameSessionSuccess;
+}
+
+/// @nodoc
+
+class _$QuitGameSessionSuccess implements QuitGameSessionSuccess {
+  const _$QuitGameSessionSuccess();
+
+  @override
+  String toString() {
+    return 'Responses.quitGameSessionSuccess()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is QuitGameSessionSuccess);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String name, Uint8List msg) fromPlayer,
+    required TResult Function(List<String> field0) playerList,
+    required TResult Function(ConnectionInitError field0) connectionInitFailure,
+    required TResult Function(String field0) roomCreated,
+    required TResult Function(String token, RoomState roomState)
+        joinRoomSuccess,
+    required TResult Function() joinRoomFailureTokenNotFound,
+    required TResult Function() joinRoomFailureRoomFull,
+    required TResult Function(String field0) opponentJoinRoom,
+    required TResult Function() opponentQuitRoom,
+    required TResult Function() opponentReady,
+    required TResult Function() opponentUnready,
+    required TResult Function(Color field0) gameStarted,
+    required TResult Function(Field field0) fieldUpdate,
+    required TResult Function() undoRequest,
+    required TResult Function() undoTimeoutRejected,
+    required TResult Function() undoAutoRejected,
+    required TResult Function(Field field0) undo,
+    required TResult Function() undoRejectedByOpponent,
+    required TResult Function() gameEndBlackTimeout,
+    required TResult Function() gameEndWhiteTimeout,
+    required TResult Function() gameEndBlackWins,
+    required TResult Function() gameEndWhiteWins,
+    required TResult Function() gameEndDraw,
+    required TResult Function(String player1Name, int player1Score,
+            String player2Name, int player2Score)
+        roomScores,
+    required TResult Function() opponentQuitGameSession,
+    required TResult Function() opponentExitGame,
+    required TResult Function() opponentDisconnected,
+    required TResult Function(String field0) gameSessionError,
+    required TResult Function(String name, String msg) chatMessage,
+    required TResult Function(String field0) createAccountFailure,
+    required TResult Function(String field0) loginFailure,
+    required TResult Function(String field0) updateAccountFailure,
+    required TResult Function(String name, String password)
+        createAccountSuccess,
+    required TResult Function(String name, String password)
+        updateAccountSuccess,
+    required TResult Function(String field0) loginSuccess,
+    required TResult Function() quitRoomSuccess,
+    required TResult Function() quitGameSessionSuccess,
+  }) {
+    return quitGameSessionSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+  }) {
+    return quitGameSessionSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String name, Uint8List msg)? fromPlayer,
+    TResult Function(List<String> field0)? playerList,
+    TResult Function(ConnectionInitError field0)? connectionInitFailure,
+    TResult Function(String field0)? roomCreated,
+    TResult Function(String token, RoomState roomState)? joinRoomSuccess,
+    TResult Function()? joinRoomFailureTokenNotFound,
+    TResult Function()? joinRoomFailureRoomFull,
+    TResult Function(String field0)? opponentJoinRoom,
+    TResult Function()? opponentQuitRoom,
+    TResult Function()? opponentReady,
+    TResult Function()? opponentUnready,
+    TResult Function(Color field0)? gameStarted,
+    TResult Function(Field field0)? fieldUpdate,
+    TResult Function()? undoRequest,
+    TResult Function()? undoTimeoutRejected,
+    TResult Function()? undoAutoRejected,
+    TResult Function(Field field0)? undo,
+    TResult Function()? undoRejectedByOpponent,
+    TResult Function()? gameEndBlackTimeout,
+    TResult Function()? gameEndWhiteTimeout,
+    TResult Function()? gameEndBlackWins,
+    TResult Function()? gameEndWhiteWins,
+    TResult Function()? gameEndDraw,
+    TResult Function(String player1Name, int player1Score, String player2Name,
+            int player2Score)?
+        roomScores,
+    TResult Function()? opponentQuitGameSession,
+    TResult Function()? opponentExitGame,
+    TResult Function()? opponentDisconnected,
+    TResult Function(String field0)? gameSessionError,
+    TResult Function(String name, String msg)? chatMessage,
+    TResult Function(String field0)? createAccountFailure,
+    TResult Function(String field0)? loginFailure,
+    TResult Function(String field0)? updateAccountFailure,
+    TResult Function(String name, String password)? createAccountSuccess,
+    TResult Function(String name, String password)? updateAccountSuccess,
+    TResult Function(String field0)? loginSuccess,
+    TResult Function()? quitRoomSuccess,
+    TResult Function()? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (quitGameSessionSuccess != null) {
+      return quitGameSessionSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FromPlayer value) fromPlayer,
+    required TResult Function(PlayerList value) playerList,
+    required TResult Function(ConnectionInitFailure value)
+        connectionInitFailure,
+    required TResult Function(RoomCreated value) roomCreated,
+    required TResult Function(JoinRoomSuccess value) joinRoomSuccess,
+    required TResult Function(JoinRoomFailureTokenNotFound value)
+        joinRoomFailureTokenNotFound,
+    required TResult Function(JoinRoomFailureRoomFull value)
+        joinRoomFailureRoomFull,
+    required TResult Function(OpponentJoinRoom value) opponentJoinRoom,
+    required TResult Function(OpponentQuitRoom value) opponentQuitRoom,
+    required TResult Function(OpponentReady value) opponentReady,
+    required TResult Function(OpponentUnready value) opponentUnready,
+    required TResult Function(GameStarted value) gameStarted,
+    required TResult Function(FieldUpdate value) fieldUpdate,
+    required TResult Function(UndoRequest value) undoRequest,
+    required TResult Function(UndoTimeoutRejected value) undoTimeoutRejected,
+    required TResult Function(UndoAutoRejected value) undoAutoRejected,
+    required TResult Function(Undo value) undo,
+    required TResult Function(UndoRejectedByOpponent value)
+        undoRejectedByOpponent,
+    required TResult Function(GameEndBlackTimeout value) gameEndBlackTimeout,
+    required TResult Function(GameEndWhiteTimeout value) gameEndWhiteTimeout,
+    required TResult Function(GameEndBlackWins value) gameEndBlackWins,
+    required TResult Function(GameEndWhiteWins value) gameEndWhiteWins,
+    required TResult Function(GameEndDraw value) gameEndDraw,
+    required TResult Function(RoomScores value) roomScores,
+    required TResult Function(OpponentQuitGameSession value)
+        opponentQuitGameSession,
+    required TResult Function(OpponentExitGame value) opponentExitGame,
+    required TResult Function(OpponentDisconnected value) opponentDisconnected,
+    required TResult Function(GameSessionError value) gameSessionError,
+    required TResult Function(ChatMessage value) chatMessage,
+    required TResult Function(CreateAccountFailure value) createAccountFailure,
+    required TResult Function(LoginFailure value) loginFailure,
+    required TResult Function(UpdateAccountFailure value) updateAccountFailure,
+    required TResult Function(CreateAccountSuccess value) createAccountSuccess,
+    required TResult Function(UpdateAccountSuccess value) updateAccountSuccess,
+    required TResult Function(LoginSuccess value) loginSuccess,
+    required TResult Function(QuitRoomSuccess value) quitRoomSuccess,
+    required TResult Function(QuitGameSessionSuccess value)
+        quitGameSessionSuccess,
+  }) {
+    return quitGameSessionSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+  }) {
+    return quitGameSessionSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FromPlayer value)? fromPlayer,
+    TResult Function(PlayerList value)? playerList,
+    TResult Function(ConnectionInitFailure value)? connectionInitFailure,
+    TResult Function(RoomCreated value)? roomCreated,
+    TResult Function(JoinRoomSuccess value)? joinRoomSuccess,
+    TResult Function(JoinRoomFailureTokenNotFound value)?
+        joinRoomFailureTokenNotFound,
+    TResult Function(JoinRoomFailureRoomFull value)? joinRoomFailureRoomFull,
+    TResult Function(OpponentJoinRoom value)? opponentJoinRoom,
+    TResult Function(OpponentQuitRoom value)? opponentQuitRoom,
+    TResult Function(OpponentReady value)? opponentReady,
+    TResult Function(OpponentUnready value)? opponentUnready,
+    TResult Function(GameStarted value)? gameStarted,
+    TResult Function(FieldUpdate value)? fieldUpdate,
+    TResult Function(UndoRequest value)? undoRequest,
+    TResult Function(UndoTimeoutRejected value)? undoTimeoutRejected,
+    TResult Function(UndoAutoRejected value)? undoAutoRejected,
+    TResult Function(Undo value)? undo,
+    TResult Function(UndoRejectedByOpponent value)? undoRejectedByOpponent,
+    TResult Function(GameEndBlackTimeout value)? gameEndBlackTimeout,
+    TResult Function(GameEndWhiteTimeout value)? gameEndWhiteTimeout,
+    TResult Function(GameEndBlackWins value)? gameEndBlackWins,
+    TResult Function(GameEndWhiteWins value)? gameEndWhiteWins,
+    TResult Function(GameEndDraw value)? gameEndDraw,
+    TResult Function(RoomScores value)? roomScores,
+    TResult Function(OpponentQuitGameSession value)? opponentQuitGameSession,
+    TResult Function(OpponentExitGame value)? opponentExitGame,
+    TResult Function(OpponentDisconnected value)? opponentDisconnected,
+    TResult Function(GameSessionError value)? gameSessionError,
+    TResult Function(ChatMessage value)? chatMessage,
+    TResult Function(CreateAccountFailure value)? createAccountFailure,
+    TResult Function(LoginFailure value)? loginFailure,
+    TResult Function(UpdateAccountFailure value)? updateAccountFailure,
+    TResult Function(CreateAccountSuccess value)? createAccountSuccess,
+    TResult Function(UpdateAccountSuccess value)? updateAccountSuccess,
+    TResult Function(LoginSuccess value)? loginSuccess,
+    TResult Function(QuitRoomSuccess value)? quitRoomSuccess,
+    TResult Function(QuitGameSessionSuccess value)? quitGameSessionSuccess,
+    required TResult orElse(),
+  }) {
+    if (quitGameSessionSuccess != null) {
+      return quitGameSessionSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class QuitGameSessionSuccess implements Responses {
+  const factory QuitGameSessionSuccess() = _$QuitGameSessionSuccess;
 }
 
 /// @nodoc

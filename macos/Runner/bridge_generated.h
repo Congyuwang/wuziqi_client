@@ -7,6 +7,22 @@ typedef struct wire_uint_8_list {
   int32_t len;
 } wire_uint_8_list;
 
+typedef struct Messages_Login {
+  struct wire_uint_8_list *name;
+  struct wire_uint_8_list *password;
+} Messages_Login;
+
+typedef struct Messages_UpdateAccount {
+  struct wire_uint_8_list *name;
+  struct wire_uint_8_list *old_password;
+  struct wire_uint_8_list *new_password;
+} Messages_UpdateAccount;
+
+typedef struct Messages_CreateAccount {
+  struct wire_uint_8_list *name;
+  struct wire_uint_8_list *password;
+} Messages_CreateAccount;
+
 typedef struct Messages_ToPlayer {
   struct wire_uint_8_list *name;
   struct wire_uint_8_list *msg;
@@ -16,10 +32,6 @@ typedef struct Messages_SearchOnlinePlayers {
   struct wire_uint_8_list *name;
   uint8_t limit;
 } Messages_SearchOnlinePlayers;
-
-typedef struct Messages_UserName {
-  struct wire_uint_8_list *field0;
-} Messages_UserName;
 
 typedef struct wire_SessionConfig {
   uint64_t undo_request_timeout;
@@ -85,9 +97,11 @@ typedef struct Messages_ClientError {
 } Messages_ClientError;
 
 typedef union MessagesKind {
+  struct Messages_Login *Login;
+  struct Messages_UpdateAccount *UpdateAccount;
+  struct Messages_CreateAccount *CreateAccount;
   struct Messages_ToPlayer *ToPlayer;
   struct Messages_SearchOnlinePlayers *SearchOnlinePlayers;
-  struct Messages_UserName *UserName;
   struct Messages_CreateRoom *CreateRoom;
   struct Messages_JoinRoom *JoinRoom;
   struct Messages_QuitRoom *QuitRoom;
@@ -118,13 +132,7 @@ typedef int64_t DartPort;
 
 typedef bool (*DartPostCObjectFnType)(DartPort port_id, void *message);
 
-void wire_connect_to_server(int64_t port_,
-                            uint8_t a,
-                            uint8_t b,
-                            uint8_t c,
-                            uint8_t d,
-                            uint16_t server_port,
-                            struct wire_uint_8_list *user_name);
+void wire_connect_to_server(int64_t port_, struct wire_uint_8_list *domain_port);
 
 void wire_send(int64_t port_, struct wire_Messages *msg);
 
@@ -153,11 +161,15 @@ struct wire_SessionConfig *new_box_autoadd_session_config(void);
 
 struct wire_uint_8_list *new_uint_8_list(int32_t len);
 
+union MessagesKind *inflate_Messages_Login(void);
+
+union MessagesKind *inflate_Messages_UpdateAccount(void);
+
+union MessagesKind *inflate_Messages_CreateAccount(void);
+
 union MessagesKind *inflate_Messages_ToPlayer(void);
 
 union MessagesKind *inflate_Messages_SearchOnlinePlayers(void);
-
-union MessagesKind *inflate_Messages_UserName(void);
 
 union MessagesKind *inflate_Messages_CreateRoom(void);
 
@@ -187,9 +199,11 @@ static int64_t dummy_method_to_enforce_bundling(void) {
     dummy_var ^= ((int64_t) (void*) new_box_autoadd_room_token);
     dummy_var ^= ((int64_t) (void*) new_box_autoadd_session_config);
     dummy_var ^= ((int64_t) (void*) new_uint_8_list);
+    dummy_var ^= ((int64_t) (void*) inflate_Messages_Login);
+    dummy_var ^= ((int64_t) (void*) inflate_Messages_UpdateAccount);
+    dummy_var ^= ((int64_t) (void*) inflate_Messages_CreateAccount);
     dummy_var ^= ((int64_t) (void*) inflate_Messages_ToPlayer);
     dummy_var ^= ((int64_t) (void*) inflate_Messages_SearchOnlinePlayers);
-    dummy_var ^= ((int64_t) (void*) inflate_Messages_UserName);
     dummy_var ^= ((int64_t) (void*) inflate_Messages_CreateRoom);
     dummy_var ^= ((int64_t) (void*) inflate_Messages_JoinRoom);
     dummy_var ^= ((int64_t) (void*) inflate_Messages_Play);

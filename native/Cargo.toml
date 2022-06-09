@@ -11,5 +11,8 @@ crate-type = ["cdylib", "staticlib"]
 [dependencies]
 anyhow = "1"
 flutter_rust_bridge = "1"
+webpki-roots = "0.22.3"
+futures-rustls = "0.22.1"
+rustls = "0.20.6"
 wuziqi = { path = "../wuziqi" }
 async-std = "1.10.0"

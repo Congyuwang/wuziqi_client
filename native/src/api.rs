@@ -1,13 +1,16 @@
 pub use crate::structs::*;
 use anyhow::{Error, Result};
 use async_std::channel::Sender;
-use async_std::net::{Ipv4Addr, SocketAddrV4, TcpStream};
+use async_std::net::TcpStream;
 use async_std::stream::StreamExt;
 use async_std::sync::Mutex;
 use async_std::task;
 use async_std::task::block_on;
 use flutter_rust_bridge::StreamSink;
-use std::io::{Cursor, Read};
+use futures_rustls::{TlsConnector, TlsStream};
+use rustls::{ClientConfig, OwnedTrustAnchor, RootCertStore, ServerName};
+use std::io::{Cursor, ErrorKind, Read};
+use std::sync::Arc;
 use std::time::Duration;
 use wuziqi;
 use wuziqi::{Conn, Received};
@@ -16,24 +19,37 @@ const CLIENT_PING_INTERVAL: Option<Duration> = Some(Duration::from_secs(5));
 const MAX_DATA_SIZE: u32 = 1024;
 static CONN_SENDER: Mutex<Option<Sender<Messages>>> = Mutex::new(None);
 
-pub fn connect_to_server(
-    sink: StreamSink<Responses>,
-    a: u8,
-    b: u8,
-    c: u8,
-    d: u8,
-    server_port: u16,
-    user_name: String,
-) -> Result<()> {
-    let tcp = block_on(TcpStream::connect(SocketAddrV4::new(
-        Ipv4Addr::new(a, b, c, d),
-        server_port,
-    )))?;
-    let mut conn: Conn<Messages, Responses> = Conn::init(tcp, CLIENT_PING_INTERVAL, MAX_DATA_SIZE);
-    let _ = block_on(conn.sender().send(Messages::UserName(user_name)));
-    let sender = conn.sender().clone();
+/// domain_port should include port
+pub fn connect_to_server(sink: StreamSink<Responses>, domain_port: String) -> Result<()> {
+    let tls = block_on(async move {
+        let tcp = TcpStream::connect(&domain_port).await?;
+        let domain = domain_port
+            .splitn(2, ":")
+            .next()
+            .ok_or(std::io::Error::from(ErrorKind::InvalidInput))?;
+        let server_name =
+            ServerName::try_from(domain).map_err(|_| std::io::Error::from(ErrorKind::InvalidInput))?;
+        let mut root_certs = RootCertStore::empty();
+        root_certs.add_server_trust_anchors(webpki_roots::TLS_SERVER_ROOTS.0.into_iter().map(
+            |c| {
+                OwnedTrustAnchor::from_subject_spki_name_constraints(
+                    c.subject,
+                    c.spki,
+                    c.name_constraints,
+                )
+            },
+        ));
+        let config = ClientConfig::builder()
+            .with_safe_defaults()
+            .with_root_certificates(root_certs)
+            .with_no_client_auth();
+        let connector = TlsConnector::from(Arc::new(config));
+        connector.connect(server_name, tcp).await
+    });
+    let tls = TlsStream::Client(tls?);
+    let mut conn: Conn<Messages, Responses> = Conn::init(tls, CLIENT_PING_INTERVAL, MAX_DATA_SIZE);
     let mut conn_sender_lock = block_on(CONN_SENDER.lock());
-    conn_sender_lock.replace(sender);
+    conn_sender_lock.replace(conn.sender().clone());
     task::spawn(async move {
         while let Some(rsp) = conn.next().await {
             if let Received::Response(rsp) = rsp {

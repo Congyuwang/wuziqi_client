@@ -15,14 +15,8 @@ import 'dart:ffi' as ffi;
 part 'bridge_generated.freezed.dart';
 
 abstract class Native {
-  Stream<Responses> connectToServer(
-      {required int a,
-      required int b,
-      required int c,
-      required int d,
-      required int serverPort,
-      required String userName,
-      dynamic hint});
+  /// domain_port should include port
+  Stream<Responses> connectToServer({required String domainPort, dynamic hint});
 
   /// use this function to send messages to server
   /// this function does nothing if the connection is not yet established
@@ -82,6 +76,7 @@ class ConnectionInitError with _$ConnectionInitError {
   const factory ConnectionInitError.userNameTooLong() = UserNameTooLong;
   const factory ConnectionInitError.userNameExists() = UserNameExists;
   const factory ConnectionInitError.invalidUserName() = InvalidUserName;
+  const factory ConnectionInitError.tlsError() = TlsError;
   const factory ConnectionInitError.networkError(
     ConnectionError field0,
   ) = NetworkError;
@@ -109,6 +104,25 @@ class FieldRow {
 
 @freezed
 class Messages with _$Messages {
+  /// login to the server
+  const factory Messages.login({
+    required String name,
+    required String password,
+  }) = Login;
+
+  /// update account
+  const factory Messages.updateAccount({
+    required String name,
+    required String oldPassword,
+    required String newPassword,
+  }) = UpdateAccount;
+
+  /// create a new account
+  const factory Messages.createAccount({
+    required String name,
+    required String password,
+  }) = CreateAccount;
+
   /// send bytes to player
   const factory Messages.toPlayer({
     required String name,
@@ -123,11 +137,6 @@ class Messages with _$Messages {
     String? name,
     required int limit,
   }) = SearchOnlinePlayers;
-
-  /// send user name
-  const factory Messages.userName(
-    String field0,
-  ) = UserName;
 
   /// create a new room
   const factory Messages.createRoom(
@@ -191,9 +200,6 @@ class Responses with _$Responses {
   const factory Responses.playerList(
     List<String> field0,
   ) = PlayerList;
-
-  /// Connection success
-  const factory Responses.connectionSuccess() = ConnectionSuccess;
 
   /// Connection Init Error
   const factory Responses.connectionInitFailure(
@@ -304,6 +310,44 @@ class Responses with _$Responses {
     required String name,
     required String msg,
   }) = ChatMessage;
+
+  /// create account failed (reason)
+  const factory Responses.createAccountFailure(
+    String field0,
+  ) = CreateAccountFailure;
+
+  /// login failed (reason)
+  const factory Responses.loginFailure(
+    String field0,
+  ) = LoginFailure;
+
+  /// update account failed (reason)
+  const factory Responses.updateAccountFailure(
+    String field0,
+  ) = UpdateAccountFailure;
+
+  /// create account success
+  const factory Responses.createAccountSuccess({
+    required String name,
+    required String password,
+  }) = CreateAccountSuccess;
+
+  /// update account success
+  const factory Responses.updateAccountSuccess({
+    required String name,
+    required String password,
+  }) = UpdateAccountSuccess;
+
+  /// login success (name)
+  const factory Responses.loginSuccess(
+    String field0,
+  ) = LoginSuccess;
+
+  /// I quit room
+  const factory Responses.quitRoomSuccess() = QuitRoomSuccess;
+
+  /// I quit game session
+  const factory Responses.quitGameSessionSuccess() = QuitGameSessionSuccess;
 }
 
 @freezed
@@ -355,28 +399,16 @@ class NativeImpl extends FlutterRustBridgeBase<NativeWire> implements Native {
   NativeImpl.raw(NativeWire inner) : super(inner);
 
   Stream<Responses> connectToServer(
-          {required int a,
-          required int b,
-          required int c,
-          required int d,
-          required int serverPort,
-          required String userName,
-          dynamic hint}) =>
+          {required String domainPort, dynamic hint}) =>
       executeStream(FlutterRustBridgeTask(
-        callFfi: (port_) => inner.wire_connect_to_server(
-            port_,
-            _api2wire_u8(a),
-            _api2wire_u8(b),
-            _api2wire_u8(c),
-            _api2wire_u8(d),
-            _api2wire_u16(serverPort),
-            _api2wire_String(userName)),
+        callFfi: (port_) =>
+            inner.wire_connect_to_server(port_, _api2wire_String(domainPort)),
         parseSuccessData: _wire2api_responses,
         constMeta: const FlutterRustBridgeTaskConstMeta(
           debugName: "connect_to_server",
-          argNames: ["a", "b", "c", "d", "serverPort", "userName"],
+          argNames: ["domainPort"],
         ),
-        argValues: [a, b, c, d, serverPort, userName],
+        argValues: [domainPort],
         hint: hint,
       ));
 
@@ -511,10 +543,6 @@ class NativeImpl extends FlutterRustBridgeBase<NativeWire> implements Native {
     return raw == null ? ffi.nullptr : _api2wire_String(raw);
   }
 
-  int _api2wire_u16(int raw) {
-    return raw;
-  }
-
   int _api2wire_u64(int raw) {
     return raw;
   }
@@ -547,83 +575,100 @@ class NativeImpl extends FlutterRustBridgeBase<NativeWire> implements Native {
   }
 
   void _api_fill_to_wire_messages(Messages apiObj, wire_Messages wireObj) {
-    if (apiObj is ToPlayer) {
+    if (apiObj is Login) {
       wireObj.tag = 0;
+      wireObj.kind = inner.inflate_Messages_Login();
+      wireObj.kind.ref.Login.ref.name = _api2wire_String(apiObj.name);
+      wireObj.kind.ref.Login.ref.password = _api2wire_String(apiObj.password);
+    }
+    if (apiObj is UpdateAccount) {
+      wireObj.tag = 1;
+      wireObj.kind = inner.inflate_Messages_UpdateAccount();
+      wireObj.kind.ref.UpdateAccount.ref.name = _api2wire_String(apiObj.name);
+      wireObj.kind.ref.UpdateAccount.ref.old_password =
+          _api2wire_String(apiObj.oldPassword);
+      wireObj.kind.ref.UpdateAccount.ref.new_password =
+          _api2wire_String(apiObj.newPassword);
+    }
+    if (apiObj is CreateAccount) {
+      wireObj.tag = 2;
+      wireObj.kind = inner.inflate_Messages_CreateAccount();
+      wireObj.kind.ref.CreateAccount.ref.name = _api2wire_String(apiObj.name);
+      wireObj.kind.ref.CreateAccount.ref.password =
+          _api2wire_String(apiObj.password);
+    }
+    if (apiObj is ToPlayer) {
+      wireObj.tag = 3;
       wireObj.kind = inner.inflate_Messages_ToPlayer();
       wireObj.kind.ref.ToPlayer.ref.name = _api2wire_String(apiObj.name);
       wireObj.kind.ref.ToPlayer.ref.msg = _api2wire_uint_8_list(apiObj.msg);
     }
     if (apiObj is SearchOnlinePlayers) {
-      wireObj.tag = 1;
+      wireObj.tag = 4;
       wireObj.kind = inner.inflate_Messages_SearchOnlinePlayers();
       wireObj.kind.ref.SearchOnlinePlayers.ref.name =
           _api2wire_opt_String(apiObj.name);
       wireObj.kind.ref.SearchOnlinePlayers.ref.limit =
           _api2wire_u8(apiObj.limit);
     }
-    if (apiObj is UserName) {
-      wireObj.tag = 2;
-      wireObj.kind = inner.inflate_Messages_UserName();
-      wireObj.kind.ref.UserName.ref.field0 = _api2wire_String(apiObj.field0);
-    }
     if (apiObj is CreateRoom) {
-      wireObj.tag = 3;
+      wireObj.tag = 5;
       wireObj.kind = inner.inflate_Messages_CreateRoom();
       wireObj.kind.ref.CreateRoom.ref.field0 =
           _api2wire_box_autoadd_session_config(apiObj.field0);
     }
     if (apiObj is JoinRoom) {
-      wireObj.tag = 4;
+      wireObj.tag = 6;
       wireObj.kind = inner.inflate_Messages_JoinRoom();
       wireObj.kind.ref.JoinRoom.ref.field0 =
           _api2wire_box_autoadd_room_token(apiObj.field0);
     }
     if (apiObj is QuitRoom) {
-      wireObj.tag = 5;
-      return;
-    }
-    if (apiObj is Ready) {
-      wireObj.tag = 6;
-      return;
-    }
-    if (apiObj is Unready) {
       wireObj.tag = 7;
       return;
     }
-    if (apiObj is Play) {
+    if (apiObj is Ready) {
       wireObj.tag = 8;
+      return;
+    }
+    if (apiObj is Unready) {
+      wireObj.tag = 9;
+      return;
+    }
+    if (apiObj is Play) {
+      wireObj.tag = 10;
       wireObj.kind = inner.inflate_Messages_Play();
       wireObj.kind.ref.Play.ref.x = _api2wire_u8(apiObj.x);
       wireObj.kind.ref.Play.ref.y = _api2wire_u8(apiObj.y);
     }
     if (apiObj is RequestUndo) {
-      wireObj.tag = 9;
-      return;
-    }
-    if (apiObj is ApproveUndo) {
-      wireObj.tag = 10;
-      return;
-    }
-    if (apiObj is RejectUndo) {
       wireObj.tag = 11;
       return;
     }
-    if (apiObj is QuitGameSession) {
+    if (apiObj is ApproveUndo) {
       wireObj.tag = 12;
       return;
     }
-    if (apiObj is SendChatMessage) {
+    if (apiObj is RejectUndo) {
       wireObj.tag = 13;
+      return;
+    }
+    if (apiObj is QuitGameSession) {
+      wireObj.tag = 14;
+      return;
+    }
+    if (apiObj is SendChatMessage) {
+      wireObj.tag = 15;
       wireObj.kind = inner.inflate_Messages_SendChatMessage();
       wireObj.kind.ref.SendChatMessage.ref.field0 =
           _api2wire_String(apiObj.field0);
     }
     if (apiObj is ExitGame) {
-      wireObj.tag = 14;
+      wireObj.tag = 16;
       return;
     }
     if (apiObj is ClientError) {
-      wireObj.tag = 15;
+      wireObj.tag = 17;
       wireObj.kind = inner.inflate_Messages_ClientError();
       wireObj.kind.ref.ClientError.ref.field0 = _api2wire_String(apiObj.field0);
     }
@@ -690,6 +735,8 @@ ConnectionInitError _wire2api_connection_init_error(dynamic raw) {
     case 5:
       return InvalidUserName();
     case 6:
+      return TlsError();
+    case 7:
       return NetworkError(
         _wire2api_connection_error(raw[1]),
       );
@@ -746,86 +793,114 @@ Responses _wire2api_responses(dynamic raw) {
         _wire2api_StringList(raw[1]),
       );
     case 2:
-      return ConnectionSuccess();
-    case 3:
       return ConnectionInitFailure(
         _wire2api_box_autoadd_connection_init_error(raw[1]),
       );
-    case 4:
+    case 3:
       return RoomCreated(
         _wire2api_String(raw[1]),
       );
-    case 5:
+    case 4:
       return JoinRoomSuccess(
         token: _wire2api_String(raw[1]),
         roomState: _wire2api_box_autoadd_room_state(raw[2]),
       );
-    case 6:
+    case 5:
       return JoinRoomFailureTokenNotFound();
-    case 7:
+    case 6:
       return JoinRoomFailureRoomFull();
-    case 8:
+    case 7:
       return OpponentJoinRoom(
         _wire2api_String(raw[1]),
       );
-    case 9:
+    case 8:
       return OpponentQuitRoom();
-    case 10:
+    case 9:
       return OpponentReady();
-    case 11:
+    case 10:
       return OpponentUnready();
-    case 12:
+    case 11:
       return GameStarted(
         _wire2api_color(raw[1]),
       );
-    case 13:
+    case 12:
       return FieldUpdate(
         _wire2api_box_autoadd_field(raw[1]),
       );
-    case 14:
+    case 13:
       return UndoRequest();
-    case 15:
+    case 14:
       return UndoTimeoutRejected();
-    case 16:
+    case 15:
       return UndoAutoRejected();
-    case 17:
+    case 16:
       return Undo(
         _wire2api_box_autoadd_field(raw[1]),
       );
-    case 18:
+    case 17:
       return UndoRejectedByOpponent();
-    case 19:
+    case 18:
       return GameEndBlackTimeout();
-    case 20:
+    case 19:
       return GameEndWhiteTimeout();
-    case 21:
+    case 20:
       return GameEndBlackWins();
-    case 22:
+    case 21:
       return GameEndWhiteWins();
-    case 23:
+    case 22:
       return GameEndDraw();
-    case 24:
+    case 23:
       return RoomScores(
         player1Name: _wire2api_String(raw[1]),
         player1Score: _wire2api_i32(raw[2]),
         player2Name: _wire2api_String(raw[3]),
         player2Score: _wire2api_i32(raw[4]),
       );
-    case 25:
+    case 24:
       return OpponentQuitGameSession();
-    case 26:
+    case 25:
       return OpponentExitGame();
-    case 27:
+    case 26:
       return OpponentDisconnected();
-    case 28:
+    case 27:
       return GameSessionError(
         _wire2api_String(raw[1]),
       );
-    case 29:
+    case 28:
       return ChatMessage(
         name: _wire2api_String(raw[1]),
         msg: _wire2api_String(raw[2]),
       );
+    case 29:
+      return CreateAccountFailure(
+        _wire2api_String(raw[1]),
+      );
+    case 30:
+      return LoginFailure(
+        _wire2api_String(raw[1]),
+      );
+    case 31:
+      return UpdateAccountFailure(
+        _wire2api_String(raw[1]),
+      );
+    case 32:
+      return CreateAccountSuccess(
+        name: _wire2api_String(raw[1]),
+        password: _wire2api_String(raw[2]),
+      );
+    case 33:
+      return UpdateAccountSuccess(
+        name: _wire2api_String(raw[1]),
+        password: _wire2api_String(raw[2]),
+      );
+    case 34:
+      return LoginSuccess(
+        _wire2api_String(raw[1]),
+      );
+    case 35:
+      return QuitRoomSuccess();
+    case 36:
+      return QuitGameSessionSuccess();
     default:
       throw Exception("unreachable");
   }
@@ -903,37 +978,20 @@ class NativeWire implements FlutterRustBridgeWireBase {
 
   void wire_connect_to_server(
     int port_,
-    int a,
-    int b,
-    int c,
-    int d,
-    int server_port,
-    ffi.Pointer<wire_uint_8_list> user_name,
+    ffi.Pointer<wire_uint_8_list> domain_port,
   ) {
     return _wire_connect_to_server(
       port_,
-      a,
-      b,
-      c,
-      d,
-      server_port,
-      user_name,
+      domain_port,
     );
   }
 
   late final _wire_connect_to_serverPtr = _lookup<
       ffi.NativeFunction<
-          ffi.Void Function(
-              ffi.Int64,
-              ffi.Uint8,
-              ffi.Uint8,
-              ffi.Uint8,
-              ffi.Uint8,
-              ffi.Uint16,
+          ffi.Void Function(ffi.Int64,
               ffi.Pointer<wire_uint_8_list>)>>('wire_connect_to_server');
-  late final _wire_connect_to_server = _wire_connect_to_serverPtr.asFunction<
-      void Function(
-          int, int, int, int, int, int, ffi.Pointer<wire_uint_8_list>)>();
+  late final _wire_connect_to_server = _wire_connect_to_serverPtr
+      .asFunction<void Function(int, ffi.Pointer<wire_uint_8_list>)>();
 
   void wire_send(
     int port_,
@@ -1107,6 +1165,38 @@ class NativeWire implements FlutterRustBridgeWireBase {
   late final _new_uint_8_list = _new_uint_8_listPtr
       .asFunction<ffi.Pointer<wire_uint_8_list> Function(int)>();
 
+  ffi.Pointer<MessagesKind> inflate_Messages_Login() {
+    return _inflate_Messages_Login();
+  }
+
+  late final _inflate_Messages_LoginPtr =
+      _lookup<ffi.NativeFunction<ffi.Pointer<MessagesKind> Function()>>(
+          'inflate_Messages_Login');
+  late final _inflate_Messages_Login = _inflate_Messages_LoginPtr
+      .asFunction<ffi.Pointer<MessagesKind> Function()>();
+
+  ffi.Pointer<MessagesKind> inflate_Messages_UpdateAccount() {
+    return _inflate_Messages_UpdateAccount();
+  }
+
+  late final _inflate_Messages_UpdateAccountPtr =
+      _lookup<ffi.NativeFunction<ffi.Pointer<MessagesKind> Function()>>(
+          'inflate_Messages_UpdateAccount');
+  late final _inflate_Messages_UpdateAccount =
+      _inflate_Messages_UpdateAccountPtr
+          .asFunction<ffi.Pointer<MessagesKind> Function()>();
+
+  ffi.Pointer<MessagesKind> inflate_Messages_CreateAccount() {
+    return _inflate_Messages_CreateAccount();
+  }
+
+  late final _inflate_Messages_CreateAccountPtr =
+      _lookup<ffi.NativeFunction<ffi.Pointer<MessagesKind> Function()>>(
+          'inflate_Messages_CreateAccount');
+  late final _inflate_Messages_CreateAccount =
+      _inflate_Messages_CreateAccountPtr
+          .asFunction<ffi.Pointer<MessagesKind> Function()>();
+
   ffi.Pointer<MessagesKind> inflate_Messages_ToPlayer() {
     return _inflate_Messages_ToPlayer();
   }
@@ -1127,16 +1217,6 @@ class NativeWire implements FlutterRustBridgeWireBase {
   late final _inflate_Messages_SearchOnlinePlayers =
       _inflate_Messages_SearchOnlinePlayersPtr
           .asFunction<ffi.Pointer<MessagesKind> Function()>();
-
-  ffi.Pointer<MessagesKind> inflate_Messages_UserName() {
-    return _inflate_Messages_UserName();
-  }
-
-  late final _inflate_Messages_UserNamePtr =
-      _lookup<ffi.NativeFunction<ffi.Pointer<MessagesKind> Function()>>(
-          'inflate_Messages_UserName');
-  late final _inflate_Messages_UserName = _inflate_Messages_UserNamePtr
-      .asFunction<ffi.Pointer<MessagesKind> Function()>();
 
   ffi.Pointer<MessagesKind> inflate_Messages_CreateRoom() {
     return _inflate_Messages_CreateRoom();
@@ -1225,6 +1305,26 @@ class wire_uint_8_list extends ffi.Struct {
   external int len;
 }
 
+class Messages_Login extends ffi.Struct {
+  external ffi.Pointer<wire_uint_8_list> name;
+
+  external ffi.Pointer<wire_uint_8_list> password;
+}
+
+class Messages_UpdateAccount extends ffi.Struct {
+  external ffi.Pointer<wire_uint_8_list> name;
+
+  external ffi.Pointer<wire_uint_8_list> old_password;
+
+  external ffi.Pointer<wire_uint_8_list> new_password;
+}
+
+class Messages_CreateAccount extends ffi.Struct {
+  external ffi.Pointer<wire_uint_8_list> name;
+
+  external ffi.Pointer<wire_uint_8_list> password;
+}
+
 class Messages_ToPlayer extends ffi.Struct {
   external ffi.Pointer<wire_uint_8_list> name;
 
@@ -1236,10 +1336,6 @@ class Messages_SearchOnlinePlayers extends ffi.Struct {
 
   @ffi.Uint8()
   external int limit;
-}
-
-class Messages_UserName extends ffi.Struct {
-  external ffi.Pointer<wire_uint_8_list> field0;
 }
 
 class wire_SessionConfig extends ffi.Struct {
@@ -1298,11 +1394,15 @@ class Messages_ClientError extends ffi.Struct {
 }
 
 class MessagesKind extends ffi.Union {
+  external ffi.Pointer<Messages_Login> Login;
+
+  external ffi.Pointer<Messages_UpdateAccount> UpdateAccount;
+
+  external ffi.Pointer<Messages_CreateAccount> CreateAccount;
+
   external ffi.Pointer<Messages_ToPlayer> ToPlayer;
 
   external ffi.Pointer<Messages_SearchOnlinePlayers> SearchOnlinePlayers;
-
-  external ffi.Pointer<Messages_UserName> UserName;
 
   external ffi.Pointer<Messages_CreateRoom> CreateRoom;
 

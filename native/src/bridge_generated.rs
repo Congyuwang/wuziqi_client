@@ -29,15 +29,7 @@ use crate::structs::SingleState;
 // Section: wire functions
 
 #[no_mangle]
-pub extern "C" fn wire_connect_to_server(
-    port_: i64,
-    a: u8,
-    b: u8,
-    c: u8,
-    d: u8,
-    server_port: u16,
-    user_name: *mut wire_uint_8_list,
-) {
+pub extern "C" fn wire_connect_to_server(port_: i64, domain_port: *mut wire_uint_8_list) {
     FLUTTER_RUST_BRIDGE_HANDLER.wrap(
         WrapInfo {
             debug_name: "connect_to_server",
@@ -45,23 +37,8 @@ pub extern "C" fn wire_connect_to_server(
             mode: FfiCallMode::Stream,
         },
         move || {
-            let api_a = a.wire2api();
-            let api_b = b.wire2api();
-            let api_c = c.wire2api();
-            let api_d = d.wire2api();
-            let api_server_port = server_port.wire2api();
-            let api_user_name = user_name.wire2api();
-            move |task_callback| {
-                connect_to_server(
-                    task_callback.stream_sink(),
-                    api_a,
-                    api_b,
-                    api_c,
-                    api_d,
-                    api_server_port,
-                    api_user_name,
-                )
-            }
+            let api_domain_port = domain_port.wire2api();
+            move |task_callback| connect_to_server(task_callback.stream_sink(), api_domain_port)
         },
     )
 }
@@ -221,9 +198,11 @@ pub struct wire_Messages {
 
 #[repr(C)]
 pub union MessagesKind {
+    Login: *mut Messages_Login,
+    UpdateAccount: *mut Messages_UpdateAccount,
+    CreateAccount: *mut Messages_CreateAccount,
     ToPlayer: *mut Messages_ToPlayer,
     SearchOnlinePlayers: *mut Messages_SearchOnlinePlayers,
-    UserName: *mut Messages_UserName,
     CreateRoom: *mut Messages_CreateRoom,
     JoinRoom: *mut Messages_JoinRoom,
     QuitRoom: *mut Messages_QuitRoom,
@@ -241,6 +220,28 @@ pub union MessagesKind {
 
 #[repr(C)]
 #[derive(Clone)]
+pub struct Messages_Login {
+    name: *mut wire_uint_8_list,
+    password: *mut wire_uint_8_list,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_UpdateAccount {
+    name: *mut wire_uint_8_list,
+    old_password: *mut wire_uint_8_list,
+    new_password: *mut wire_uint_8_list,
+}
+
+#[repr(C)]
+#[derive(Clone)]
+pub struct Messages_CreateAccount {
+    name: *mut wire_uint_8_list,
+    password: *mut wire_uint_8_list,
+}
+
+#[repr(C)]
+#[derive(Clone)]
 pub struct Messages_ToPlayer {
     name: *mut wire_uint_8_list,
     msg: *mut wire_uint_8_list,
@@ -251,12 +252,6 @@ pub struct Messages_ToPlayer {
 pub struct Messages_SearchOnlinePlayers {
     name: *mut wire_uint_8_list,
     limit: u8,
-}
-
-#[repr(C)]
-#[derive(Clone)]
-pub struct Messages_UserName {
-    field0: *mut wire_uint_8_list,
 }
 
 #[repr(C)]
@@ -410,13 +405,38 @@ impl Wire2Api<Messages> for wire_Messages {
         match self.tag {
             0 => unsafe {
                 let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.Login);
+                Messages::Login {
+                    name: ans.name.wire2api(),
+                    password: ans.password.wire2api(),
+                }
+            },
+            1 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.UpdateAccount);
+                Messages::UpdateAccount {
+                    name: ans.name.wire2api(),
+                    old_password: ans.old_password.wire2api(),
+                    new_password: ans.new_password.wire2api(),
+                }
+            },
+            2 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
+                let ans = support::box_from_leak_ptr(ans.CreateAccount);
+                Messages::CreateAccount {
+                    name: ans.name.wire2api(),
+                    password: ans.password.wire2api(),
+                }
+            },
+            3 => unsafe {
+                let ans = support::box_from_leak_ptr(self.kind);
                 let ans = support::box_from_leak_ptr(ans.ToPlayer);
                 Messages::ToPlayer {
                     name: ans.name.wire2api(),
                     msg: ans.msg.wire2api(),
                 }
             },
-            1 => unsafe {
+            4 => unsafe {
                 let ans = support::box_from_leak_ptr(self.kind);
                 let ans = support::box_from_leak_ptr(ans.SearchOnlinePlayers);
                 Messages::SearchOnlinePlayers {
@@ -424,25 +444,20 @@ impl Wire2Api<Messages> for wire_Messages {
                     limit: ans.limit.wire2api(),
                 }
             },
-            2 => unsafe {
-                let ans = support::box_from_leak_ptr(self.kind);
-                let ans = support::box_from_leak_ptr(ans.UserName);
-                Messages::UserName(ans.field0.wire2api())
-            },
-            3 => unsafe {
+            5 => unsafe {
                 let ans = support::box_from_leak_ptr(self.kind);
                 let ans = support::box_from_leak_ptr(ans.CreateRoom);
                 Messages::CreateRoom(ans.field0.wire2api())
             },
-            4 => unsafe {
+            6 => unsafe {
                 let ans = support::box_from_leak_ptr(self.kind);
                 let ans = support::box_from_leak_ptr(ans.JoinRoom);
                 Messages::JoinRoom(ans.field0.wire2api())
             },
-            5 => Messages::QuitRoom,
-            6 => Messages::Ready,
-            7 => Messages::Unready,
-            8 => unsafe {
+            7 => Messages::QuitRoom,
+            8 => Messages::Ready,
+            9 => Messages::Unready,
+            10 => unsafe {
                 let ans = support::box_from_leak_ptr(self.kind);
                 let ans = support::box_from_leak_ptr(ans.Play);
                 Messages::Play {
@@ -450,17 +465,17 @@ impl Wire2Api<Messages> for wire_Messages {
                     y: ans.y.wire2api(),
                 }
             },
-            9 => Messages::RequestUndo,
-            10 => Messages::ApproveUndo,
-            11 => Messages::RejectUndo,
-            12 => Messages::QuitGameSession,
-            13 => unsafe {
+            11 => Messages::RequestUndo,
+            12 => Messages::ApproveUndo,
+            13 => Messages::RejectUndo,
+            14 => Messages::QuitGameSession,
+            15 => unsafe {
                 let ans = support::box_from_leak_ptr(self.kind);
                 let ans = support::box_from_leak_ptr(ans.SendChatMessage);
                 Messages::SendChatMessage(ans.field0.wire2api())
             },
-            14 => Messages::ExitGame,
-            15 => unsafe {
+            16 => Messages::ExitGame,
+            17 => unsafe {
                 let ans = support::box_from_leak_ptr(self.kind);
                 let ans = support::box_from_leak_ptr(ans.ClientError);
                 Messages::ClientError(ans.field0.wire2api())
@@ -483,12 +498,6 @@ impl Wire2Api<SessionConfig> for wire_SessionConfig {
             undo_dialogue_extra_seconds: self.undo_dialogue_extra_seconds.wire2api(),
             play_timeout: self.play_timeout.wire2api(),
         }
-    }
-}
-
-impl Wire2Api<u16> for u16 {
-    fn wire2api(self) -> u16 {
-        self
     }
 }
 
@@ -535,6 +544,37 @@ impl NewWithNullPtr for wire_Messages {
 }
 
 #[no_mangle]
+pub extern "C" fn inflate_Messages_Login() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        Login: support::new_leak_box_ptr(Messages_Login {
+            name: core::ptr::null_mut(),
+            password: core::ptr::null_mut(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_UpdateAccount() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        UpdateAccount: support::new_leak_box_ptr(Messages_UpdateAccount {
+            name: core::ptr::null_mut(),
+            old_password: core::ptr::null_mut(),
+            new_password: core::ptr::null_mut(),
+        }),
+    })
+}
+
+#[no_mangle]
+pub extern "C" fn inflate_Messages_CreateAccount() -> *mut MessagesKind {
+    support::new_leak_box_ptr(MessagesKind {
+        CreateAccount: support::new_leak_box_ptr(Messages_CreateAccount {
+            name: core::ptr::null_mut(),
+            password: core::ptr::null_mut(),
+        }),
+    })
+}
+
+#[no_mangle]
 pub extern "C" fn inflate_Messages_ToPlayer() -> *mut MessagesKind {
     support::new_leak_box_ptr(MessagesKind {
         ToPlayer: support::new_leak_box_ptr(Messages_ToPlayer {
@@ -550,15 +590,6 @@ pub extern "C" fn inflate_Messages_SearchOnlinePlayers() -> *mut MessagesKind {
         SearchOnlinePlayers: support::new_leak_box_ptr(Messages_SearchOnlinePlayers {
             name: core::ptr::null_mut(),
             limit: Default::default(),
-        }),
-    })
-}
-
-#[no_mangle]
-pub extern "C" fn inflate_Messages_UserName() -> *mut MessagesKind {
-    support::new_leak_box_ptr(MessagesKind {
-        UserName: support::new_leak_box_ptr(Messages_UserName {
-            field0: core::ptr::null_mut(),
         }),
     })
 }
@@ -661,7 +692,8 @@ impl support::IntoDart for ConnectionInitError {
             Self::UserNameTooLong => vec![3.into_dart()],
             Self::UserNameExists => vec![4.into_dart()],
             Self::InvalidUserName => vec![5.into_dart()],
-            Self::NetworkError(field0) => vec![6.into_dart(), field0.into_dart()],
+            Self::TlsError => vec![6.into_dart()],
+            Self::NetworkError(field0) => vec![7.into_dart(), field0.into_dart()],
         }
         .into_dart()
     }
@@ -693,49 +725,60 @@ impl support::IntoDart for Responses {
                 vec![0.into_dart(), name.into_dart(), msg.into_dart()]
             }
             Self::PlayerList(field0) => vec![1.into_dart(), field0.into_dart()],
-            Self::ConnectionSuccess => vec![2.into_dart()],
-            Self::ConnectionInitFailure(field0) => vec![3.into_dart(), field0.into_dart()],
-            Self::RoomCreated(field0) => vec![4.into_dart(), field0.into_dart()],
+            Self::ConnectionInitFailure(field0) => vec![2.into_dart(), field0.into_dart()],
+            Self::RoomCreated(field0) => vec![3.into_dart(), field0.into_dart()],
             Self::JoinRoomSuccess { token, room_state } => {
-                vec![5.into_dart(), token.into_dart(), room_state.into_dart()]
+                vec![4.into_dart(), token.into_dart(), room_state.into_dart()]
             }
-            Self::JoinRoomFailureTokenNotFound => vec![6.into_dart()],
-            Self::JoinRoomFailureRoomFull => vec![7.into_dart()],
-            Self::OpponentJoinRoom(field0) => vec![8.into_dart(), field0.into_dart()],
-            Self::OpponentQuitRoom => vec![9.into_dart()],
-            Self::OpponentReady => vec![10.into_dart()],
-            Self::OpponentUnready => vec![11.into_dart()],
-            Self::GameStarted(field0) => vec![12.into_dart(), field0.into_dart()],
-            Self::FieldUpdate(field0) => vec![13.into_dart(), field0.into_dart()],
-            Self::UndoRequest => vec![14.into_dart()],
-            Self::UndoTimeoutRejected => vec![15.into_dart()],
-            Self::UndoAutoRejected => vec![16.into_dart()],
-            Self::Undo(field0) => vec![17.into_dart(), field0.into_dart()],
-            Self::UndoRejectedByOpponent => vec![18.into_dart()],
-            Self::GameEndBlackTimeout => vec![19.into_dart()],
-            Self::GameEndWhiteTimeout => vec![20.into_dart()],
-            Self::GameEndBlackWins => vec![21.into_dart()],
-            Self::GameEndWhiteWins => vec![22.into_dart()],
-            Self::GameEndDraw => vec![23.into_dart()],
+            Self::JoinRoomFailureTokenNotFound => vec![5.into_dart()],
+            Self::JoinRoomFailureRoomFull => vec![6.into_dart()],
+            Self::OpponentJoinRoom(field0) => vec![7.into_dart(), field0.into_dart()],
+            Self::OpponentQuitRoom => vec![8.into_dart()],
+            Self::OpponentReady => vec![9.into_dart()],
+            Self::OpponentUnready => vec![10.into_dart()],
+            Self::GameStarted(field0) => vec![11.into_dart(), field0.into_dart()],
+            Self::FieldUpdate(field0) => vec![12.into_dart(), field0.into_dart()],
+            Self::UndoRequest => vec![13.into_dart()],
+            Self::UndoTimeoutRejected => vec![14.into_dart()],
+            Self::UndoAutoRejected => vec![15.into_dart()],
+            Self::Undo(field0) => vec![16.into_dart(), field0.into_dart()],
+            Self::UndoRejectedByOpponent => vec![17.into_dart()],
+            Self::GameEndBlackTimeout => vec![18.into_dart()],
+            Self::GameEndWhiteTimeout => vec![19.into_dart()],
+            Self::GameEndBlackWins => vec![20.into_dart()],
+            Self::GameEndWhiteWins => vec![21.into_dart()],
+            Self::GameEndDraw => vec![22.into_dart()],
             Self::RoomScores {
                 player1_name,
                 player1_score,
                 player2_name,
                 player2_score,
             } => vec![
-                24.into_dart(),
+                23.into_dart(),
                 player1_name.into_dart(),
                 player1_score.into_dart(),
                 player2_name.into_dart(),
                 player2_score.into_dart(),
             ],
-            Self::OpponentQuitGameSession => vec![25.into_dart()],
-            Self::OpponentExitGame => vec![26.into_dart()],
-            Self::OpponentDisconnected => vec![27.into_dart()],
-            Self::GameSessionError(field0) => vec![28.into_dart(), field0.into_dart()],
+            Self::OpponentQuitGameSession => vec![24.into_dart()],
+            Self::OpponentExitGame => vec![25.into_dart()],
+            Self::OpponentDisconnected => vec![26.into_dart()],
+            Self::GameSessionError(field0) => vec![27.into_dart(), field0.into_dart()],
             Self::ChatMessage { name, msg } => {
-                vec![29.into_dart(), name.into_dart(), msg.into_dart()]
+                vec![28.into_dart(), name.into_dart(), msg.into_dart()]
             }
+            Self::CreateAccountFailure(field0) => vec![29.into_dart(), field0.into_dart()],
+            Self::LoginFailure(field0) => vec![30.into_dart(), field0.into_dart()],
+            Self::UpdateAccountFailure(field0) => vec![31.into_dart(), field0.into_dart()],
+            Self::CreateAccountSuccess { name, password } => {
+                vec![32.into_dart(), name.into_dart(), password.into_dart()]
+            }
+            Self::UpdateAccountSuccess { name, password } => {
+                vec![33.into_dart(), name.into_dart(), password.into_dart()]
+            }
+            Self::LoginSuccess(field0) => vec![34.into_dart(), field0.into_dart()],
+            Self::QuitRoomSuccess => vec![35.into_dart()],
+            Self::QuitGameSessionSuccess => vec![36.into_dart()],
         }
         .into_dart()
     }

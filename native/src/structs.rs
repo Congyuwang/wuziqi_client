@@ -1,4 +1,5 @@
 use flutter_rust_bridge::support::IntoDartExceptPrimitive;
+use wuziqi::{CreateAccountFailure, InvalidAccountPassword, LoginFailure, UpdatePasswordFailure};
 
 #[derive(Clone)]
 pub enum SingleState {
@@ -37,6 +38,7 @@ pub enum ConnectionInitError {
     UserNameTooLong,
     UserNameExists,
     InvalidUserName,
+    TlsError,
     NetworkError(ConnectionError),
 }
 
@@ -63,6 +65,16 @@ pub struct SessionConfig {
 }
 
 pub enum Messages {
+    /// login to the server
+    Login { name: String, password: String },
+    /// update account
+    UpdateAccount {
+        name: String,
+        old_password: String,
+        new_password: String,
+    },
+    /// create a new account
+    CreateAccount { name: String, password: String },
     /// send bytes to player
     ToPlayer { name: String, msg: Vec<u8> },
     /// search online players name
@@ -70,8 +82,6 @@ pub enum Messages {
     /// that contains the required `name`
     /// if `name` is null, random player names are returned
     SearchOnlinePlayers { name: Option<String>, limit: u8 },
-    /// send user name
-    UserName(String),
     /// create a new room
     CreateRoom(SessionConfig),
     /// attempt to join a room with a RoomToken
@@ -114,8 +124,6 @@ pub enum Responses {
         msg: Vec<u8>,
     },
     PlayerList(Vec<String>),
-    /// Connection success
-    ConnectionSuccess,
     /// Connection Init Error
     ConnectionInitFailure(ConnectionInitError),
     /// response to `CreateRoom`
@@ -184,6 +192,28 @@ pub enum Responses {
         name: String,
         msg: String,
     },
+    /// create account failed (reason)
+    CreateAccountFailure(String),
+    /// login failed (reason)
+    LoginFailure(String),
+    /// update account failed (reason)
+    UpdateAccountFailure(String),
+    /// create account success
+    CreateAccountSuccess {
+        name: String,
+        password: String,
+    },
+    /// update account success
+    UpdateAccountSuccess {
+        name: String,
+        password: String,
+    },
+    /// login success (name)
+    LoginSuccess(String),
+    /// I quit room
+    QuitRoomSuccess,
+    /// I quit game session
+    QuitGameSessionSuccess,
 }
 
 impl TryFrom<Vec<u8>> for Responses {
@@ -229,7 +259,6 @@ impl Into<wuziqi::Messages> for Messages {
                 wuziqi::Messages::SearchOnlinePlayers(name, limit)
             }
             Messages::ToPlayer { name, msg } => wuziqi::Messages::ToPlayer(name, msg),
-            Messages::UserName(name) => wuziqi::Messages::UserName(name),
             Messages::CreateRoom(config) => wuziqi::Messages::CreateRoom(config.into()),
             Messages::JoinRoom(token) => wuziqi::Messages::JoinRoom(token.into()),
             Messages::QuitRoom => wuziqi::Messages::QuitRoom,
@@ -243,6 +272,15 @@ impl Into<wuziqi::Messages> for Messages {
             Messages::SendChatMessage(msg) => wuziqi::Messages::ChatMessage(msg),
             Messages::ExitGame => wuziqi::Messages::ExitGame,
             Messages::ClientError(e) => wuziqi::Messages::ClientError(e),
+            Messages::Login { name, password } => wuziqi::Messages::Login(name, password),
+            Messages::UpdateAccount {
+                name,
+                old_password,
+                new_password,
+            } => wuziqi::Messages::UpdateAccount(name, old_password, new_password),
+            Messages::CreateAccount { name, password } => {
+                wuziqi::Messages::CreateAccount(name, password)
+            }
         }
     }
 }
@@ -275,6 +313,7 @@ impl From<wuziqi::ConnectionInitError> for ConnectionInitError {
             wuziqi::ConnectionInitError::NetworkError(e) => {
                 ConnectionInitError::NetworkError(e.into())
             }
+            wuziqi::ConnectionInitError::TlsError => ConnectionInitError::TlsError,
         }
     }
 }
@@ -351,10 +390,30 @@ impl From<wuziqi::FieldStateNullable> for Field {
 
 impl From<wuziqi::Responses> for Responses {
     fn from(rsp: wuziqi::Responses) -> Self {
+        fn invalid_account_password(k: InvalidAccountPassword) -> String {
+            match k {
+                InvalidAccountPassword::BadCharacterAccountName => {
+                    "bad character in name".to_string()
+                }
+                InvalidAccountPassword::AccountNameTooShort => {
+                    "account name too short".to_string()
+                }
+                InvalidAccountPassword::AccountNameTooLong => {
+                    "account name too long".to_string()
+                }
+                InvalidAccountPassword::BadCharacterAccountPassword => {
+                    "bad character in password".to_string()
+                }
+                InvalidAccountPassword::PasswordTooShort => {
+                    "password too short".to_string()
+                }
+                InvalidAccountPassword::PasswordTooLong => "password too long".to_string(),
+            }
+        }
+
         match rsp {
             wuziqi::Responses::FromPlayer(name, msg) => Responses::FromPlayer { name, msg },
             wuziqi::Responses::PlayerList(names) => Responses::PlayerList(names),
-            wuziqi::Responses::ConnectionSuccess => Responses::ConnectionSuccess,
             wuziqi::Responses::ConnectionInitFailure(e) => {
                 Responses::ConnectionInitFailure(e.into())
             }
@@ -394,6 +453,58 @@ impl From<wuziqi::Responses> for Responses {
             wuziqi::Responses::OpponentDisconnected => Responses::OpponentDisconnected,
             wuziqi::Responses::GameSessionError(e) => Responses::GameSessionError(e),
             wuziqi::Responses::ChatMessage(name, msg) => Responses::ChatMessage { name, msg },
+            wuziqi::Responses::CreateAccountFailure(e) => {
+                let reason = match e {
+                    CreateAccountFailure::BadInput(k) => {
+                        let invalid_reason = invalid_account_password(k);
+                        format!("bad input ({})", invalid_reason)
+                    }
+                    CreateAccountFailure::AccountAlreadyExist => {
+                        "account already exists".to_string()
+                    }
+                    CreateAccountFailure::ServerError => "server error".to_string(),
+                    CreateAccountFailure::AlreadyLoggedIn => {
+                        "account is already logged in".to_string()
+                    }
+                };
+                Responses::CreateAccountFailure(reason)
+            }
+            wuziqi::Responses::LoginFailure(e) => {
+                let reason = match e {
+                    LoginFailure::BadInput(k) => {
+                        let invalid_reason = invalid_account_password(k);
+                        format!("bad input ({})", invalid_reason)
+                    }
+                    LoginFailure::AccountDoesNotExist => "account does not exist".to_string(),
+                    LoginFailure::PasswordIncorrect => "password is incorrect".to_string(),
+                    LoginFailure::AlreadyLoggedIn => "account is already logged in".to_string(),
+                    LoginFailure::ServerError => "server error".to_string(),
+                };
+                Responses::LoginFailure(reason)
+            }
+            wuziqi::Responses::UpdateAccountFailure(e) => {
+                let reason = match e {
+                    UpdatePasswordFailure::BadInput(k) => {
+                        let invalid_reason = invalid_account_password(k);
+                        format!("bad input ({})", invalid_reason)
+                    }
+                    UpdatePasswordFailure::UserDoesNotExist => "account does not exist".to_string(),
+                    UpdatePasswordFailure::PasswordIncorrect => {
+                        "old password is incorrect".to_string()
+                    }
+                    UpdatePasswordFailure::ServerError => "server error".to_string(),
+                };
+                Responses::UpdateAccountFailure(reason)
+            }
+            wuziqi::Responses::CreateAccountSuccess(name, password) => {
+                Responses::CreateAccountSuccess { name, password }
+            }
+            wuziqi::Responses::UpdateAccountSuccess(name, password) => {
+                Responses::UpdateAccountSuccess { name, password }
+            }
+            wuziqi::Responses::LoginSuccess(name) => Responses::LoginSuccess(name),
+            wuziqi::Responses::QuitRoomSuccess => Responses::QuitRoomSuccess,
+            wuziqi::Responses::QuitGameSessionSuccess => Responses::QuitGameSessionSuccess,
         }
     }
 }
