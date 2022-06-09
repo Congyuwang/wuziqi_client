@@ -12,49 +12,7 @@ part of 'bridge_generated.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ConnectionInitErrorTearOff {
-  const _$ConnectionInitErrorTearOff();
-
-  IpMaxConnExceed ipMaxConnExceed() {
-    return const IpMaxConnExceed();
-  }
-
-  ConnectionClosed connectionClosed() {
-    return const ConnectionClosed();
-  }
-
-  UserNameNotReceived userNameNotReceived() {
-    return const UserNameNotReceived();
-  }
-
-  UserNameTooLong userNameTooLong() {
-    return const UserNameTooLong();
-  }
-
-  UserNameExists userNameExists() {
-    return const UserNameExists();
-  }
-
-  InvalidUserName invalidUserName() {
-    return const InvalidUserName();
-  }
-
-  TlsError tlsError() {
-    return const TlsError();
-  }
-
-  NetworkError networkError(ConnectionError field0) {
-    return NetworkError(
-      field0,
-    );
-  }
-}
-
-/// @nodoc
-const $ConnectionInitError = _$ConnectionInitErrorTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ConnectionInitError {
@@ -152,22 +110,22 @@ class _$ConnectionInitErrorCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $IpMaxConnExceedCopyWith<$Res> {
-  factory $IpMaxConnExceedCopyWith(
-          IpMaxConnExceed value, $Res Function(IpMaxConnExceed) then) =
-      _$IpMaxConnExceedCopyWithImpl<$Res>;
+abstract class _$$IpMaxConnExceedCopyWith<$Res> {
+  factory _$$IpMaxConnExceedCopyWith(
+          _$IpMaxConnExceed value, $Res Function(_$IpMaxConnExceed) then) =
+      __$$IpMaxConnExceedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$IpMaxConnExceedCopyWithImpl<$Res>
+class __$$IpMaxConnExceedCopyWithImpl<$Res>
     extends _$ConnectionInitErrorCopyWithImpl<$Res>
-    implements $IpMaxConnExceedCopyWith<$Res> {
-  _$IpMaxConnExceedCopyWithImpl(
-      IpMaxConnExceed _value, $Res Function(IpMaxConnExceed) _then)
-      : super(_value, (v) => _then(v as IpMaxConnExceed));
+    implements _$$IpMaxConnExceedCopyWith<$Res> {
+  __$$IpMaxConnExceedCopyWithImpl(
+      _$IpMaxConnExceed _value, $Res Function(_$IpMaxConnExceed) _then)
+      : super(_value, (v) => _then(v as _$IpMaxConnExceed));
 
   @override
-  IpMaxConnExceed get _value => super._value as IpMaxConnExceed;
+  _$IpMaxConnExceed get _value => super._value as _$IpMaxConnExceed;
 }
 
 /// @nodoc
@@ -183,7 +141,7 @@ class _$IpMaxConnExceed implements IpMaxConnExceed {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is IpMaxConnExceed);
+        (other.runtimeType == runtimeType && other is _$IpMaxConnExceed);
   }
 
   @override
@@ -293,22 +251,22 @@ abstract class IpMaxConnExceed implements ConnectionInitError {
 }
 
 /// @nodoc
-abstract class $ConnectionClosedCopyWith<$Res> {
-  factory $ConnectionClosedCopyWith(
-          ConnectionClosed value, $Res Function(ConnectionClosed) then) =
-      _$ConnectionClosedCopyWithImpl<$Res>;
+abstract class _$$ConnectionClosedCopyWith<$Res> {
+  factory _$$ConnectionClosedCopyWith(
+          _$ConnectionClosed value, $Res Function(_$ConnectionClosed) then) =
+      __$$ConnectionClosedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ConnectionClosedCopyWithImpl<$Res>
+class __$$ConnectionClosedCopyWithImpl<$Res>
     extends _$ConnectionInitErrorCopyWithImpl<$Res>
-    implements $ConnectionClosedCopyWith<$Res> {
-  _$ConnectionClosedCopyWithImpl(
-      ConnectionClosed _value, $Res Function(ConnectionClosed) _then)
-      : super(_value, (v) => _then(v as ConnectionClosed));
+    implements _$$ConnectionClosedCopyWith<$Res> {
+  __$$ConnectionClosedCopyWithImpl(
+      _$ConnectionClosed _value, $Res Function(_$ConnectionClosed) _then)
+      : super(_value, (v) => _then(v as _$ConnectionClosed));
 
   @override
-  ConnectionClosed get _value => super._value as ConnectionClosed;
+  _$ConnectionClosed get _value => super._value as _$ConnectionClosed;
 }
 
 /// @nodoc
@@ -324,7 +282,7 @@ class _$ConnectionClosed implements ConnectionClosed {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ConnectionClosed);
+        (other.runtimeType == runtimeType && other is _$ConnectionClosed);
   }
 
   @override
@@ -434,22 +392,22 @@ abstract class ConnectionClosed implements ConnectionInitError {
 }
 
 /// @nodoc
-abstract class $UserNameNotReceivedCopyWith<$Res> {
-  factory $UserNameNotReceivedCopyWith(
-          UserNameNotReceived value, $Res Function(UserNameNotReceived) then) =
-      _$UserNameNotReceivedCopyWithImpl<$Res>;
+abstract class _$$UserNameNotReceivedCopyWith<$Res> {
+  factory _$$UserNameNotReceivedCopyWith(_$UserNameNotReceived value,
+          $Res Function(_$UserNameNotReceived) then) =
+      __$$UserNameNotReceivedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UserNameNotReceivedCopyWithImpl<$Res>
+class __$$UserNameNotReceivedCopyWithImpl<$Res>
     extends _$ConnectionInitErrorCopyWithImpl<$Res>
-    implements $UserNameNotReceivedCopyWith<$Res> {
-  _$UserNameNotReceivedCopyWithImpl(
-      UserNameNotReceived _value, $Res Function(UserNameNotReceived) _then)
-      : super(_value, (v) => _then(v as UserNameNotReceived));
+    implements _$$UserNameNotReceivedCopyWith<$Res> {
+  __$$UserNameNotReceivedCopyWithImpl(
+      _$UserNameNotReceived _value, $Res Function(_$UserNameNotReceived) _then)
+      : super(_value, (v) => _then(v as _$UserNameNotReceived));
 
   @override
-  UserNameNotReceived get _value => super._value as UserNameNotReceived;
+  _$UserNameNotReceived get _value => super._value as _$UserNameNotReceived;
 }
 
 /// @nodoc
@@ -465,7 +423,7 @@ class _$UserNameNotReceived implements UserNameNotReceived {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UserNameNotReceived);
+        (other.runtimeType == runtimeType && other is _$UserNameNotReceived);
   }
 
   @override
@@ -575,22 +533,22 @@ abstract class UserNameNotReceived implements ConnectionInitError {
 }
 
 /// @nodoc
-abstract class $UserNameTooLongCopyWith<$Res> {
-  factory $UserNameTooLongCopyWith(
-          UserNameTooLong value, $Res Function(UserNameTooLong) then) =
-      _$UserNameTooLongCopyWithImpl<$Res>;
+abstract class _$$UserNameTooLongCopyWith<$Res> {
+  factory _$$UserNameTooLongCopyWith(
+          _$UserNameTooLong value, $Res Function(_$UserNameTooLong) then) =
+      __$$UserNameTooLongCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UserNameTooLongCopyWithImpl<$Res>
+class __$$UserNameTooLongCopyWithImpl<$Res>
     extends _$ConnectionInitErrorCopyWithImpl<$Res>
-    implements $UserNameTooLongCopyWith<$Res> {
-  _$UserNameTooLongCopyWithImpl(
-      UserNameTooLong _value, $Res Function(UserNameTooLong) _then)
-      : super(_value, (v) => _then(v as UserNameTooLong));
+    implements _$$UserNameTooLongCopyWith<$Res> {
+  __$$UserNameTooLongCopyWithImpl(
+      _$UserNameTooLong _value, $Res Function(_$UserNameTooLong) _then)
+      : super(_value, (v) => _then(v as _$UserNameTooLong));
 
   @override
-  UserNameTooLong get _value => super._value as UserNameTooLong;
+  _$UserNameTooLong get _value => super._value as _$UserNameTooLong;
 }
 
 /// @nodoc
@@ -606,7 +564,7 @@ class _$UserNameTooLong implements UserNameTooLong {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UserNameTooLong);
+        (other.runtimeType == runtimeType && other is _$UserNameTooLong);
   }
 
   @override
@@ -716,22 +674,22 @@ abstract class UserNameTooLong implements ConnectionInitError {
 }
 
 /// @nodoc
-abstract class $UserNameExistsCopyWith<$Res> {
-  factory $UserNameExistsCopyWith(
-          UserNameExists value, $Res Function(UserNameExists) then) =
-      _$UserNameExistsCopyWithImpl<$Res>;
+abstract class _$$UserNameExistsCopyWith<$Res> {
+  factory _$$UserNameExistsCopyWith(
+          _$UserNameExists value, $Res Function(_$UserNameExists) then) =
+      __$$UserNameExistsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UserNameExistsCopyWithImpl<$Res>
+class __$$UserNameExistsCopyWithImpl<$Res>
     extends _$ConnectionInitErrorCopyWithImpl<$Res>
-    implements $UserNameExistsCopyWith<$Res> {
-  _$UserNameExistsCopyWithImpl(
-      UserNameExists _value, $Res Function(UserNameExists) _then)
-      : super(_value, (v) => _then(v as UserNameExists));
+    implements _$$UserNameExistsCopyWith<$Res> {
+  __$$UserNameExistsCopyWithImpl(
+      _$UserNameExists _value, $Res Function(_$UserNameExists) _then)
+      : super(_value, (v) => _then(v as _$UserNameExists));
 
   @override
-  UserNameExists get _value => super._value as UserNameExists;
+  _$UserNameExists get _value => super._value as _$UserNameExists;
 }
 
 /// @nodoc
@@ -747,7 +705,7 @@ class _$UserNameExists implements UserNameExists {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UserNameExists);
+        (other.runtimeType == runtimeType && other is _$UserNameExists);
   }
 
   @override
@@ -857,22 +815,22 @@ abstract class UserNameExists implements ConnectionInitError {
 }
 
 /// @nodoc
-abstract class $InvalidUserNameCopyWith<$Res> {
-  factory $InvalidUserNameCopyWith(
-          InvalidUserName value, $Res Function(InvalidUserName) then) =
-      _$InvalidUserNameCopyWithImpl<$Res>;
+abstract class _$$InvalidUserNameCopyWith<$Res> {
+  factory _$$InvalidUserNameCopyWith(
+          _$InvalidUserName value, $Res Function(_$InvalidUserName) then) =
+      __$$InvalidUserNameCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InvalidUserNameCopyWithImpl<$Res>
+class __$$InvalidUserNameCopyWithImpl<$Res>
     extends _$ConnectionInitErrorCopyWithImpl<$Res>
-    implements $InvalidUserNameCopyWith<$Res> {
-  _$InvalidUserNameCopyWithImpl(
-      InvalidUserName _value, $Res Function(InvalidUserName) _then)
-      : super(_value, (v) => _then(v as InvalidUserName));
+    implements _$$InvalidUserNameCopyWith<$Res> {
+  __$$InvalidUserNameCopyWithImpl(
+      _$InvalidUserName _value, $Res Function(_$InvalidUserName) _then)
+      : super(_value, (v) => _then(v as _$InvalidUserName));
 
   @override
-  InvalidUserName get _value => super._value as InvalidUserName;
+  _$InvalidUserName get _value => super._value as _$InvalidUserName;
 }
 
 /// @nodoc
@@ -888,7 +846,7 @@ class _$InvalidUserName implements InvalidUserName {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is InvalidUserName);
+        (other.runtimeType == runtimeType && other is _$InvalidUserName);
   }
 
   @override
@@ -998,20 +956,21 @@ abstract class InvalidUserName implements ConnectionInitError {
 }
 
 /// @nodoc
-abstract class $TlsErrorCopyWith<$Res> {
-  factory $TlsErrorCopyWith(TlsError value, $Res Function(TlsError) then) =
-      _$TlsErrorCopyWithImpl<$Res>;
+abstract class _$$TlsErrorCopyWith<$Res> {
+  factory _$$TlsErrorCopyWith(
+          _$TlsError value, $Res Function(_$TlsError) then) =
+      __$$TlsErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$TlsErrorCopyWithImpl<$Res>
+class __$$TlsErrorCopyWithImpl<$Res>
     extends _$ConnectionInitErrorCopyWithImpl<$Res>
-    implements $TlsErrorCopyWith<$Res> {
-  _$TlsErrorCopyWithImpl(TlsError _value, $Res Function(TlsError) _then)
-      : super(_value, (v) => _then(v as TlsError));
+    implements _$$TlsErrorCopyWith<$Res> {
+  __$$TlsErrorCopyWithImpl(_$TlsError _value, $Res Function(_$TlsError) _then)
+      : super(_value, (v) => _then(v as _$TlsError));
 
   @override
-  TlsError get _value => super._value as TlsError;
+  _$TlsError get _value => super._value as _$TlsError;
 }
 
 /// @nodoc
@@ -1027,7 +986,7 @@ class _$TlsError implements TlsError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is TlsError);
+        (other.runtimeType == runtimeType && other is _$TlsError);
   }
 
   @override
@@ -1137,29 +1096,29 @@ abstract class TlsError implements ConnectionInitError {
 }
 
 /// @nodoc
-abstract class $NetworkErrorCopyWith<$Res> {
-  factory $NetworkErrorCopyWith(
-          NetworkError value, $Res Function(NetworkError) then) =
-      _$NetworkErrorCopyWithImpl<$Res>;
+abstract class _$$NetworkErrorCopyWith<$Res> {
+  factory _$$NetworkErrorCopyWith(
+          _$NetworkError value, $Res Function(_$NetworkError) then) =
+      __$$NetworkErrorCopyWithImpl<$Res>;
   $Res call({ConnectionError field0});
 }
 
 /// @nodoc
-class _$NetworkErrorCopyWithImpl<$Res>
+class __$$NetworkErrorCopyWithImpl<$Res>
     extends _$ConnectionInitErrorCopyWithImpl<$Res>
-    implements $NetworkErrorCopyWith<$Res> {
-  _$NetworkErrorCopyWithImpl(
-      NetworkError _value, $Res Function(NetworkError) _then)
-      : super(_value, (v) => _then(v as NetworkError));
+    implements _$$NetworkErrorCopyWith<$Res> {
+  __$$NetworkErrorCopyWithImpl(
+      _$NetworkError _value, $Res Function(_$NetworkError) _then)
+      : super(_value, (v) => _then(v as _$NetworkError));
 
   @override
-  NetworkError get _value => super._value as NetworkError;
+  _$NetworkError get _value => super._value as _$NetworkError;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(NetworkError(
+    return _then(_$NetworkError(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -1185,7 +1144,7 @@ class _$NetworkError implements NetworkError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is NetworkError &&
+            other is _$NetworkError &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -1195,8 +1154,8 @@ class _$NetworkError implements NetworkError {
 
   @JsonKey(ignore: true)
   @override
-  $NetworkErrorCopyWith<NetworkError> get copyWith =>
-      _$NetworkErrorCopyWithImpl<NetworkError>(this, _$identity);
+  _$$NetworkErrorCopyWith<_$NetworkError> get copyWith =>
+      __$$NetworkErrorCopyWithImpl<_$NetworkError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1298,124 +1257,13 @@ class _$NetworkError implements NetworkError {
 }
 
 abstract class NetworkError implements ConnectionInitError {
-  const factory NetworkError(ConnectionError field0) = _$NetworkError;
+  const factory NetworkError(final ConnectionError field0) = _$NetworkError;
 
-  ConnectionError get field0;
+  ConnectionError get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $NetworkErrorCopyWith<NetworkError> get copyWith =>
+  _$$NetworkErrorCopyWith<_$NetworkError> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$MessagesTearOff {
-  const _$MessagesTearOff();
-
-  Login login({required String name, required String password}) {
-    return Login(
-      name: name,
-      password: password,
-    );
-  }
-
-  UpdateAccount updateAccount(
-      {required String name,
-      required String oldPassword,
-      required String newPassword}) {
-    return UpdateAccount(
-      name: name,
-      oldPassword: oldPassword,
-      newPassword: newPassword,
-    );
-  }
-
-  CreateAccount createAccount(
-      {required String name, required String password}) {
-    return CreateAccount(
-      name: name,
-      password: password,
-    );
-  }
-
-  ToPlayer toPlayer({required String name, required Uint8List msg}) {
-    return ToPlayer(
-      name: name,
-      msg: msg,
-    );
-  }
-
-  SearchOnlinePlayers searchOnlinePlayers({String? name, required int limit}) {
-    return SearchOnlinePlayers(
-      name: name,
-      limit: limit,
-    );
-  }
-
-  CreateRoom createRoom(SessionConfig field0) {
-    return CreateRoom(
-      field0,
-    );
-  }
-
-  JoinRoom joinRoom(RoomToken field0) {
-    return JoinRoom(
-      field0,
-    );
-  }
-
-  QuitRoom quitRoom() {
-    return const QuitRoom();
-  }
-
-  Ready ready() {
-    return const Ready();
-  }
-
-  Unready unready() {
-    return const Unready();
-  }
-
-  Play play({required int x, required int y}) {
-    return Play(
-      x: x,
-      y: y,
-    );
-  }
-
-  RequestUndo requestUndo() {
-    return const RequestUndo();
-  }
-
-  ApproveUndo approveUndo() {
-    return const ApproveUndo();
-  }
-
-  RejectUndo rejectUndo() {
-    return const RejectUndo();
-  }
-
-  QuitGameSession quitGameSession() {
-    return const QuitGameSession();
-  }
-
-  SendChatMessage sendChatMessage(String field0) {
-    return SendChatMessage(
-      field0,
-    );
-  }
-
-  ExitGame exitGame() {
-    return const ExitGame();
-  }
-
-  ClientError clientError(String field0) {
-    return ClientError(
-      field0,
-    );
-  }
-}
-
-/// @nodoc
-const $Messages = _$MessagesTearOff();
 
 /// @nodoc
 mixin _$Messages {
@@ -1575,27 +1423,27 @@ class _$MessagesCopyWithImpl<$Res> implements $MessagesCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $LoginCopyWith<$Res> {
-  factory $LoginCopyWith(Login value, $Res Function(Login) then) =
-      _$LoginCopyWithImpl<$Res>;
+abstract class _$$LoginCopyWith<$Res> {
+  factory _$$LoginCopyWith(_$Login value, $Res Function(_$Login) then) =
+      __$$LoginCopyWithImpl<$Res>;
   $Res call({String name, String password});
 }
 
 /// @nodoc
-class _$LoginCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $LoginCopyWith<$Res> {
-  _$LoginCopyWithImpl(Login _value, $Res Function(Login) _then)
-      : super(_value, (v) => _then(v as Login));
+class __$$LoginCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$LoginCopyWith<$Res> {
+  __$$LoginCopyWithImpl(_$Login _value, $Res Function(_$Login) _then)
+      : super(_value, (v) => _then(v as _$Login));
 
   @override
-  Login get _value => super._value as Login;
+  _$Login get _value => super._value as _$Login;
 
   @override
   $Res call({
     Object? name = freezed,
     Object? password = freezed,
   }) {
-    return _then(Login(
+    return _then(_$Login(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1627,7 +1475,7 @@ class _$Login implements Login {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Login &&
+            other is _$Login &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.password, password));
   }
@@ -1640,8 +1488,8 @@ class _$Login implements Login {
 
   @JsonKey(ignore: true)
   @override
-  $LoginCopyWith<Login> get copyWith =>
-      _$LoginCopyWithImpl<Login>(this, _$identity);
+  _$$LoginCopyWith<_$Login> get copyWith =>
+      __$$LoginCopyWithImpl<_$Login>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1807,32 +1655,32 @@ class _$Login implements Login {
 }
 
 abstract class Login implements Messages {
-  const factory Login({required String name, required String password}) =
-      _$Login;
+  const factory Login(
+      {required final String name, required final String password}) = _$Login;
 
-  String get name;
-  String get password;
+  String get name => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginCopyWith<Login> get copyWith => throw _privateConstructorUsedError;
+  _$$LoginCopyWith<_$Login> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UpdateAccountCopyWith<$Res> {
-  factory $UpdateAccountCopyWith(
-          UpdateAccount value, $Res Function(UpdateAccount) then) =
-      _$UpdateAccountCopyWithImpl<$Res>;
+abstract class _$$UpdateAccountCopyWith<$Res> {
+  factory _$$UpdateAccountCopyWith(
+          _$UpdateAccount value, $Res Function(_$UpdateAccount) then) =
+      __$$UpdateAccountCopyWithImpl<$Res>;
   $Res call({String name, String oldPassword, String newPassword});
 }
 
 /// @nodoc
-class _$UpdateAccountCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $UpdateAccountCopyWith<$Res> {
-  _$UpdateAccountCopyWithImpl(
-      UpdateAccount _value, $Res Function(UpdateAccount) _then)
-      : super(_value, (v) => _then(v as UpdateAccount));
+class __$$UpdateAccountCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$UpdateAccountCopyWith<$Res> {
+  __$$UpdateAccountCopyWithImpl(
+      _$UpdateAccount _value, $Res Function(_$UpdateAccount) _then)
+      : super(_value, (v) => _then(v as _$UpdateAccount));
 
   @override
-  UpdateAccount get _value => super._value as UpdateAccount;
+  _$UpdateAccount get _value => super._value as _$UpdateAccount;
 
   @override
   $Res call({
@@ -1840,7 +1688,7 @@ class _$UpdateAccountCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
     Object? oldPassword = freezed,
     Object? newPassword = freezed,
   }) {
-    return _then(UpdateAccount(
+    return _then(_$UpdateAccount(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1881,7 +1729,7 @@ class _$UpdateAccount implements UpdateAccount {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UpdateAccount &&
+            other is _$UpdateAccount &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.oldPassword, oldPassword) &&
@@ -1898,8 +1746,8 @@ class _$UpdateAccount implements UpdateAccount {
 
   @JsonKey(ignore: true)
   @override
-  $UpdateAccountCopyWith<UpdateAccount> get copyWith =>
-      _$UpdateAccountCopyWithImpl<UpdateAccount>(this, _$identity);
+  _$$UpdateAccountCopyWith<_$UpdateAccount> get copyWith =>
+      __$$UpdateAccountCopyWithImpl<_$UpdateAccount>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2066,42 +1914,42 @@ class _$UpdateAccount implements UpdateAccount {
 
 abstract class UpdateAccount implements Messages {
   const factory UpdateAccount(
-      {required String name,
-      required String oldPassword,
-      required String newPassword}) = _$UpdateAccount;
+      {required final String name,
+      required final String oldPassword,
+      required final String newPassword}) = _$UpdateAccount;
 
-  String get name;
-  String get oldPassword;
-  String get newPassword;
+  String get name => throw _privateConstructorUsedError;
+  String get oldPassword => throw _privateConstructorUsedError;
+  String get newPassword => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UpdateAccountCopyWith<UpdateAccount> get copyWith =>
+  _$$UpdateAccountCopyWith<_$UpdateAccount> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreateAccountCopyWith<$Res> {
-  factory $CreateAccountCopyWith(
-          CreateAccount value, $Res Function(CreateAccount) then) =
-      _$CreateAccountCopyWithImpl<$Res>;
+abstract class _$$CreateAccountCopyWith<$Res> {
+  factory _$$CreateAccountCopyWith(
+          _$CreateAccount value, $Res Function(_$CreateAccount) then) =
+      __$$CreateAccountCopyWithImpl<$Res>;
   $Res call({String name, String password});
 }
 
 /// @nodoc
-class _$CreateAccountCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $CreateAccountCopyWith<$Res> {
-  _$CreateAccountCopyWithImpl(
-      CreateAccount _value, $Res Function(CreateAccount) _then)
-      : super(_value, (v) => _then(v as CreateAccount));
+class __$$CreateAccountCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$CreateAccountCopyWith<$Res> {
+  __$$CreateAccountCopyWithImpl(
+      _$CreateAccount _value, $Res Function(_$CreateAccount) _then)
+      : super(_value, (v) => _then(v as _$CreateAccount));
 
   @override
-  CreateAccount get _value => super._value as CreateAccount;
+  _$CreateAccount get _value => super._value as _$CreateAccount;
 
   @override
   $Res call({
     Object? name = freezed,
     Object? password = freezed,
   }) {
-    return _then(CreateAccount(
+    return _then(_$CreateAccount(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -2133,7 +1981,7 @@ class _$CreateAccount implements CreateAccount {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateAccount &&
+            other is _$CreateAccount &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.password, password));
   }
@@ -2146,8 +1994,8 @@ class _$CreateAccount implements CreateAccount {
 
   @JsonKey(ignore: true)
   @override
-  $CreateAccountCopyWith<CreateAccount> get copyWith =>
-      _$CreateAccountCopyWithImpl<CreateAccount>(this, _$identity);
+  _$$CreateAccountCopyWith<_$CreateAccount> get copyWith =>
+      __$$CreateAccountCopyWithImpl<_$CreateAccount>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2314,37 +2162,39 @@ class _$CreateAccount implements CreateAccount {
 
 abstract class CreateAccount implements Messages {
   const factory CreateAccount(
-      {required String name, required String password}) = _$CreateAccount;
+      {required final String name,
+      required final String password}) = _$CreateAccount;
 
-  String get name;
-  String get password;
+  String get name => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateAccountCopyWith<CreateAccount> get copyWith =>
+  _$$CreateAccountCopyWith<_$CreateAccount> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ToPlayerCopyWith<$Res> {
-  factory $ToPlayerCopyWith(ToPlayer value, $Res Function(ToPlayer) then) =
-      _$ToPlayerCopyWithImpl<$Res>;
+abstract class _$$ToPlayerCopyWith<$Res> {
+  factory _$$ToPlayerCopyWith(
+          _$ToPlayer value, $Res Function(_$ToPlayer) then) =
+      __$$ToPlayerCopyWithImpl<$Res>;
   $Res call({String name, Uint8List msg});
 }
 
 /// @nodoc
-class _$ToPlayerCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $ToPlayerCopyWith<$Res> {
-  _$ToPlayerCopyWithImpl(ToPlayer _value, $Res Function(ToPlayer) _then)
-      : super(_value, (v) => _then(v as ToPlayer));
+class __$$ToPlayerCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$ToPlayerCopyWith<$Res> {
+  __$$ToPlayerCopyWithImpl(_$ToPlayer _value, $Res Function(_$ToPlayer) _then)
+      : super(_value, (v) => _then(v as _$ToPlayer));
 
   @override
-  ToPlayer get _value => super._value as ToPlayer;
+  _$ToPlayer get _value => super._value as _$ToPlayer;
 
   @override
   $Res call({
     Object? name = freezed,
     Object? msg = freezed,
   }) {
-    return _then(ToPlayer(
+    return _then(_$ToPlayer(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -2376,7 +2226,7 @@ class _$ToPlayer implements ToPlayer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ToPlayer &&
+            other is _$ToPlayer &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.msg, msg));
   }
@@ -2389,8 +2239,8 @@ class _$ToPlayer implements ToPlayer {
 
   @JsonKey(ignore: true)
   @override
-  $ToPlayerCopyWith<ToPlayer> get copyWith =>
-      _$ToPlayerCopyWithImpl<ToPlayer>(this, _$identity);
+  _$$ToPlayerCopyWith<_$ToPlayer> get copyWith =>
+      __$$ToPlayerCopyWithImpl<_$ToPlayer>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2556,41 +2406,41 @@ class _$ToPlayer implements ToPlayer {
 }
 
 abstract class ToPlayer implements Messages {
-  const factory ToPlayer({required String name, required Uint8List msg}) =
-      _$ToPlayer;
+  const factory ToPlayer(
+      {required final String name, required final Uint8List msg}) = _$ToPlayer;
 
-  String get name;
-  Uint8List get msg;
+  String get name => throw _privateConstructorUsedError;
+  Uint8List get msg => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ToPlayerCopyWith<ToPlayer> get copyWith =>
+  _$$ToPlayerCopyWith<_$ToPlayer> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SearchOnlinePlayersCopyWith<$Res> {
-  factory $SearchOnlinePlayersCopyWith(
-          SearchOnlinePlayers value, $Res Function(SearchOnlinePlayers) then) =
-      _$SearchOnlinePlayersCopyWithImpl<$Res>;
+abstract class _$$SearchOnlinePlayersCopyWith<$Res> {
+  factory _$$SearchOnlinePlayersCopyWith(_$SearchOnlinePlayers value,
+          $Res Function(_$SearchOnlinePlayers) then) =
+      __$$SearchOnlinePlayersCopyWithImpl<$Res>;
   $Res call({String? name, int limit});
 }
 
 /// @nodoc
-class _$SearchOnlinePlayersCopyWithImpl<$Res>
+class __$$SearchOnlinePlayersCopyWithImpl<$Res>
     extends _$MessagesCopyWithImpl<$Res>
-    implements $SearchOnlinePlayersCopyWith<$Res> {
-  _$SearchOnlinePlayersCopyWithImpl(
-      SearchOnlinePlayers _value, $Res Function(SearchOnlinePlayers) _then)
-      : super(_value, (v) => _then(v as SearchOnlinePlayers));
+    implements _$$SearchOnlinePlayersCopyWith<$Res> {
+  __$$SearchOnlinePlayersCopyWithImpl(
+      _$SearchOnlinePlayers _value, $Res Function(_$SearchOnlinePlayers) _then)
+      : super(_value, (v) => _then(v as _$SearchOnlinePlayers));
 
   @override
-  SearchOnlinePlayers get _value => super._value as SearchOnlinePlayers;
+  _$SearchOnlinePlayers get _value => super._value as _$SearchOnlinePlayers;
 
   @override
   $Res call({
     Object? name = freezed,
     Object? limit = freezed,
   }) {
-    return _then(SearchOnlinePlayers(
+    return _then(_$SearchOnlinePlayers(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -2622,7 +2472,7 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is SearchOnlinePlayers &&
+            other is _$SearchOnlinePlayers &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.limit, limit));
   }
@@ -2635,8 +2485,9 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
 
   @JsonKey(ignore: true)
   @override
-  $SearchOnlinePlayersCopyWith<SearchOnlinePlayers> get copyWith =>
-      _$SearchOnlinePlayersCopyWithImpl<SearchOnlinePlayers>(this, _$identity);
+  _$$SearchOnlinePlayersCopyWith<_$SearchOnlinePlayers> get copyWith =>
+      __$$SearchOnlinePlayersCopyWithImpl<_$SearchOnlinePlayers>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2802,38 +2653,39 @@ class _$SearchOnlinePlayers implements SearchOnlinePlayers {
 }
 
 abstract class SearchOnlinePlayers implements Messages {
-  const factory SearchOnlinePlayers({String? name, required int limit}) =
-      _$SearchOnlinePlayers;
+  const factory SearchOnlinePlayers(
+      {final String? name, required final int limit}) = _$SearchOnlinePlayers;
 
-  String? get name;
-  int get limit;
+  String? get name => throw _privateConstructorUsedError;
+  int get limit => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SearchOnlinePlayersCopyWith<SearchOnlinePlayers> get copyWith =>
+  _$$SearchOnlinePlayersCopyWith<_$SearchOnlinePlayers> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreateRoomCopyWith<$Res> {
-  factory $CreateRoomCopyWith(
-          CreateRoom value, $Res Function(CreateRoom) then) =
-      _$CreateRoomCopyWithImpl<$Res>;
+abstract class _$$CreateRoomCopyWith<$Res> {
+  factory _$$CreateRoomCopyWith(
+          _$CreateRoom value, $Res Function(_$CreateRoom) then) =
+      __$$CreateRoomCopyWithImpl<$Res>;
   $Res call({SessionConfig field0});
 }
 
 /// @nodoc
-class _$CreateRoomCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $CreateRoomCopyWith<$Res> {
-  _$CreateRoomCopyWithImpl(CreateRoom _value, $Res Function(CreateRoom) _then)
-      : super(_value, (v) => _then(v as CreateRoom));
+class __$$CreateRoomCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$CreateRoomCopyWith<$Res> {
+  __$$CreateRoomCopyWithImpl(
+      _$CreateRoom _value, $Res Function(_$CreateRoom) _then)
+      : super(_value, (v) => _then(v as _$CreateRoom));
 
   @override
-  CreateRoom get _value => super._value as CreateRoom;
+  _$CreateRoom get _value => super._value as _$CreateRoom;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(CreateRoom(
+    return _then(_$CreateRoom(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -2859,7 +2711,7 @@ class _$CreateRoom implements CreateRoom {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateRoom &&
+            other is _$CreateRoom &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -2869,8 +2721,8 @@ class _$CreateRoom implements CreateRoom {
 
   @JsonKey(ignore: true)
   @override
-  $CreateRoomCopyWith<CreateRoom> get copyWith =>
-      _$CreateRoomCopyWithImpl<CreateRoom>(this, _$identity);
+  _$$CreateRoomCopyWith<_$CreateRoom> get copyWith =>
+      __$$CreateRoomCopyWithImpl<_$CreateRoom>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3036,35 +2888,36 @@ class _$CreateRoom implements CreateRoom {
 }
 
 abstract class CreateRoom implements Messages {
-  const factory CreateRoom(SessionConfig field0) = _$CreateRoom;
+  const factory CreateRoom(final SessionConfig field0) = _$CreateRoom;
 
-  SessionConfig get field0;
+  SessionConfig get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateRoomCopyWith<CreateRoom> get copyWith =>
+  _$$CreateRoomCopyWith<_$CreateRoom> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $JoinRoomCopyWith<$Res> {
-  factory $JoinRoomCopyWith(JoinRoom value, $Res Function(JoinRoom) then) =
-      _$JoinRoomCopyWithImpl<$Res>;
+abstract class _$$JoinRoomCopyWith<$Res> {
+  factory _$$JoinRoomCopyWith(
+          _$JoinRoom value, $Res Function(_$JoinRoom) then) =
+      __$$JoinRoomCopyWithImpl<$Res>;
   $Res call({RoomToken field0});
 }
 
 /// @nodoc
-class _$JoinRoomCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $JoinRoomCopyWith<$Res> {
-  _$JoinRoomCopyWithImpl(JoinRoom _value, $Res Function(JoinRoom) _then)
-      : super(_value, (v) => _then(v as JoinRoom));
+class __$$JoinRoomCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$JoinRoomCopyWith<$Res> {
+  __$$JoinRoomCopyWithImpl(_$JoinRoom _value, $Res Function(_$JoinRoom) _then)
+      : super(_value, (v) => _then(v as _$JoinRoom));
 
   @override
-  JoinRoom get _value => super._value as JoinRoom;
+  _$JoinRoom get _value => super._value as _$JoinRoom;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(JoinRoom(
+    return _then(_$JoinRoom(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -3090,7 +2943,7 @@ class _$JoinRoom implements JoinRoom {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is JoinRoom &&
+            other is _$JoinRoom &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -3100,8 +2953,8 @@ class _$JoinRoom implements JoinRoom {
 
   @JsonKey(ignore: true)
   @override
-  $JoinRoomCopyWith<JoinRoom> get copyWith =>
-      _$JoinRoomCopyWithImpl<JoinRoom>(this, _$identity);
+  _$$JoinRoomCopyWith<_$JoinRoom> get copyWith =>
+      __$$JoinRoomCopyWithImpl<_$JoinRoom>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3267,28 +3120,29 @@ class _$JoinRoom implements JoinRoom {
 }
 
 abstract class JoinRoom implements Messages {
-  const factory JoinRoom(RoomToken field0) = _$JoinRoom;
+  const factory JoinRoom(final RoomToken field0) = _$JoinRoom;
 
-  RoomToken get field0;
+  RoomToken get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $JoinRoomCopyWith<JoinRoom> get copyWith =>
+  _$$JoinRoomCopyWith<_$JoinRoom> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $QuitRoomCopyWith<$Res> {
-  factory $QuitRoomCopyWith(QuitRoom value, $Res Function(QuitRoom) then) =
-      _$QuitRoomCopyWithImpl<$Res>;
+abstract class _$$QuitRoomCopyWith<$Res> {
+  factory _$$QuitRoomCopyWith(
+          _$QuitRoom value, $Res Function(_$QuitRoom) then) =
+      __$$QuitRoomCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$QuitRoomCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $QuitRoomCopyWith<$Res> {
-  _$QuitRoomCopyWithImpl(QuitRoom _value, $Res Function(QuitRoom) _then)
-      : super(_value, (v) => _then(v as QuitRoom));
+class __$$QuitRoomCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$QuitRoomCopyWith<$Res> {
+  __$$QuitRoomCopyWithImpl(_$QuitRoom _value, $Res Function(_$QuitRoom) _then)
+      : super(_value, (v) => _then(v as _$QuitRoom));
 
   @override
-  QuitRoom get _value => super._value as QuitRoom;
+  _$QuitRoom get _value => super._value as _$QuitRoom;
 }
 
 /// @nodoc
@@ -3304,7 +3158,7 @@ class _$QuitRoom implements QuitRoom {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is QuitRoom);
+        (other.runtimeType == runtimeType && other is _$QuitRoom);
   }
 
   @override
@@ -3478,19 +3332,19 @@ abstract class QuitRoom implements Messages {
 }
 
 /// @nodoc
-abstract class $ReadyCopyWith<$Res> {
-  factory $ReadyCopyWith(Ready value, $Res Function(Ready) then) =
-      _$ReadyCopyWithImpl<$Res>;
+abstract class _$$ReadyCopyWith<$Res> {
+  factory _$$ReadyCopyWith(_$Ready value, $Res Function(_$Ready) then) =
+      __$$ReadyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ReadyCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $ReadyCopyWith<$Res> {
-  _$ReadyCopyWithImpl(Ready _value, $Res Function(Ready) _then)
-      : super(_value, (v) => _then(v as Ready));
+class __$$ReadyCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$ReadyCopyWith<$Res> {
+  __$$ReadyCopyWithImpl(_$Ready _value, $Res Function(_$Ready) _then)
+      : super(_value, (v) => _then(v as _$Ready));
 
   @override
-  Ready get _value => super._value as Ready;
+  _$Ready get _value => super._value as _$Ready;
 }
 
 /// @nodoc
@@ -3506,7 +3360,7 @@ class _$Ready implements Ready {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Ready);
+        (other.runtimeType == runtimeType && other is _$Ready);
   }
 
   @override
@@ -3680,19 +3534,19 @@ abstract class Ready implements Messages {
 }
 
 /// @nodoc
-abstract class $UnreadyCopyWith<$Res> {
-  factory $UnreadyCopyWith(Unready value, $Res Function(Unready) then) =
-      _$UnreadyCopyWithImpl<$Res>;
+abstract class _$$UnreadyCopyWith<$Res> {
+  factory _$$UnreadyCopyWith(_$Unready value, $Res Function(_$Unready) then) =
+      __$$UnreadyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UnreadyCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $UnreadyCopyWith<$Res> {
-  _$UnreadyCopyWithImpl(Unready _value, $Res Function(Unready) _then)
-      : super(_value, (v) => _then(v as Unready));
+class __$$UnreadyCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$UnreadyCopyWith<$Res> {
+  __$$UnreadyCopyWithImpl(_$Unready _value, $Res Function(_$Unready) _then)
+      : super(_value, (v) => _then(v as _$Unready));
 
   @override
-  Unready get _value => super._value as Unready;
+  _$Unready get _value => super._value as _$Unready;
 }
 
 /// @nodoc
@@ -3708,7 +3562,7 @@ class _$Unready implements Unready {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Unready);
+        (other.runtimeType == runtimeType && other is _$Unready);
   }
 
   @override
@@ -3882,27 +3736,27 @@ abstract class Unready implements Messages {
 }
 
 /// @nodoc
-abstract class $PlayCopyWith<$Res> {
-  factory $PlayCopyWith(Play value, $Res Function(Play) then) =
-      _$PlayCopyWithImpl<$Res>;
+abstract class _$$PlayCopyWith<$Res> {
+  factory _$$PlayCopyWith(_$Play value, $Res Function(_$Play) then) =
+      __$$PlayCopyWithImpl<$Res>;
   $Res call({int x, int y});
 }
 
 /// @nodoc
-class _$PlayCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $PlayCopyWith<$Res> {
-  _$PlayCopyWithImpl(Play _value, $Res Function(Play) _then)
-      : super(_value, (v) => _then(v as Play));
+class __$$PlayCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$PlayCopyWith<$Res> {
+  __$$PlayCopyWithImpl(_$Play _value, $Res Function(_$Play) _then)
+      : super(_value, (v) => _then(v as _$Play));
 
   @override
-  Play get _value => super._value as Play;
+  _$Play get _value => super._value as _$Play;
 
   @override
   $Res call({
     Object? x = freezed,
     Object? y = freezed,
   }) {
-    return _then(Play(
+    return _then(_$Play(
       x: x == freezed
           ? _value.x
           : x // ignore: cast_nullable_to_non_nullable
@@ -3934,7 +3788,7 @@ class _$Play implements Play {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Play &&
+            other is _$Play &&
             const DeepCollectionEquality().equals(other.x, x) &&
             const DeepCollectionEquality().equals(other.y, y));
   }
@@ -3947,8 +3801,8 @@ class _$Play implements Play {
 
   @JsonKey(ignore: true)
   @override
-  $PlayCopyWith<Play> get copyWith =>
-      _$PlayCopyWithImpl<Play>(this, _$identity);
+  _$$PlayCopyWith<_$Play> get copyWith =>
+      __$$PlayCopyWithImpl<_$Play>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4114,30 +3968,30 @@ class _$Play implements Play {
 }
 
 abstract class Play implements Messages {
-  const factory Play({required int x, required int y}) = _$Play;
+  const factory Play({required final int x, required final int y}) = _$Play;
 
-  int get x;
-  int get y;
+  int get x => throw _privateConstructorUsedError;
+  int get y => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PlayCopyWith<Play> get copyWith => throw _privateConstructorUsedError;
+  _$$PlayCopyWith<_$Play> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RequestUndoCopyWith<$Res> {
-  factory $RequestUndoCopyWith(
-          RequestUndo value, $Res Function(RequestUndo) then) =
-      _$RequestUndoCopyWithImpl<$Res>;
+abstract class _$$RequestUndoCopyWith<$Res> {
+  factory _$$RequestUndoCopyWith(
+          _$RequestUndo value, $Res Function(_$RequestUndo) then) =
+      __$$RequestUndoCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RequestUndoCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $RequestUndoCopyWith<$Res> {
-  _$RequestUndoCopyWithImpl(
-      RequestUndo _value, $Res Function(RequestUndo) _then)
-      : super(_value, (v) => _then(v as RequestUndo));
+class __$$RequestUndoCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$RequestUndoCopyWith<$Res> {
+  __$$RequestUndoCopyWithImpl(
+      _$RequestUndo _value, $Res Function(_$RequestUndo) _then)
+      : super(_value, (v) => _then(v as _$RequestUndo));
 
   @override
-  RequestUndo get _value => super._value as RequestUndo;
+  _$RequestUndo get _value => super._value as _$RequestUndo;
 }
 
 /// @nodoc
@@ -4153,7 +4007,7 @@ class _$RequestUndo implements RequestUndo {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is RequestUndo);
+        (other.runtimeType == runtimeType && other is _$RequestUndo);
   }
 
   @override
@@ -4327,21 +4181,21 @@ abstract class RequestUndo implements Messages {
 }
 
 /// @nodoc
-abstract class $ApproveUndoCopyWith<$Res> {
-  factory $ApproveUndoCopyWith(
-          ApproveUndo value, $Res Function(ApproveUndo) then) =
-      _$ApproveUndoCopyWithImpl<$Res>;
+abstract class _$$ApproveUndoCopyWith<$Res> {
+  factory _$$ApproveUndoCopyWith(
+          _$ApproveUndo value, $Res Function(_$ApproveUndo) then) =
+      __$$ApproveUndoCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ApproveUndoCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $ApproveUndoCopyWith<$Res> {
-  _$ApproveUndoCopyWithImpl(
-      ApproveUndo _value, $Res Function(ApproveUndo) _then)
-      : super(_value, (v) => _then(v as ApproveUndo));
+class __$$ApproveUndoCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$ApproveUndoCopyWith<$Res> {
+  __$$ApproveUndoCopyWithImpl(
+      _$ApproveUndo _value, $Res Function(_$ApproveUndo) _then)
+      : super(_value, (v) => _then(v as _$ApproveUndo));
 
   @override
-  ApproveUndo get _value => super._value as ApproveUndo;
+  _$ApproveUndo get _value => super._value as _$ApproveUndo;
 }
 
 /// @nodoc
@@ -4357,7 +4211,7 @@ class _$ApproveUndo implements ApproveUndo {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ApproveUndo);
+        (other.runtimeType == runtimeType && other is _$ApproveUndo);
   }
 
   @override
@@ -4531,20 +4385,21 @@ abstract class ApproveUndo implements Messages {
 }
 
 /// @nodoc
-abstract class $RejectUndoCopyWith<$Res> {
-  factory $RejectUndoCopyWith(
-          RejectUndo value, $Res Function(RejectUndo) then) =
-      _$RejectUndoCopyWithImpl<$Res>;
+abstract class _$$RejectUndoCopyWith<$Res> {
+  factory _$$RejectUndoCopyWith(
+          _$RejectUndo value, $Res Function(_$RejectUndo) then) =
+      __$$RejectUndoCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RejectUndoCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $RejectUndoCopyWith<$Res> {
-  _$RejectUndoCopyWithImpl(RejectUndo _value, $Res Function(RejectUndo) _then)
-      : super(_value, (v) => _then(v as RejectUndo));
+class __$$RejectUndoCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$RejectUndoCopyWith<$Res> {
+  __$$RejectUndoCopyWithImpl(
+      _$RejectUndo _value, $Res Function(_$RejectUndo) _then)
+      : super(_value, (v) => _then(v as _$RejectUndo));
 
   @override
-  RejectUndo get _value => super._value as RejectUndo;
+  _$RejectUndo get _value => super._value as _$RejectUndo;
 }
 
 /// @nodoc
@@ -4560,7 +4415,7 @@ class _$RejectUndo implements RejectUndo {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is RejectUndo);
+        (other.runtimeType == runtimeType && other is _$RejectUndo);
   }
 
   @override
@@ -4734,21 +4589,21 @@ abstract class RejectUndo implements Messages {
 }
 
 /// @nodoc
-abstract class $QuitGameSessionCopyWith<$Res> {
-  factory $QuitGameSessionCopyWith(
-          QuitGameSession value, $Res Function(QuitGameSession) then) =
-      _$QuitGameSessionCopyWithImpl<$Res>;
+abstract class _$$QuitGameSessionCopyWith<$Res> {
+  factory _$$QuitGameSessionCopyWith(
+          _$QuitGameSession value, $Res Function(_$QuitGameSession) then) =
+      __$$QuitGameSessionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$QuitGameSessionCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $QuitGameSessionCopyWith<$Res> {
-  _$QuitGameSessionCopyWithImpl(
-      QuitGameSession _value, $Res Function(QuitGameSession) _then)
-      : super(_value, (v) => _then(v as QuitGameSession));
+class __$$QuitGameSessionCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$QuitGameSessionCopyWith<$Res> {
+  __$$QuitGameSessionCopyWithImpl(
+      _$QuitGameSession _value, $Res Function(_$QuitGameSession) _then)
+      : super(_value, (v) => _then(v as _$QuitGameSession));
 
   @override
-  QuitGameSession get _value => super._value as QuitGameSession;
+  _$QuitGameSession get _value => super._value as _$QuitGameSession;
 }
 
 /// @nodoc
@@ -4764,7 +4619,7 @@ class _$QuitGameSession implements QuitGameSession {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is QuitGameSession);
+        (other.runtimeType == runtimeType && other is _$QuitGameSession);
   }
 
   @override
@@ -4938,28 +4793,28 @@ abstract class QuitGameSession implements Messages {
 }
 
 /// @nodoc
-abstract class $SendChatMessageCopyWith<$Res> {
-  factory $SendChatMessageCopyWith(
-          SendChatMessage value, $Res Function(SendChatMessage) then) =
-      _$SendChatMessageCopyWithImpl<$Res>;
+abstract class _$$SendChatMessageCopyWith<$Res> {
+  factory _$$SendChatMessageCopyWith(
+          _$SendChatMessage value, $Res Function(_$SendChatMessage) then) =
+      __$$SendChatMessageCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$SendChatMessageCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $SendChatMessageCopyWith<$Res> {
-  _$SendChatMessageCopyWithImpl(
-      SendChatMessage _value, $Res Function(SendChatMessage) _then)
-      : super(_value, (v) => _then(v as SendChatMessage));
+class __$$SendChatMessageCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$SendChatMessageCopyWith<$Res> {
+  __$$SendChatMessageCopyWithImpl(
+      _$SendChatMessage _value, $Res Function(_$SendChatMessage) _then)
+      : super(_value, (v) => _then(v as _$SendChatMessage));
 
   @override
-  SendChatMessage get _value => super._value as SendChatMessage;
+  _$SendChatMessage get _value => super._value as _$SendChatMessage;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(SendChatMessage(
+    return _then(_$SendChatMessage(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -4985,7 +4840,7 @@ class _$SendChatMessage implements SendChatMessage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is SendChatMessage &&
+            other is _$SendChatMessage &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -4995,8 +4850,8 @@ class _$SendChatMessage implements SendChatMessage {
 
   @JsonKey(ignore: true)
   @override
-  $SendChatMessageCopyWith<SendChatMessage> get copyWith =>
-      _$SendChatMessageCopyWithImpl<SendChatMessage>(this, _$identity);
+  _$$SendChatMessageCopyWith<_$SendChatMessage> get copyWith =>
+      __$$SendChatMessageCopyWithImpl<_$SendChatMessage>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5162,28 +5017,29 @@ class _$SendChatMessage implements SendChatMessage {
 }
 
 abstract class SendChatMessage implements Messages {
-  const factory SendChatMessage(String field0) = _$SendChatMessage;
+  const factory SendChatMessage(final String field0) = _$SendChatMessage;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SendChatMessageCopyWith<SendChatMessage> get copyWith =>
+  _$$SendChatMessageCopyWith<_$SendChatMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ExitGameCopyWith<$Res> {
-  factory $ExitGameCopyWith(ExitGame value, $Res Function(ExitGame) then) =
-      _$ExitGameCopyWithImpl<$Res>;
+abstract class _$$ExitGameCopyWith<$Res> {
+  factory _$$ExitGameCopyWith(
+          _$ExitGame value, $Res Function(_$ExitGame) then) =
+      __$$ExitGameCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ExitGameCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $ExitGameCopyWith<$Res> {
-  _$ExitGameCopyWithImpl(ExitGame _value, $Res Function(ExitGame) _then)
-      : super(_value, (v) => _then(v as ExitGame));
+class __$$ExitGameCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$ExitGameCopyWith<$Res> {
+  __$$ExitGameCopyWithImpl(_$ExitGame _value, $Res Function(_$ExitGame) _then)
+      : super(_value, (v) => _then(v as _$ExitGame));
 
   @override
-  ExitGame get _value => super._value as ExitGame;
+  _$ExitGame get _value => super._value as _$ExitGame;
 }
 
 /// @nodoc
@@ -5199,7 +5055,7 @@ class _$ExitGame implements ExitGame {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ExitGame);
+        (other.runtimeType == runtimeType && other is _$ExitGame);
   }
 
   @override
@@ -5373,28 +5229,28 @@ abstract class ExitGame implements Messages {
 }
 
 /// @nodoc
-abstract class $ClientErrorCopyWith<$Res> {
-  factory $ClientErrorCopyWith(
-          ClientError value, $Res Function(ClientError) then) =
-      _$ClientErrorCopyWithImpl<$Res>;
+abstract class _$$ClientErrorCopyWith<$Res> {
+  factory _$$ClientErrorCopyWith(
+          _$ClientError value, $Res Function(_$ClientError) then) =
+      __$$ClientErrorCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$ClientErrorCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
-    implements $ClientErrorCopyWith<$Res> {
-  _$ClientErrorCopyWithImpl(
-      ClientError _value, $Res Function(ClientError) _then)
-      : super(_value, (v) => _then(v as ClientError));
+class __$$ClientErrorCopyWithImpl<$Res> extends _$MessagesCopyWithImpl<$Res>
+    implements _$$ClientErrorCopyWith<$Res> {
+  __$$ClientErrorCopyWithImpl(
+      _$ClientError _value, $Res Function(_$ClientError) _then)
+      : super(_value, (v) => _then(v as _$ClientError));
 
   @override
-  ClientError get _value => super._value as ClientError;
+  _$ClientError get _value => super._value as _$ClientError;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(ClientError(
+    return _then(_$ClientError(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -5420,7 +5276,7 @@ class _$ClientError implements ClientError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ClientError &&
+            other is _$ClientError &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -5430,8 +5286,8 @@ class _$ClientError implements ClientError {
 
   @JsonKey(ignore: true)
   @override
-  $ClientErrorCopyWith<ClientError> get copyWith =>
-      _$ClientErrorCopyWithImpl<ClientError>(this, _$identity);
+  _$$ClientErrorCopyWith<_$ClientError> get copyWith =>
+      __$$ClientErrorCopyWithImpl<_$ClientError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5597,220 +5453,13 @@ class _$ClientError implements ClientError {
 }
 
 abstract class ClientError implements Messages {
-  const factory ClientError(String field0) = _$ClientError;
+  const factory ClientError(final String field0) = _$ClientError;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ClientErrorCopyWith<ClientError> get copyWith =>
+  _$$ClientErrorCopyWith<_$ClientError> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$ResponsesTearOff {
-  const _$ResponsesTearOff();
-
-  FromPlayer fromPlayer({required String name, required Uint8List msg}) {
-    return FromPlayer(
-      name: name,
-      msg: msg,
-    );
-  }
-
-  PlayerList playerList(List<String> field0) {
-    return PlayerList(
-      field0,
-    );
-  }
-
-  ConnectionInitFailure connectionInitFailure(ConnectionInitError field0) {
-    return ConnectionInitFailure(
-      field0,
-    );
-  }
-
-  RoomCreated roomCreated(String field0) {
-    return RoomCreated(
-      field0,
-    );
-  }
-
-  JoinRoomSuccess joinRoomSuccess(
-      {required String token, required RoomState roomState}) {
-    return JoinRoomSuccess(
-      token: token,
-      roomState: roomState,
-    );
-  }
-
-  JoinRoomFailureTokenNotFound joinRoomFailureTokenNotFound() {
-    return const JoinRoomFailureTokenNotFound();
-  }
-
-  JoinRoomFailureRoomFull joinRoomFailureRoomFull() {
-    return const JoinRoomFailureRoomFull();
-  }
-
-  OpponentJoinRoom opponentJoinRoom(String field0) {
-    return OpponentJoinRoom(
-      field0,
-    );
-  }
-
-  OpponentQuitRoom opponentQuitRoom() {
-    return const OpponentQuitRoom();
-  }
-
-  OpponentReady opponentReady() {
-    return const OpponentReady();
-  }
-
-  OpponentUnready opponentUnready() {
-    return const OpponentUnready();
-  }
-
-  GameStarted gameStarted(Color field0) {
-    return GameStarted(
-      field0,
-    );
-  }
-
-  FieldUpdate fieldUpdate(Field field0) {
-    return FieldUpdate(
-      field0,
-    );
-  }
-
-  UndoRequest undoRequest() {
-    return const UndoRequest();
-  }
-
-  UndoTimeoutRejected undoTimeoutRejected() {
-    return const UndoTimeoutRejected();
-  }
-
-  UndoAutoRejected undoAutoRejected() {
-    return const UndoAutoRejected();
-  }
-
-  Undo undo(Field field0) {
-    return Undo(
-      field0,
-    );
-  }
-
-  UndoRejectedByOpponent undoRejectedByOpponent() {
-    return const UndoRejectedByOpponent();
-  }
-
-  GameEndBlackTimeout gameEndBlackTimeout() {
-    return const GameEndBlackTimeout();
-  }
-
-  GameEndWhiteTimeout gameEndWhiteTimeout() {
-    return const GameEndWhiteTimeout();
-  }
-
-  GameEndBlackWins gameEndBlackWins() {
-    return const GameEndBlackWins();
-  }
-
-  GameEndWhiteWins gameEndWhiteWins() {
-    return const GameEndWhiteWins();
-  }
-
-  GameEndDraw gameEndDraw() {
-    return const GameEndDraw();
-  }
-
-  RoomScores roomScores(
-      {required String player1Name,
-      required int player1Score,
-      required String player2Name,
-      required int player2Score}) {
-    return RoomScores(
-      player1Name: player1Name,
-      player1Score: player1Score,
-      player2Name: player2Name,
-      player2Score: player2Score,
-    );
-  }
-
-  OpponentQuitGameSession opponentQuitGameSession() {
-    return const OpponentQuitGameSession();
-  }
-
-  OpponentExitGame opponentExitGame() {
-    return const OpponentExitGame();
-  }
-
-  OpponentDisconnected opponentDisconnected() {
-    return const OpponentDisconnected();
-  }
-
-  GameSessionError gameSessionError(String field0) {
-    return GameSessionError(
-      field0,
-    );
-  }
-
-  ChatMessage chatMessage({required String name, required String msg}) {
-    return ChatMessage(
-      name: name,
-      msg: msg,
-    );
-  }
-
-  CreateAccountFailure createAccountFailure(String field0) {
-    return CreateAccountFailure(
-      field0,
-    );
-  }
-
-  LoginFailure loginFailure(String field0) {
-    return LoginFailure(
-      field0,
-    );
-  }
-
-  UpdateAccountFailure updateAccountFailure(String field0) {
-    return UpdateAccountFailure(
-      field0,
-    );
-  }
-
-  CreateAccountSuccess createAccountSuccess(
-      {required String name, required String password}) {
-    return CreateAccountSuccess(
-      name: name,
-      password: password,
-    );
-  }
-
-  UpdateAccountSuccess updateAccountSuccess(
-      {required String name, required String password}) {
-    return UpdateAccountSuccess(
-      name: name,
-      password: password,
-    );
-  }
-
-  LoginSuccess loginSuccess(String field0) {
-    return LoginSuccess(
-      field0,
-    );
-  }
-
-  QuitRoomSuccess quitRoomSuccess() {
-    return const QuitRoomSuccess();
-  }
-
-  QuitGameSessionSuccess quitGameSessionSuccess() {
-    return const QuitGameSessionSuccess();
-  }
-}
-
-/// @nodoc
-const $Responses = _$ResponsesTearOff();
 
 /// @nodoc
 mixin _$Responses {
@@ -6097,28 +5746,29 @@ class _$ResponsesCopyWithImpl<$Res> implements $ResponsesCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $FromPlayerCopyWith<$Res> {
-  factory $FromPlayerCopyWith(
-          FromPlayer value, $Res Function(FromPlayer) then) =
-      _$FromPlayerCopyWithImpl<$Res>;
+abstract class _$$FromPlayerCopyWith<$Res> {
+  factory _$$FromPlayerCopyWith(
+          _$FromPlayer value, $Res Function(_$FromPlayer) then) =
+      __$$FromPlayerCopyWithImpl<$Res>;
   $Res call({String name, Uint8List msg});
 }
 
 /// @nodoc
-class _$FromPlayerCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $FromPlayerCopyWith<$Res> {
-  _$FromPlayerCopyWithImpl(FromPlayer _value, $Res Function(FromPlayer) _then)
-      : super(_value, (v) => _then(v as FromPlayer));
+class __$$FromPlayerCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$FromPlayerCopyWith<$Res> {
+  __$$FromPlayerCopyWithImpl(
+      _$FromPlayer _value, $Res Function(_$FromPlayer) _then)
+      : super(_value, (v) => _then(v as _$FromPlayer));
 
   @override
-  FromPlayer get _value => super._value as FromPlayer;
+  _$FromPlayer get _value => super._value as _$FromPlayer;
 
   @override
   $Res call({
     Object? name = freezed,
     Object? msg = freezed,
   }) {
-    return _then(FromPlayer(
+    return _then(_$FromPlayer(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -6150,7 +5800,7 @@ class _$FromPlayer implements FromPlayer {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is FromPlayer &&
+            other is _$FromPlayer &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.msg, msg));
   }
@@ -6163,8 +5813,8 @@ class _$FromPlayer implements FromPlayer {
 
   @JsonKey(ignore: true)
   @override
-  $FromPlayerCopyWith<FromPlayer> get copyWith =>
-      _$FromPlayerCopyWithImpl<FromPlayer>(this, _$identity);
+  _$$FromPlayerCopyWith<_$FromPlayer> get copyWith =>
+      __$$FromPlayerCopyWithImpl<_$FromPlayer>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6457,40 +6107,42 @@ class _$FromPlayer implements FromPlayer {
 }
 
 abstract class FromPlayer implements Responses {
-  const factory FromPlayer({required String name, required Uint8List msg}) =
-      _$FromPlayer;
+  const factory FromPlayer(
+      {required final String name,
+      required final Uint8List msg}) = _$FromPlayer;
 
-  String get name;
-  Uint8List get msg;
+  String get name => throw _privateConstructorUsedError;
+  Uint8List get msg => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FromPlayerCopyWith<FromPlayer> get copyWith =>
+  _$$FromPlayerCopyWith<_$FromPlayer> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PlayerListCopyWith<$Res> {
-  factory $PlayerListCopyWith(
-          PlayerList value, $Res Function(PlayerList) then) =
-      _$PlayerListCopyWithImpl<$Res>;
+abstract class _$$PlayerListCopyWith<$Res> {
+  factory _$$PlayerListCopyWith(
+          _$PlayerList value, $Res Function(_$PlayerList) then) =
+      __$$PlayerListCopyWithImpl<$Res>;
   $Res call({List<String> field0});
 }
 
 /// @nodoc
-class _$PlayerListCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $PlayerListCopyWith<$Res> {
-  _$PlayerListCopyWithImpl(PlayerList _value, $Res Function(PlayerList) _then)
-      : super(_value, (v) => _then(v as PlayerList));
+class __$$PlayerListCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$PlayerListCopyWith<$Res> {
+  __$$PlayerListCopyWithImpl(
+      _$PlayerList _value, $Res Function(_$PlayerList) _then)
+      : super(_value, (v) => _then(v as _$PlayerList));
 
   @override
-  PlayerList get _value => super._value as PlayerList;
+  _$PlayerList get _value => super._value as _$PlayerList;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(PlayerList(
+    return _then(_$PlayerList(
       field0 == freezed
-          ? _value.field0
+          ? _value._field0
           : field0 // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -6500,10 +6152,14 @@ class _$PlayerListCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
 /// @nodoc
 
 class _$PlayerList implements PlayerList {
-  const _$PlayerList(this.field0);
+  const _$PlayerList(final List<String> field0) : _field0 = field0;
 
+  final List<String> _field0;
   @override
-  final List<String> field0;
+  List<String> get field0 {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_field0);
+  }
 
   @override
   String toString() {
@@ -6514,18 +6170,18 @@ class _$PlayerList implements PlayerList {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is PlayerList &&
-            const DeepCollectionEquality().equals(other.field0, field0));
+            other is _$PlayerList &&
+            const DeepCollectionEquality().equals(other._field0, _field0));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(field0));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_field0));
 
   @JsonKey(ignore: true)
   @override
-  $PlayerListCopyWith<PlayerList> get copyWith =>
-      _$PlayerListCopyWithImpl<PlayerList>(this, _$identity);
+  _$$PlayerListCopyWith<_$PlayerList> get copyWith =>
+      __$$PlayerListCopyWithImpl<_$PlayerList>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6818,40 +6474,40 @@ class _$PlayerList implements PlayerList {
 }
 
 abstract class PlayerList implements Responses {
-  const factory PlayerList(List<String> field0) = _$PlayerList;
+  const factory PlayerList(final List<String> field0) = _$PlayerList;
 
-  List<String> get field0;
+  List<String> get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PlayerListCopyWith<PlayerList> get copyWith =>
+  _$$PlayerListCopyWith<_$PlayerList> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ConnectionInitFailureCopyWith<$Res> {
-  factory $ConnectionInitFailureCopyWith(ConnectionInitFailure value,
-          $Res Function(ConnectionInitFailure) then) =
-      _$ConnectionInitFailureCopyWithImpl<$Res>;
+abstract class _$$ConnectionInitFailureCopyWith<$Res> {
+  factory _$$ConnectionInitFailureCopyWith(_$ConnectionInitFailure value,
+          $Res Function(_$ConnectionInitFailure) then) =
+      __$$ConnectionInitFailureCopyWithImpl<$Res>;
   $Res call({ConnectionInitError field0});
 
   $ConnectionInitErrorCopyWith<$Res> get field0;
 }
 
 /// @nodoc
-class _$ConnectionInitFailureCopyWithImpl<$Res>
+class __$$ConnectionInitFailureCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $ConnectionInitFailureCopyWith<$Res> {
-  _$ConnectionInitFailureCopyWithImpl(
-      ConnectionInitFailure _value, $Res Function(ConnectionInitFailure) _then)
-      : super(_value, (v) => _then(v as ConnectionInitFailure));
+    implements _$$ConnectionInitFailureCopyWith<$Res> {
+  __$$ConnectionInitFailureCopyWithImpl(_$ConnectionInitFailure _value,
+      $Res Function(_$ConnectionInitFailure) _then)
+      : super(_value, (v) => _then(v as _$ConnectionInitFailure));
 
   @override
-  ConnectionInitFailure get _value => super._value as ConnectionInitFailure;
+  _$ConnectionInitFailure get _value => super._value as _$ConnectionInitFailure;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(ConnectionInitFailure(
+    return _then(_$ConnectionInitFailure(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -6884,7 +6540,7 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ConnectionInitFailure &&
+            other is _$ConnectionInitFailure &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -6894,8 +6550,8 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
 
   @JsonKey(ignore: true)
   @override
-  $ConnectionInitFailureCopyWith<ConnectionInitFailure> get copyWith =>
-      _$ConnectionInitFailureCopyWithImpl<ConnectionInitFailure>(
+  _$$ConnectionInitFailureCopyWith<_$ConnectionInitFailure> get copyWith =>
+      __$$ConnectionInitFailureCopyWithImpl<_$ConnectionInitFailure>(
           this, _$identity);
 
   @override
@@ -7189,38 +6845,38 @@ class _$ConnectionInitFailure implements ConnectionInitFailure {
 }
 
 abstract class ConnectionInitFailure implements Responses {
-  const factory ConnectionInitFailure(ConnectionInitError field0) =
+  const factory ConnectionInitFailure(final ConnectionInitError field0) =
       _$ConnectionInitFailure;
 
-  ConnectionInitError get field0;
+  ConnectionInitError get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConnectionInitFailureCopyWith<ConnectionInitFailure> get copyWith =>
+  _$$ConnectionInitFailureCopyWith<_$ConnectionInitFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RoomCreatedCopyWith<$Res> {
-  factory $RoomCreatedCopyWith(
-          RoomCreated value, $Res Function(RoomCreated) then) =
-      _$RoomCreatedCopyWithImpl<$Res>;
+abstract class _$$RoomCreatedCopyWith<$Res> {
+  factory _$$RoomCreatedCopyWith(
+          _$RoomCreated value, $Res Function(_$RoomCreated) then) =
+      __$$RoomCreatedCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$RoomCreatedCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $RoomCreatedCopyWith<$Res> {
-  _$RoomCreatedCopyWithImpl(
-      RoomCreated _value, $Res Function(RoomCreated) _then)
-      : super(_value, (v) => _then(v as RoomCreated));
+class __$$RoomCreatedCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$RoomCreatedCopyWith<$Res> {
+  __$$RoomCreatedCopyWithImpl(
+      _$RoomCreated _value, $Res Function(_$RoomCreated) _then)
+      : super(_value, (v) => _then(v as _$RoomCreated));
 
   @override
-  RoomCreated get _value => super._value as RoomCreated;
+  _$RoomCreated get _value => super._value as _$RoomCreated;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(RoomCreated(
+    return _then(_$RoomCreated(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -7246,7 +6902,7 @@ class _$RoomCreated implements RoomCreated {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is RoomCreated &&
+            other is _$RoomCreated &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -7256,8 +6912,8 @@ class _$RoomCreated implements RoomCreated {
 
   @JsonKey(ignore: true)
   @override
-  $RoomCreatedCopyWith<RoomCreated> get copyWith =>
-      _$RoomCreatedCopyWithImpl<RoomCreated>(this, _$identity);
+  _$$RoomCreatedCopyWith<_$RoomCreated> get copyWith =>
+      __$$RoomCreatedCopyWithImpl<_$RoomCreated>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7550,40 +7206,41 @@ class _$RoomCreated implements RoomCreated {
 }
 
 abstract class RoomCreated implements Responses {
-  const factory RoomCreated(String field0) = _$RoomCreated;
+  const factory RoomCreated(final String field0) = _$RoomCreated;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RoomCreatedCopyWith<RoomCreated> get copyWith =>
+  _$$RoomCreatedCopyWith<_$RoomCreated> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $JoinRoomSuccessCopyWith<$Res> {
-  factory $JoinRoomSuccessCopyWith(
-          JoinRoomSuccess value, $Res Function(JoinRoomSuccess) then) =
-      _$JoinRoomSuccessCopyWithImpl<$Res>;
+abstract class _$$JoinRoomSuccessCopyWith<$Res> {
+  factory _$$JoinRoomSuccessCopyWith(
+          _$JoinRoomSuccess value, $Res Function(_$JoinRoomSuccess) then) =
+      __$$JoinRoomSuccessCopyWithImpl<$Res>;
   $Res call({String token, RoomState roomState});
 
   $RoomStateCopyWith<$Res> get roomState;
 }
 
 /// @nodoc
-class _$JoinRoomSuccessCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $JoinRoomSuccessCopyWith<$Res> {
-  _$JoinRoomSuccessCopyWithImpl(
-      JoinRoomSuccess _value, $Res Function(JoinRoomSuccess) _then)
-      : super(_value, (v) => _then(v as JoinRoomSuccess));
+class __$$JoinRoomSuccessCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$JoinRoomSuccessCopyWith<$Res> {
+  __$$JoinRoomSuccessCopyWithImpl(
+      _$JoinRoomSuccess _value, $Res Function(_$JoinRoomSuccess) _then)
+      : super(_value, (v) => _then(v as _$JoinRoomSuccess));
 
   @override
-  JoinRoomSuccess get _value => super._value as JoinRoomSuccess;
+  _$JoinRoomSuccess get _value => super._value as _$JoinRoomSuccess;
 
   @override
   $Res call({
     Object? token = freezed,
     Object? roomState = freezed,
   }) {
-    return _then(JoinRoomSuccess(
+    return _then(_$JoinRoomSuccess(
       token: token == freezed
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
@@ -7622,7 +7279,7 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is JoinRoomSuccess &&
+            other is _$JoinRoomSuccess &&
             const DeepCollectionEquality().equals(other.token, token) &&
             const DeepCollectionEquality().equals(other.roomState, roomState));
   }
@@ -7635,8 +7292,8 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
 
   @JsonKey(ignore: true)
   @override
-  $JoinRoomSuccessCopyWith<JoinRoomSuccess> get copyWith =>
-      _$JoinRoomSuccessCopyWithImpl<JoinRoomSuccess>(this, _$identity);
+  _$$JoinRoomSuccessCopyWith<_$JoinRoomSuccess> get copyWith =>
+      __$$JoinRoomSuccessCopyWithImpl<_$JoinRoomSuccess>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7930,36 +7587,36 @@ class _$JoinRoomSuccess implements JoinRoomSuccess {
 
 abstract class JoinRoomSuccess implements Responses {
   const factory JoinRoomSuccess(
-      {required String token,
-      required RoomState roomState}) = _$JoinRoomSuccess;
+      {required final String token,
+      required final RoomState roomState}) = _$JoinRoomSuccess;
 
-  String get token;
-  RoomState get roomState;
+  String get token => throw _privateConstructorUsedError;
+  RoomState get roomState => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $JoinRoomSuccessCopyWith<JoinRoomSuccess> get copyWith =>
+  _$$JoinRoomSuccessCopyWith<_$JoinRoomSuccess> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $JoinRoomFailureTokenNotFoundCopyWith<$Res> {
-  factory $JoinRoomFailureTokenNotFoundCopyWith(
-          JoinRoomFailureTokenNotFound value,
-          $Res Function(JoinRoomFailureTokenNotFound) then) =
-      _$JoinRoomFailureTokenNotFoundCopyWithImpl<$Res>;
+abstract class _$$JoinRoomFailureTokenNotFoundCopyWith<$Res> {
+  factory _$$JoinRoomFailureTokenNotFoundCopyWith(
+          _$JoinRoomFailureTokenNotFound value,
+          $Res Function(_$JoinRoomFailureTokenNotFound) then) =
+      __$$JoinRoomFailureTokenNotFoundCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$JoinRoomFailureTokenNotFoundCopyWithImpl<$Res>
+class __$$JoinRoomFailureTokenNotFoundCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $JoinRoomFailureTokenNotFoundCopyWith<$Res> {
-  _$JoinRoomFailureTokenNotFoundCopyWithImpl(
-      JoinRoomFailureTokenNotFound _value,
-      $Res Function(JoinRoomFailureTokenNotFound) _then)
-      : super(_value, (v) => _then(v as JoinRoomFailureTokenNotFound));
+    implements _$$JoinRoomFailureTokenNotFoundCopyWith<$Res> {
+  __$$JoinRoomFailureTokenNotFoundCopyWithImpl(
+      _$JoinRoomFailureTokenNotFound _value,
+      $Res Function(_$JoinRoomFailureTokenNotFound) _then)
+      : super(_value, (v) => _then(v as _$JoinRoomFailureTokenNotFound));
 
   @override
-  JoinRoomFailureTokenNotFound get _value =>
-      super._value as JoinRoomFailureTokenNotFound;
+  _$JoinRoomFailureTokenNotFound get _value =>
+      super._value as _$JoinRoomFailureTokenNotFound;
 }
 
 /// @nodoc
@@ -7976,7 +7633,7 @@ class _$JoinRoomFailureTokenNotFound implements JoinRoomFailureTokenNotFound {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is JoinRoomFailureTokenNotFound);
+            other is _$JoinRoomFailureTokenNotFound);
   }
 
   @override
@@ -8277,22 +7934,23 @@ abstract class JoinRoomFailureTokenNotFound implements Responses {
 }
 
 /// @nodoc
-abstract class $JoinRoomFailureRoomFullCopyWith<$Res> {
-  factory $JoinRoomFailureRoomFullCopyWith(JoinRoomFailureRoomFull value,
-          $Res Function(JoinRoomFailureRoomFull) then) =
-      _$JoinRoomFailureRoomFullCopyWithImpl<$Res>;
+abstract class _$$JoinRoomFailureRoomFullCopyWith<$Res> {
+  factory _$$JoinRoomFailureRoomFullCopyWith(_$JoinRoomFailureRoomFull value,
+          $Res Function(_$JoinRoomFailureRoomFull) then) =
+      __$$JoinRoomFailureRoomFullCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$JoinRoomFailureRoomFullCopyWithImpl<$Res>
+class __$$JoinRoomFailureRoomFullCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $JoinRoomFailureRoomFullCopyWith<$Res> {
-  _$JoinRoomFailureRoomFullCopyWithImpl(JoinRoomFailureRoomFull _value,
-      $Res Function(JoinRoomFailureRoomFull) _then)
-      : super(_value, (v) => _then(v as JoinRoomFailureRoomFull));
+    implements _$$JoinRoomFailureRoomFullCopyWith<$Res> {
+  __$$JoinRoomFailureRoomFullCopyWithImpl(_$JoinRoomFailureRoomFull _value,
+      $Res Function(_$JoinRoomFailureRoomFull) _then)
+      : super(_value, (v) => _then(v as _$JoinRoomFailureRoomFull));
 
   @override
-  JoinRoomFailureRoomFull get _value => super._value as JoinRoomFailureRoomFull;
+  _$JoinRoomFailureRoomFull get _value =>
+      super._value as _$JoinRoomFailureRoomFull;
 }
 
 /// @nodoc
@@ -8308,7 +7966,8 @@ class _$JoinRoomFailureRoomFull implements JoinRoomFailureRoomFull {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is JoinRoomFailureRoomFull);
+        (other.runtimeType == runtimeType &&
+            other is _$JoinRoomFailureRoomFull);
   }
 
   @override
@@ -8609,28 +8268,29 @@ abstract class JoinRoomFailureRoomFull implements Responses {
 }
 
 /// @nodoc
-abstract class $OpponentJoinRoomCopyWith<$Res> {
-  factory $OpponentJoinRoomCopyWith(
-          OpponentJoinRoom value, $Res Function(OpponentJoinRoom) then) =
-      _$OpponentJoinRoomCopyWithImpl<$Res>;
+abstract class _$$OpponentJoinRoomCopyWith<$Res> {
+  factory _$$OpponentJoinRoomCopyWith(
+          _$OpponentJoinRoom value, $Res Function(_$OpponentJoinRoom) then) =
+      __$$OpponentJoinRoomCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$OpponentJoinRoomCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $OpponentJoinRoomCopyWith<$Res> {
-  _$OpponentJoinRoomCopyWithImpl(
-      OpponentJoinRoom _value, $Res Function(OpponentJoinRoom) _then)
-      : super(_value, (v) => _then(v as OpponentJoinRoom));
+class __$$OpponentJoinRoomCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$OpponentJoinRoomCopyWith<$Res> {
+  __$$OpponentJoinRoomCopyWithImpl(
+      _$OpponentJoinRoom _value, $Res Function(_$OpponentJoinRoom) _then)
+      : super(_value, (v) => _then(v as _$OpponentJoinRoom));
 
   @override
-  OpponentJoinRoom get _value => super._value as OpponentJoinRoom;
+  _$OpponentJoinRoom get _value => super._value as _$OpponentJoinRoom;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(OpponentJoinRoom(
+    return _then(_$OpponentJoinRoom(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -8656,7 +8316,7 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is OpponentJoinRoom &&
+            other is _$OpponentJoinRoom &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -8666,8 +8326,8 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
 
   @JsonKey(ignore: true)
   @override
-  $OpponentJoinRoomCopyWith<OpponentJoinRoom> get copyWith =>
-      _$OpponentJoinRoomCopyWithImpl<OpponentJoinRoom>(this, _$identity);
+  _$$OpponentJoinRoomCopyWith<_$OpponentJoinRoom> get copyWith =>
+      __$$OpponentJoinRoomCopyWithImpl<_$OpponentJoinRoom>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8960,30 +8620,31 @@ class _$OpponentJoinRoom implements OpponentJoinRoom {
 }
 
 abstract class OpponentJoinRoom implements Responses {
-  const factory OpponentJoinRoom(String field0) = _$OpponentJoinRoom;
+  const factory OpponentJoinRoom(final String field0) = _$OpponentJoinRoom;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OpponentJoinRoomCopyWith<OpponentJoinRoom> get copyWith =>
+  _$$OpponentJoinRoomCopyWith<_$OpponentJoinRoom> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OpponentQuitRoomCopyWith<$Res> {
-  factory $OpponentQuitRoomCopyWith(
-          OpponentQuitRoom value, $Res Function(OpponentQuitRoom) then) =
-      _$OpponentQuitRoomCopyWithImpl<$Res>;
+abstract class _$$OpponentQuitRoomCopyWith<$Res> {
+  factory _$$OpponentQuitRoomCopyWith(
+          _$OpponentQuitRoom value, $Res Function(_$OpponentQuitRoom) then) =
+      __$$OpponentQuitRoomCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$OpponentQuitRoomCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $OpponentQuitRoomCopyWith<$Res> {
-  _$OpponentQuitRoomCopyWithImpl(
-      OpponentQuitRoom _value, $Res Function(OpponentQuitRoom) _then)
-      : super(_value, (v) => _then(v as OpponentQuitRoom));
+class __$$OpponentQuitRoomCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$OpponentQuitRoomCopyWith<$Res> {
+  __$$OpponentQuitRoomCopyWithImpl(
+      _$OpponentQuitRoom _value, $Res Function(_$OpponentQuitRoom) _then)
+      : super(_value, (v) => _then(v as _$OpponentQuitRoom));
 
   @override
-  OpponentQuitRoom get _value => super._value as OpponentQuitRoom;
+  _$OpponentQuitRoom get _value => super._value as _$OpponentQuitRoom;
 }
 
 /// @nodoc
@@ -8999,7 +8660,7 @@ class _$OpponentQuitRoom implements OpponentQuitRoom {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is OpponentQuitRoom);
+        (other.runtimeType == runtimeType && other is _$OpponentQuitRoom);
   }
 
   @override
@@ -9300,21 +8961,21 @@ abstract class OpponentQuitRoom implements Responses {
 }
 
 /// @nodoc
-abstract class $OpponentReadyCopyWith<$Res> {
-  factory $OpponentReadyCopyWith(
-          OpponentReady value, $Res Function(OpponentReady) then) =
-      _$OpponentReadyCopyWithImpl<$Res>;
+abstract class _$$OpponentReadyCopyWith<$Res> {
+  factory _$$OpponentReadyCopyWith(
+          _$OpponentReady value, $Res Function(_$OpponentReady) then) =
+      __$$OpponentReadyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$OpponentReadyCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $OpponentReadyCopyWith<$Res> {
-  _$OpponentReadyCopyWithImpl(
-      OpponentReady _value, $Res Function(OpponentReady) _then)
-      : super(_value, (v) => _then(v as OpponentReady));
+class __$$OpponentReadyCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$OpponentReadyCopyWith<$Res> {
+  __$$OpponentReadyCopyWithImpl(
+      _$OpponentReady _value, $Res Function(_$OpponentReady) _then)
+      : super(_value, (v) => _then(v as _$OpponentReady));
 
   @override
-  OpponentReady get _value => super._value as OpponentReady;
+  _$OpponentReady get _value => super._value as _$OpponentReady;
 }
 
 /// @nodoc
@@ -9330,7 +8991,7 @@ class _$OpponentReady implements OpponentReady {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is OpponentReady);
+        (other.runtimeType == runtimeType && other is _$OpponentReady);
   }
 
   @override
@@ -9631,21 +9292,22 @@ abstract class OpponentReady implements Responses {
 }
 
 /// @nodoc
-abstract class $OpponentUnreadyCopyWith<$Res> {
-  factory $OpponentUnreadyCopyWith(
-          OpponentUnready value, $Res Function(OpponentUnready) then) =
-      _$OpponentUnreadyCopyWithImpl<$Res>;
+abstract class _$$OpponentUnreadyCopyWith<$Res> {
+  factory _$$OpponentUnreadyCopyWith(
+          _$OpponentUnready value, $Res Function(_$OpponentUnready) then) =
+      __$$OpponentUnreadyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$OpponentUnreadyCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $OpponentUnreadyCopyWith<$Res> {
-  _$OpponentUnreadyCopyWithImpl(
-      OpponentUnready _value, $Res Function(OpponentUnready) _then)
-      : super(_value, (v) => _then(v as OpponentUnready));
+class __$$OpponentUnreadyCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$OpponentUnreadyCopyWith<$Res> {
+  __$$OpponentUnreadyCopyWithImpl(
+      _$OpponentUnready _value, $Res Function(_$OpponentUnready) _then)
+      : super(_value, (v) => _then(v as _$OpponentUnready));
 
   @override
-  OpponentUnready get _value => super._value as OpponentUnready;
+  _$OpponentUnready get _value => super._value as _$OpponentUnready;
 }
 
 /// @nodoc
@@ -9661,7 +9323,7 @@ class _$OpponentUnready implements OpponentUnready {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is OpponentUnready);
+        (other.runtimeType == runtimeType && other is _$OpponentUnready);
   }
 
   @override
@@ -9962,28 +9624,28 @@ abstract class OpponentUnready implements Responses {
 }
 
 /// @nodoc
-abstract class $GameStartedCopyWith<$Res> {
-  factory $GameStartedCopyWith(
-          GameStarted value, $Res Function(GameStarted) then) =
-      _$GameStartedCopyWithImpl<$Res>;
+abstract class _$$GameStartedCopyWith<$Res> {
+  factory _$$GameStartedCopyWith(
+          _$GameStarted value, $Res Function(_$GameStarted) then) =
+      __$$GameStartedCopyWithImpl<$Res>;
   $Res call({Color field0});
 }
 
 /// @nodoc
-class _$GameStartedCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $GameStartedCopyWith<$Res> {
-  _$GameStartedCopyWithImpl(
-      GameStarted _value, $Res Function(GameStarted) _then)
-      : super(_value, (v) => _then(v as GameStarted));
+class __$$GameStartedCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$GameStartedCopyWith<$Res> {
+  __$$GameStartedCopyWithImpl(
+      _$GameStarted _value, $Res Function(_$GameStarted) _then)
+      : super(_value, (v) => _then(v as _$GameStarted));
 
   @override
-  GameStarted get _value => super._value as GameStarted;
+  _$GameStarted get _value => super._value as _$GameStarted;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(GameStarted(
+    return _then(_$GameStarted(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -10009,7 +9671,7 @@ class _$GameStarted implements GameStarted {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GameStarted &&
+            other is _$GameStarted &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -10019,8 +9681,8 @@ class _$GameStarted implements GameStarted {
 
   @JsonKey(ignore: true)
   @override
-  $GameStartedCopyWith<GameStarted> get copyWith =>
-      _$GameStartedCopyWithImpl<GameStarted>(this, _$identity);
+  _$$GameStartedCopyWith<_$GameStarted> get copyWith =>
+      __$$GameStartedCopyWithImpl<_$GameStarted>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -10313,37 +9975,37 @@ class _$GameStarted implements GameStarted {
 }
 
 abstract class GameStarted implements Responses {
-  const factory GameStarted(Color field0) = _$GameStarted;
+  const factory GameStarted(final Color field0) = _$GameStarted;
 
-  Color get field0;
+  Color get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GameStartedCopyWith<GameStarted> get copyWith =>
+  _$$GameStartedCopyWith<_$GameStarted> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FieldUpdateCopyWith<$Res> {
-  factory $FieldUpdateCopyWith(
-          FieldUpdate value, $Res Function(FieldUpdate) then) =
-      _$FieldUpdateCopyWithImpl<$Res>;
+abstract class _$$FieldUpdateCopyWith<$Res> {
+  factory _$$FieldUpdateCopyWith(
+          _$FieldUpdate value, $Res Function(_$FieldUpdate) then) =
+      __$$FieldUpdateCopyWithImpl<$Res>;
   $Res call({Field field0});
 }
 
 /// @nodoc
-class _$FieldUpdateCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $FieldUpdateCopyWith<$Res> {
-  _$FieldUpdateCopyWithImpl(
-      FieldUpdate _value, $Res Function(FieldUpdate) _then)
-      : super(_value, (v) => _then(v as FieldUpdate));
+class __$$FieldUpdateCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$FieldUpdateCopyWith<$Res> {
+  __$$FieldUpdateCopyWithImpl(
+      _$FieldUpdate _value, $Res Function(_$FieldUpdate) _then)
+      : super(_value, (v) => _then(v as _$FieldUpdate));
 
   @override
-  FieldUpdate get _value => super._value as FieldUpdate;
+  _$FieldUpdate get _value => super._value as _$FieldUpdate;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(FieldUpdate(
+    return _then(_$FieldUpdate(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -10369,7 +10031,7 @@ class _$FieldUpdate implements FieldUpdate {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is FieldUpdate &&
+            other is _$FieldUpdate &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -10379,8 +10041,8 @@ class _$FieldUpdate implements FieldUpdate {
 
   @JsonKey(ignore: true)
   @override
-  $FieldUpdateCopyWith<FieldUpdate> get copyWith =>
-      _$FieldUpdateCopyWithImpl<FieldUpdate>(this, _$identity);
+  _$$FieldUpdateCopyWith<_$FieldUpdate> get copyWith =>
+      __$$FieldUpdateCopyWithImpl<_$FieldUpdate>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -10673,30 +10335,30 @@ class _$FieldUpdate implements FieldUpdate {
 }
 
 abstract class FieldUpdate implements Responses {
-  const factory FieldUpdate(Field field0) = _$FieldUpdate;
+  const factory FieldUpdate(final Field field0) = _$FieldUpdate;
 
-  Field get field0;
+  Field get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FieldUpdateCopyWith<FieldUpdate> get copyWith =>
+  _$$FieldUpdateCopyWith<_$FieldUpdate> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UndoRequestCopyWith<$Res> {
-  factory $UndoRequestCopyWith(
-          UndoRequest value, $Res Function(UndoRequest) then) =
-      _$UndoRequestCopyWithImpl<$Res>;
+abstract class _$$UndoRequestCopyWith<$Res> {
+  factory _$$UndoRequestCopyWith(
+          _$UndoRequest value, $Res Function(_$UndoRequest) then) =
+      __$$UndoRequestCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UndoRequestCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $UndoRequestCopyWith<$Res> {
-  _$UndoRequestCopyWithImpl(
-      UndoRequest _value, $Res Function(UndoRequest) _then)
-      : super(_value, (v) => _then(v as UndoRequest));
+class __$$UndoRequestCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$UndoRequestCopyWith<$Res> {
+  __$$UndoRequestCopyWithImpl(
+      _$UndoRequest _value, $Res Function(_$UndoRequest) _then)
+      : super(_value, (v) => _then(v as _$UndoRequest));
 
   @override
-  UndoRequest get _value => super._value as UndoRequest;
+  _$UndoRequest get _value => super._value as _$UndoRequest;
 }
 
 /// @nodoc
@@ -10712,7 +10374,7 @@ class _$UndoRequest implements UndoRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UndoRequest);
+        (other.runtimeType == runtimeType && other is _$UndoRequest);
   }
 
   @override
@@ -11013,22 +10675,22 @@ abstract class UndoRequest implements Responses {
 }
 
 /// @nodoc
-abstract class $UndoTimeoutRejectedCopyWith<$Res> {
-  factory $UndoTimeoutRejectedCopyWith(
-          UndoTimeoutRejected value, $Res Function(UndoTimeoutRejected) then) =
-      _$UndoTimeoutRejectedCopyWithImpl<$Res>;
+abstract class _$$UndoTimeoutRejectedCopyWith<$Res> {
+  factory _$$UndoTimeoutRejectedCopyWith(_$UndoTimeoutRejected value,
+          $Res Function(_$UndoTimeoutRejected) then) =
+      __$$UndoTimeoutRejectedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UndoTimeoutRejectedCopyWithImpl<$Res>
+class __$$UndoTimeoutRejectedCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $UndoTimeoutRejectedCopyWith<$Res> {
-  _$UndoTimeoutRejectedCopyWithImpl(
-      UndoTimeoutRejected _value, $Res Function(UndoTimeoutRejected) _then)
-      : super(_value, (v) => _then(v as UndoTimeoutRejected));
+    implements _$$UndoTimeoutRejectedCopyWith<$Res> {
+  __$$UndoTimeoutRejectedCopyWithImpl(
+      _$UndoTimeoutRejected _value, $Res Function(_$UndoTimeoutRejected) _then)
+      : super(_value, (v) => _then(v as _$UndoTimeoutRejected));
 
   @override
-  UndoTimeoutRejected get _value => super._value as UndoTimeoutRejected;
+  _$UndoTimeoutRejected get _value => super._value as _$UndoTimeoutRejected;
 }
 
 /// @nodoc
@@ -11044,7 +10706,7 @@ class _$UndoTimeoutRejected implements UndoTimeoutRejected {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UndoTimeoutRejected);
+        (other.runtimeType == runtimeType && other is _$UndoTimeoutRejected);
   }
 
   @override
@@ -11345,21 +11007,22 @@ abstract class UndoTimeoutRejected implements Responses {
 }
 
 /// @nodoc
-abstract class $UndoAutoRejectedCopyWith<$Res> {
-  factory $UndoAutoRejectedCopyWith(
-          UndoAutoRejected value, $Res Function(UndoAutoRejected) then) =
-      _$UndoAutoRejectedCopyWithImpl<$Res>;
+abstract class _$$UndoAutoRejectedCopyWith<$Res> {
+  factory _$$UndoAutoRejectedCopyWith(
+          _$UndoAutoRejected value, $Res Function(_$UndoAutoRejected) then) =
+      __$$UndoAutoRejectedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UndoAutoRejectedCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $UndoAutoRejectedCopyWith<$Res> {
-  _$UndoAutoRejectedCopyWithImpl(
-      UndoAutoRejected _value, $Res Function(UndoAutoRejected) _then)
-      : super(_value, (v) => _then(v as UndoAutoRejected));
+class __$$UndoAutoRejectedCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$UndoAutoRejectedCopyWith<$Res> {
+  __$$UndoAutoRejectedCopyWithImpl(
+      _$UndoAutoRejected _value, $Res Function(_$UndoAutoRejected) _then)
+      : super(_value, (v) => _then(v as _$UndoAutoRejected));
 
   @override
-  UndoAutoRejected get _value => super._value as UndoAutoRejected;
+  _$UndoAutoRejected get _value => super._value as _$UndoAutoRejected;
 }
 
 /// @nodoc
@@ -11375,7 +11038,7 @@ class _$UndoAutoRejected implements UndoAutoRejected {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UndoAutoRejected);
+        (other.runtimeType == runtimeType && other is _$UndoAutoRejected);
   }
 
   @override
@@ -11676,26 +11339,26 @@ abstract class UndoAutoRejected implements Responses {
 }
 
 /// @nodoc
-abstract class $UndoCopyWith<$Res> {
-  factory $UndoCopyWith(Undo value, $Res Function(Undo) then) =
-      _$UndoCopyWithImpl<$Res>;
+abstract class _$$UndoCopyWith<$Res> {
+  factory _$$UndoCopyWith(_$Undo value, $Res Function(_$Undo) then) =
+      __$$UndoCopyWithImpl<$Res>;
   $Res call({Field field0});
 }
 
 /// @nodoc
-class _$UndoCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $UndoCopyWith<$Res> {
-  _$UndoCopyWithImpl(Undo _value, $Res Function(Undo) _then)
-      : super(_value, (v) => _then(v as Undo));
+class __$$UndoCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$UndoCopyWith<$Res> {
+  __$$UndoCopyWithImpl(_$Undo _value, $Res Function(_$Undo) _then)
+      : super(_value, (v) => _then(v as _$Undo));
 
   @override
-  Undo get _value => super._value as Undo;
+  _$Undo get _value => super._value as _$Undo;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(Undo(
+    return _then(_$Undo(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -11721,7 +11384,7 @@ class _$Undo implements Undo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Undo &&
+            other is _$Undo &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -11731,8 +11394,8 @@ class _$Undo implements Undo {
 
   @JsonKey(ignore: true)
   @override
-  $UndoCopyWith<Undo> get copyWith =>
-      _$UndoCopyWithImpl<Undo>(this, _$identity);
+  _$$UndoCopyWith<_$Undo> get copyWith =>
+      __$$UndoCopyWithImpl<_$Undo>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -12025,30 +11688,31 @@ class _$Undo implements Undo {
 }
 
 abstract class Undo implements Responses {
-  const factory Undo(Field field0) = _$Undo;
+  const factory Undo(final Field field0) = _$Undo;
 
-  Field get field0;
+  Field get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UndoCopyWith<Undo> get copyWith => throw _privateConstructorUsedError;
+  _$$UndoCopyWith<_$Undo> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UndoRejectedByOpponentCopyWith<$Res> {
-  factory $UndoRejectedByOpponentCopyWith(UndoRejectedByOpponent value,
-          $Res Function(UndoRejectedByOpponent) then) =
-      _$UndoRejectedByOpponentCopyWithImpl<$Res>;
+abstract class _$$UndoRejectedByOpponentCopyWith<$Res> {
+  factory _$$UndoRejectedByOpponentCopyWith(_$UndoRejectedByOpponent value,
+          $Res Function(_$UndoRejectedByOpponent) then) =
+      __$$UndoRejectedByOpponentCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UndoRejectedByOpponentCopyWithImpl<$Res>
+class __$$UndoRejectedByOpponentCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $UndoRejectedByOpponentCopyWith<$Res> {
-  _$UndoRejectedByOpponentCopyWithImpl(UndoRejectedByOpponent _value,
-      $Res Function(UndoRejectedByOpponent) _then)
-      : super(_value, (v) => _then(v as UndoRejectedByOpponent));
+    implements _$$UndoRejectedByOpponentCopyWith<$Res> {
+  __$$UndoRejectedByOpponentCopyWithImpl(_$UndoRejectedByOpponent _value,
+      $Res Function(_$UndoRejectedByOpponent) _then)
+      : super(_value, (v) => _then(v as _$UndoRejectedByOpponent));
 
   @override
-  UndoRejectedByOpponent get _value => super._value as UndoRejectedByOpponent;
+  _$UndoRejectedByOpponent get _value =>
+      super._value as _$UndoRejectedByOpponent;
 }
 
 /// @nodoc
@@ -12064,7 +11728,7 @@ class _$UndoRejectedByOpponent implements UndoRejectedByOpponent {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UndoRejectedByOpponent);
+        (other.runtimeType == runtimeType && other is _$UndoRejectedByOpponent);
   }
 
   @override
@@ -12365,22 +12029,22 @@ abstract class UndoRejectedByOpponent implements Responses {
 }
 
 /// @nodoc
-abstract class $GameEndBlackTimeoutCopyWith<$Res> {
-  factory $GameEndBlackTimeoutCopyWith(
-          GameEndBlackTimeout value, $Res Function(GameEndBlackTimeout) then) =
-      _$GameEndBlackTimeoutCopyWithImpl<$Res>;
+abstract class _$$GameEndBlackTimeoutCopyWith<$Res> {
+  factory _$$GameEndBlackTimeoutCopyWith(_$GameEndBlackTimeout value,
+          $Res Function(_$GameEndBlackTimeout) then) =
+      __$$GameEndBlackTimeoutCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameEndBlackTimeoutCopyWithImpl<$Res>
+class __$$GameEndBlackTimeoutCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $GameEndBlackTimeoutCopyWith<$Res> {
-  _$GameEndBlackTimeoutCopyWithImpl(
-      GameEndBlackTimeout _value, $Res Function(GameEndBlackTimeout) _then)
-      : super(_value, (v) => _then(v as GameEndBlackTimeout));
+    implements _$$GameEndBlackTimeoutCopyWith<$Res> {
+  __$$GameEndBlackTimeoutCopyWithImpl(
+      _$GameEndBlackTimeout _value, $Res Function(_$GameEndBlackTimeout) _then)
+      : super(_value, (v) => _then(v as _$GameEndBlackTimeout));
 
   @override
-  GameEndBlackTimeout get _value => super._value as GameEndBlackTimeout;
+  _$GameEndBlackTimeout get _value => super._value as _$GameEndBlackTimeout;
 }
 
 /// @nodoc
@@ -12396,7 +12060,7 @@ class _$GameEndBlackTimeout implements GameEndBlackTimeout {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is GameEndBlackTimeout);
+        (other.runtimeType == runtimeType && other is _$GameEndBlackTimeout);
   }
 
   @override
@@ -12697,22 +12361,22 @@ abstract class GameEndBlackTimeout implements Responses {
 }
 
 /// @nodoc
-abstract class $GameEndWhiteTimeoutCopyWith<$Res> {
-  factory $GameEndWhiteTimeoutCopyWith(
-          GameEndWhiteTimeout value, $Res Function(GameEndWhiteTimeout) then) =
-      _$GameEndWhiteTimeoutCopyWithImpl<$Res>;
+abstract class _$$GameEndWhiteTimeoutCopyWith<$Res> {
+  factory _$$GameEndWhiteTimeoutCopyWith(_$GameEndWhiteTimeout value,
+          $Res Function(_$GameEndWhiteTimeout) then) =
+      __$$GameEndWhiteTimeoutCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameEndWhiteTimeoutCopyWithImpl<$Res>
+class __$$GameEndWhiteTimeoutCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $GameEndWhiteTimeoutCopyWith<$Res> {
-  _$GameEndWhiteTimeoutCopyWithImpl(
-      GameEndWhiteTimeout _value, $Res Function(GameEndWhiteTimeout) _then)
-      : super(_value, (v) => _then(v as GameEndWhiteTimeout));
+    implements _$$GameEndWhiteTimeoutCopyWith<$Res> {
+  __$$GameEndWhiteTimeoutCopyWithImpl(
+      _$GameEndWhiteTimeout _value, $Res Function(_$GameEndWhiteTimeout) _then)
+      : super(_value, (v) => _then(v as _$GameEndWhiteTimeout));
 
   @override
-  GameEndWhiteTimeout get _value => super._value as GameEndWhiteTimeout;
+  _$GameEndWhiteTimeout get _value => super._value as _$GameEndWhiteTimeout;
 }
 
 /// @nodoc
@@ -12728,7 +12392,7 @@ class _$GameEndWhiteTimeout implements GameEndWhiteTimeout {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is GameEndWhiteTimeout);
+        (other.runtimeType == runtimeType && other is _$GameEndWhiteTimeout);
   }
 
   @override
@@ -13029,21 +12693,22 @@ abstract class GameEndWhiteTimeout implements Responses {
 }
 
 /// @nodoc
-abstract class $GameEndBlackWinsCopyWith<$Res> {
-  factory $GameEndBlackWinsCopyWith(
-          GameEndBlackWins value, $Res Function(GameEndBlackWins) then) =
-      _$GameEndBlackWinsCopyWithImpl<$Res>;
+abstract class _$$GameEndBlackWinsCopyWith<$Res> {
+  factory _$$GameEndBlackWinsCopyWith(
+          _$GameEndBlackWins value, $Res Function(_$GameEndBlackWins) then) =
+      __$$GameEndBlackWinsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameEndBlackWinsCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $GameEndBlackWinsCopyWith<$Res> {
-  _$GameEndBlackWinsCopyWithImpl(
-      GameEndBlackWins _value, $Res Function(GameEndBlackWins) _then)
-      : super(_value, (v) => _then(v as GameEndBlackWins));
+class __$$GameEndBlackWinsCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$GameEndBlackWinsCopyWith<$Res> {
+  __$$GameEndBlackWinsCopyWithImpl(
+      _$GameEndBlackWins _value, $Res Function(_$GameEndBlackWins) _then)
+      : super(_value, (v) => _then(v as _$GameEndBlackWins));
 
   @override
-  GameEndBlackWins get _value => super._value as GameEndBlackWins;
+  _$GameEndBlackWins get _value => super._value as _$GameEndBlackWins;
 }
 
 /// @nodoc
@@ -13059,7 +12724,7 @@ class _$GameEndBlackWins implements GameEndBlackWins {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is GameEndBlackWins);
+        (other.runtimeType == runtimeType && other is _$GameEndBlackWins);
   }
 
   @override
@@ -13360,21 +13025,22 @@ abstract class GameEndBlackWins implements Responses {
 }
 
 /// @nodoc
-abstract class $GameEndWhiteWinsCopyWith<$Res> {
-  factory $GameEndWhiteWinsCopyWith(
-          GameEndWhiteWins value, $Res Function(GameEndWhiteWins) then) =
-      _$GameEndWhiteWinsCopyWithImpl<$Res>;
+abstract class _$$GameEndWhiteWinsCopyWith<$Res> {
+  factory _$$GameEndWhiteWinsCopyWith(
+          _$GameEndWhiteWins value, $Res Function(_$GameEndWhiteWins) then) =
+      __$$GameEndWhiteWinsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameEndWhiteWinsCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $GameEndWhiteWinsCopyWith<$Res> {
-  _$GameEndWhiteWinsCopyWithImpl(
-      GameEndWhiteWins _value, $Res Function(GameEndWhiteWins) _then)
-      : super(_value, (v) => _then(v as GameEndWhiteWins));
+class __$$GameEndWhiteWinsCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$GameEndWhiteWinsCopyWith<$Res> {
+  __$$GameEndWhiteWinsCopyWithImpl(
+      _$GameEndWhiteWins _value, $Res Function(_$GameEndWhiteWins) _then)
+      : super(_value, (v) => _then(v as _$GameEndWhiteWins));
 
   @override
-  GameEndWhiteWins get _value => super._value as GameEndWhiteWins;
+  _$GameEndWhiteWins get _value => super._value as _$GameEndWhiteWins;
 }
 
 /// @nodoc
@@ -13390,7 +13056,7 @@ class _$GameEndWhiteWins implements GameEndWhiteWins {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is GameEndWhiteWins);
+        (other.runtimeType == runtimeType && other is _$GameEndWhiteWins);
   }
 
   @override
@@ -13691,21 +13357,21 @@ abstract class GameEndWhiteWins implements Responses {
 }
 
 /// @nodoc
-abstract class $GameEndDrawCopyWith<$Res> {
-  factory $GameEndDrawCopyWith(
-          GameEndDraw value, $Res Function(GameEndDraw) then) =
-      _$GameEndDrawCopyWithImpl<$Res>;
+abstract class _$$GameEndDrawCopyWith<$Res> {
+  factory _$$GameEndDrawCopyWith(
+          _$GameEndDraw value, $Res Function(_$GameEndDraw) then) =
+      __$$GameEndDrawCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GameEndDrawCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $GameEndDrawCopyWith<$Res> {
-  _$GameEndDrawCopyWithImpl(
-      GameEndDraw _value, $Res Function(GameEndDraw) _then)
-      : super(_value, (v) => _then(v as GameEndDraw));
+class __$$GameEndDrawCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$GameEndDrawCopyWith<$Res> {
+  __$$GameEndDrawCopyWithImpl(
+      _$GameEndDraw _value, $Res Function(_$GameEndDraw) _then)
+      : super(_value, (v) => _then(v as _$GameEndDraw));
 
   @override
-  GameEndDraw get _value => super._value as GameEndDraw;
+  _$GameEndDraw get _value => super._value as _$GameEndDraw;
 }
 
 /// @nodoc
@@ -13721,7 +13387,7 @@ class _$GameEndDraw implements GameEndDraw {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is GameEndDraw);
+        (other.runtimeType == runtimeType && other is _$GameEndDraw);
   }
 
   @override
@@ -14022,10 +13688,10 @@ abstract class GameEndDraw implements Responses {
 }
 
 /// @nodoc
-abstract class $RoomScoresCopyWith<$Res> {
-  factory $RoomScoresCopyWith(
-          RoomScores value, $Res Function(RoomScores) then) =
-      _$RoomScoresCopyWithImpl<$Res>;
+abstract class _$$RoomScoresCopyWith<$Res> {
+  factory _$$RoomScoresCopyWith(
+          _$RoomScores value, $Res Function(_$RoomScores) then) =
+      __$$RoomScoresCopyWithImpl<$Res>;
   $Res call(
       {String player1Name,
       int player1Score,
@@ -14034,13 +13700,14 @@ abstract class $RoomScoresCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RoomScoresCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $RoomScoresCopyWith<$Res> {
-  _$RoomScoresCopyWithImpl(RoomScores _value, $Res Function(RoomScores) _then)
-      : super(_value, (v) => _then(v as RoomScores));
+class __$$RoomScoresCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$RoomScoresCopyWith<$Res> {
+  __$$RoomScoresCopyWithImpl(
+      _$RoomScores _value, $Res Function(_$RoomScores) _then)
+      : super(_value, (v) => _then(v as _$RoomScores));
 
   @override
-  RoomScores get _value => super._value as RoomScores;
+  _$RoomScores get _value => super._value as _$RoomScores;
 
   @override
   $Res call({
@@ -14049,7 +13716,7 @@ class _$RoomScoresCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
     Object? player2Name = freezed,
     Object? player2Score = freezed,
   }) {
-    return _then(RoomScores(
+    return _then(_$RoomScores(
       player1Name: player1Name == freezed
           ? _value.player1Name
           : player1Name // ignore: cast_nullable_to_non_nullable
@@ -14097,7 +13764,7 @@ class _$RoomScores implements RoomScores {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is RoomScores &&
+            other is _$RoomScores &&
             const DeepCollectionEquality()
                 .equals(other.player1Name, player1Name) &&
             const DeepCollectionEquality()
@@ -14118,8 +13785,8 @@ class _$RoomScores implements RoomScores {
 
   @JsonKey(ignore: true)
   @override
-  $RoomScoresCopyWith<RoomScores> get copyWith =>
-      _$RoomScoresCopyWithImpl<RoomScores>(this, _$identity);
+  _$$RoomScoresCopyWith<_$RoomScores> get copyWith =>
+      __$$RoomScoresCopyWithImpl<_$RoomScores>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -14414,37 +14081,38 @@ class _$RoomScores implements RoomScores {
 
 abstract class RoomScores implements Responses {
   const factory RoomScores(
-      {required String player1Name,
-      required int player1Score,
-      required String player2Name,
-      required int player2Score}) = _$RoomScores;
+      {required final String player1Name,
+      required final int player1Score,
+      required final String player2Name,
+      required final int player2Score}) = _$RoomScores;
 
-  String get player1Name;
-  int get player1Score;
-  String get player2Name;
-  int get player2Score;
+  String get player1Name => throw _privateConstructorUsedError;
+  int get player1Score => throw _privateConstructorUsedError;
+  String get player2Name => throw _privateConstructorUsedError;
+  int get player2Score => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RoomScoresCopyWith<RoomScores> get copyWith =>
+  _$$RoomScoresCopyWith<_$RoomScores> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OpponentQuitGameSessionCopyWith<$Res> {
-  factory $OpponentQuitGameSessionCopyWith(OpponentQuitGameSession value,
-          $Res Function(OpponentQuitGameSession) then) =
-      _$OpponentQuitGameSessionCopyWithImpl<$Res>;
+abstract class _$$OpponentQuitGameSessionCopyWith<$Res> {
+  factory _$$OpponentQuitGameSessionCopyWith(_$OpponentQuitGameSession value,
+          $Res Function(_$OpponentQuitGameSession) then) =
+      __$$OpponentQuitGameSessionCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$OpponentQuitGameSessionCopyWithImpl<$Res>
+class __$$OpponentQuitGameSessionCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $OpponentQuitGameSessionCopyWith<$Res> {
-  _$OpponentQuitGameSessionCopyWithImpl(OpponentQuitGameSession _value,
-      $Res Function(OpponentQuitGameSession) _then)
-      : super(_value, (v) => _then(v as OpponentQuitGameSession));
+    implements _$$OpponentQuitGameSessionCopyWith<$Res> {
+  __$$OpponentQuitGameSessionCopyWithImpl(_$OpponentQuitGameSession _value,
+      $Res Function(_$OpponentQuitGameSession) _then)
+      : super(_value, (v) => _then(v as _$OpponentQuitGameSession));
 
   @override
-  OpponentQuitGameSession get _value => super._value as OpponentQuitGameSession;
+  _$OpponentQuitGameSession get _value =>
+      super._value as _$OpponentQuitGameSession;
 }
 
 /// @nodoc
@@ -14460,7 +14128,8 @@ class _$OpponentQuitGameSession implements OpponentQuitGameSession {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is OpponentQuitGameSession);
+        (other.runtimeType == runtimeType &&
+            other is _$OpponentQuitGameSession);
   }
 
   @override
@@ -14761,21 +14430,22 @@ abstract class OpponentQuitGameSession implements Responses {
 }
 
 /// @nodoc
-abstract class $OpponentExitGameCopyWith<$Res> {
-  factory $OpponentExitGameCopyWith(
-          OpponentExitGame value, $Res Function(OpponentExitGame) then) =
-      _$OpponentExitGameCopyWithImpl<$Res>;
+abstract class _$$OpponentExitGameCopyWith<$Res> {
+  factory _$$OpponentExitGameCopyWith(
+          _$OpponentExitGame value, $Res Function(_$OpponentExitGame) then) =
+      __$$OpponentExitGameCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$OpponentExitGameCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $OpponentExitGameCopyWith<$Res> {
-  _$OpponentExitGameCopyWithImpl(
-      OpponentExitGame _value, $Res Function(OpponentExitGame) _then)
-      : super(_value, (v) => _then(v as OpponentExitGame));
+class __$$OpponentExitGameCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$OpponentExitGameCopyWith<$Res> {
+  __$$OpponentExitGameCopyWithImpl(
+      _$OpponentExitGame _value, $Res Function(_$OpponentExitGame) _then)
+      : super(_value, (v) => _then(v as _$OpponentExitGame));
 
   @override
-  OpponentExitGame get _value => super._value as OpponentExitGame;
+  _$OpponentExitGame get _value => super._value as _$OpponentExitGame;
 }
 
 /// @nodoc
@@ -14791,7 +14461,7 @@ class _$OpponentExitGame implements OpponentExitGame {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is OpponentExitGame);
+        (other.runtimeType == runtimeType && other is _$OpponentExitGame);
   }
 
   @override
@@ -15092,22 +14762,22 @@ abstract class OpponentExitGame implements Responses {
 }
 
 /// @nodoc
-abstract class $OpponentDisconnectedCopyWith<$Res> {
-  factory $OpponentDisconnectedCopyWith(OpponentDisconnected value,
-          $Res Function(OpponentDisconnected) then) =
-      _$OpponentDisconnectedCopyWithImpl<$Res>;
+abstract class _$$OpponentDisconnectedCopyWith<$Res> {
+  factory _$$OpponentDisconnectedCopyWith(_$OpponentDisconnected value,
+          $Res Function(_$OpponentDisconnected) then) =
+      __$$OpponentDisconnectedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$OpponentDisconnectedCopyWithImpl<$Res>
+class __$$OpponentDisconnectedCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $OpponentDisconnectedCopyWith<$Res> {
-  _$OpponentDisconnectedCopyWithImpl(
-      OpponentDisconnected _value, $Res Function(OpponentDisconnected) _then)
-      : super(_value, (v) => _then(v as OpponentDisconnected));
+    implements _$$OpponentDisconnectedCopyWith<$Res> {
+  __$$OpponentDisconnectedCopyWithImpl(_$OpponentDisconnected _value,
+      $Res Function(_$OpponentDisconnected) _then)
+      : super(_value, (v) => _then(v as _$OpponentDisconnected));
 
   @override
-  OpponentDisconnected get _value => super._value as OpponentDisconnected;
+  _$OpponentDisconnected get _value => super._value as _$OpponentDisconnected;
 }
 
 /// @nodoc
@@ -15123,7 +14793,7 @@ class _$OpponentDisconnected implements OpponentDisconnected {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is OpponentDisconnected);
+        (other.runtimeType == runtimeType && other is _$OpponentDisconnected);
   }
 
   @override
@@ -15424,28 +15094,29 @@ abstract class OpponentDisconnected implements Responses {
 }
 
 /// @nodoc
-abstract class $GameSessionErrorCopyWith<$Res> {
-  factory $GameSessionErrorCopyWith(
-          GameSessionError value, $Res Function(GameSessionError) then) =
-      _$GameSessionErrorCopyWithImpl<$Res>;
+abstract class _$$GameSessionErrorCopyWith<$Res> {
+  factory _$$GameSessionErrorCopyWith(
+          _$GameSessionError value, $Res Function(_$GameSessionError) then) =
+      __$$GameSessionErrorCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$GameSessionErrorCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $GameSessionErrorCopyWith<$Res> {
-  _$GameSessionErrorCopyWithImpl(
-      GameSessionError _value, $Res Function(GameSessionError) _then)
-      : super(_value, (v) => _then(v as GameSessionError));
+class __$$GameSessionErrorCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$GameSessionErrorCopyWith<$Res> {
+  __$$GameSessionErrorCopyWithImpl(
+      _$GameSessionError _value, $Res Function(_$GameSessionError) _then)
+      : super(_value, (v) => _then(v as _$GameSessionError));
 
   @override
-  GameSessionError get _value => super._value as GameSessionError;
+  _$GameSessionError get _value => super._value as _$GameSessionError;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(GameSessionError(
+    return _then(_$GameSessionError(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -15471,7 +15142,7 @@ class _$GameSessionError implements GameSessionError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GameSessionError &&
+            other is _$GameSessionError &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -15481,8 +15152,8 @@ class _$GameSessionError implements GameSessionError {
 
   @JsonKey(ignore: true)
   @override
-  $GameSessionErrorCopyWith<GameSessionError> get copyWith =>
-      _$GameSessionErrorCopyWithImpl<GameSessionError>(this, _$identity);
+  _$$GameSessionErrorCopyWith<_$GameSessionError> get copyWith =>
+      __$$GameSessionErrorCopyWithImpl<_$GameSessionError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -15775,38 +15446,38 @@ class _$GameSessionError implements GameSessionError {
 }
 
 abstract class GameSessionError implements Responses {
-  const factory GameSessionError(String field0) = _$GameSessionError;
+  const factory GameSessionError(final String field0) = _$GameSessionError;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GameSessionErrorCopyWith<GameSessionError> get copyWith =>
+  _$$GameSessionErrorCopyWith<_$GameSessionError> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ChatMessageCopyWith<$Res> {
-  factory $ChatMessageCopyWith(
-          ChatMessage value, $Res Function(ChatMessage) then) =
-      _$ChatMessageCopyWithImpl<$Res>;
+abstract class _$$ChatMessageCopyWith<$Res> {
+  factory _$$ChatMessageCopyWith(
+          _$ChatMessage value, $Res Function(_$ChatMessage) then) =
+      __$$ChatMessageCopyWithImpl<$Res>;
   $Res call({String name, String msg});
 }
 
 /// @nodoc
-class _$ChatMessageCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $ChatMessageCopyWith<$Res> {
-  _$ChatMessageCopyWithImpl(
-      ChatMessage _value, $Res Function(ChatMessage) _then)
-      : super(_value, (v) => _then(v as ChatMessage));
+class __$$ChatMessageCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$ChatMessageCopyWith<$Res> {
+  __$$ChatMessageCopyWithImpl(
+      _$ChatMessage _value, $Res Function(_$ChatMessage) _then)
+      : super(_value, (v) => _then(v as _$ChatMessage));
 
   @override
-  ChatMessage get _value => super._value as ChatMessage;
+  _$ChatMessage get _value => super._value as _$ChatMessage;
 
   @override
   $Res call({
     Object? name = freezed,
     Object? msg = freezed,
   }) {
-    return _then(ChatMessage(
+    return _then(_$ChatMessage(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -15838,7 +15509,7 @@ class _$ChatMessage implements ChatMessage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ChatMessage &&
+            other is _$ChatMessage &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.msg, msg));
   }
@@ -15851,8 +15522,8 @@ class _$ChatMessage implements ChatMessage {
 
   @JsonKey(ignore: true)
   @override
-  $ChatMessageCopyWith<ChatMessage> get copyWith =>
-      _$ChatMessageCopyWithImpl<ChatMessage>(this, _$identity);
+  _$$ChatMessageCopyWith<_$ChatMessage> get copyWith =>
+      __$$ChatMessageCopyWithImpl<_$ChatMessage>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -16145,40 +15816,40 @@ class _$ChatMessage implements ChatMessage {
 }
 
 abstract class ChatMessage implements Responses {
-  const factory ChatMessage({required String name, required String msg}) =
-      _$ChatMessage;
+  const factory ChatMessage(
+      {required final String name, required final String msg}) = _$ChatMessage;
 
-  String get name;
-  String get msg;
+  String get name => throw _privateConstructorUsedError;
+  String get msg => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ChatMessageCopyWith<ChatMessage> get copyWith =>
+  _$$ChatMessageCopyWith<_$ChatMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreateAccountFailureCopyWith<$Res> {
-  factory $CreateAccountFailureCopyWith(CreateAccountFailure value,
-          $Res Function(CreateAccountFailure) then) =
-      _$CreateAccountFailureCopyWithImpl<$Res>;
+abstract class _$$CreateAccountFailureCopyWith<$Res> {
+  factory _$$CreateAccountFailureCopyWith(_$CreateAccountFailure value,
+          $Res Function(_$CreateAccountFailure) then) =
+      __$$CreateAccountFailureCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$CreateAccountFailureCopyWithImpl<$Res>
+class __$$CreateAccountFailureCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $CreateAccountFailureCopyWith<$Res> {
-  _$CreateAccountFailureCopyWithImpl(
-      CreateAccountFailure _value, $Res Function(CreateAccountFailure) _then)
-      : super(_value, (v) => _then(v as CreateAccountFailure));
+    implements _$$CreateAccountFailureCopyWith<$Res> {
+  __$$CreateAccountFailureCopyWithImpl(_$CreateAccountFailure _value,
+      $Res Function(_$CreateAccountFailure) _then)
+      : super(_value, (v) => _then(v as _$CreateAccountFailure));
 
   @override
-  CreateAccountFailure get _value => super._value as CreateAccountFailure;
+  _$CreateAccountFailure get _value => super._value as _$CreateAccountFailure;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(CreateAccountFailure(
+    return _then(_$CreateAccountFailure(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -16204,7 +15875,7 @@ class _$CreateAccountFailure implements CreateAccountFailure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateAccountFailure &&
+            other is _$CreateAccountFailure &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -16214,8 +15885,8 @@ class _$CreateAccountFailure implements CreateAccountFailure {
 
   @JsonKey(ignore: true)
   @override
-  $CreateAccountFailureCopyWith<CreateAccountFailure> get copyWith =>
-      _$CreateAccountFailureCopyWithImpl<CreateAccountFailure>(
+  _$$CreateAccountFailureCopyWith<_$CreateAccountFailure> get copyWith =>
+      __$$CreateAccountFailureCopyWithImpl<_$CreateAccountFailure>(
           this, _$identity);
 
   @override
@@ -16509,37 +16180,38 @@ class _$CreateAccountFailure implements CreateAccountFailure {
 }
 
 abstract class CreateAccountFailure implements Responses {
-  const factory CreateAccountFailure(String field0) = _$CreateAccountFailure;
+  const factory CreateAccountFailure(final String field0) =
+      _$CreateAccountFailure;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateAccountFailureCopyWith<CreateAccountFailure> get copyWith =>
+  _$$CreateAccountFailureCopyWith<_$CreateAccountFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginFailureCopyWith<$Res> {
-  factory $LoginFailureCopyWith(
-          LoginFailure value, $Res Function(LoginFailure) then) =
-      _$LoginFailureCopyWithImpl<$Res>;
+abstract class _$$LoginFailureCopyWith<$Res> {
+  factory _$$LoginFailureCopyWith(
+          _$LoginFailure value, $Res Function(_$LoginFailure) then) =
+      __$$LoginFailureCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$LoginFailureCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $LoginFailureCopyWith<$Res> {
-  _$LoginFailureCopyWithImpl(
-      LoginFailure _value, $Res Function(LoginFailure) _then)
-      : super(_value, (v) => _then(v as LoginFailure));
+class __$$LoginFailureCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$LoginFailureCopyWith<$Res> {
+  __$$LoginFailureCopyWithImpl(
+      _$LoginFailure _value, $Res Function(_$LoginFailure) _then)
+      : super(_value, (v) => _then(v as _$LoginFailure));
 
   @override
-  LoginFailure get _value => super._value as LoginFailure;
+  _$LoginFailure get _value => super._value as _$LoginFailure;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(LoginFailure(
+    return _then(_$LoginFailure(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -16565,7 +16237,7 @@ class _$LoginFailure implements LoginFailure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LoginFailure &&
+            other is _$LoginFailure &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -16575,8 +16247,8 @@ class _$LoginFailure implements LoginFailure {
 
   @JsonKey(ignore: true)
   @override
-  $LoginFailureCopyWith<LoginFailure> get copyWith =>
-      _$LoginFailureCopyWithImpl<LoginFailure>(this, _$identity);
+  _$$LoginFailureCopyWith<_$LoginFailure> get copyWith =>
+      __$$LoginFailureCopyWithImpl<_$LoginFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -16869,38 +16541,38 @@ class _$LoginFailure implements LoginFailure {
 }
 
 abstract class LoginFailure implements Responses {
-  const factory LoginFailure(String field0) = _$LoginFailure;
+  const factory LoginFailure(final String field0) = _$LoginFailure;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginFailureCopyWith<LoginFailure> get copyWith =>
+  _$$LoginFailureCopyWith<_$LoginFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UpdateAccountFailureCopyWith<$Res> {
-  factory $UpdateAccountFailureCopyWith(UpdateAccountFailure value,
-          $Res Function(UpdateAccountFailure) then) =
-      _$UpdateAccountFailureCopyWithImpl<$Res>;
+abstract class _$$UpdateAccountFailureCopyWith<$Res> {
+  factory _$$UpdateAccountFailureCopyWith(_$UpdateAccountFailure value,
+          $Res Function(_$UpdateAccountFailure) then) =
+      __$$UpdateAccountFailureCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$UpdateAccountFailureCopyWithImpl<$Res>
+class __$$UpdateAccountFailureCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $UpdateAccountFailureCopyWith<$Res> {
-  _$UpdateAccountFailureCopyWithImpl(
-      UpdateAccountFailure _value, $Res Function(UpdateAccountFailure) _then)
-      : super(_value, (v) => _then(v as UpdateAccountFailure));
+    implements _$$UpdateAccountFailureCopyWith<$Res> {
+  __$$UpdateAccountFailureCopyWithImpl(_$UpdateAccountFailure _value,
+      $Res Function(_$UpdateAccountFailure) _then)
+      : super(_value, (v) => _then(v as _$UpdateAccountFailure));
 
   @override
-  UpdateAccountFailure get _value => super._value as UpdateAccountFailure;
+  _$UpdateAccountFailure get _value => super._value as _$UpdateAccountFailure;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(UpdateAccountFailure(
+    return _then(_$UpdateAccountFailure(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -16926,7 +16598,7 @@ class _$UpdateAccountFailure implements UpdateAccountFailure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UpdateAccountFailure &&
+            other is _$UpdateAccountFailure &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -16936,8 +16608,8 @@ class _$UpdateAccountFailure implements UpdateAccountFailure {
 
   @JsonKey(ignore: true)
   @override
-  $UpdateAccountFailureCopyWith<UpdateAccountFailure> get copyWith =>
-      _$UpdateAccountFailureCopyWithImpl<UpdateAccountFailure>(
+  _$$UpdateAccountFailureCopyWith<_$UpdateAccountFailure> get copyWith =>
+      __$$UpdateAccountFailureCopyWithImpl<_$UpdateAccountFailure>(
           this, _$identity);
 
   @override
@@ -17231,39 +16903,40 @@ class _$UpdateAccountFailure implements UpdateAccountFailure {
 }
 
 abstract class UpdateAccountFailure implements Responses {
-  const factory UpdateAccountFailure(String field0) = _$UpdateAccountFailure;
+  const factory UpdateAccountFailure(final String field0) =
+      _$UpdateAccountFailure;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UpdateAccountFailureCopyWith<UpdateAccountFailure> get copyWith =>
+  _$$UpdateAccountFailureCopyWith<_$UpdateAccountFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreateAccountSuccessCopyWith<$Res> {
-  factory $CreateAccountSuccessCopyWith(CreateAccountSuccess value,
-          $Res Function(CreateAccountSuccess) then) =
-      _$CreateAccountSuccessCopyWithImpl<$Res>;
+abstract class _$$CreateAccountSuccessCopyWith<$Res> {
+  factory _$$CreateAccountSuccessCopyWith(_$CreateAccountSuccess value,
+          $Res Function(_$CreateAccountSuccess) then) =
+      __$$CreateAccountSuccessCopyWithImpl<$Res>;
   $Res call({String name, String password});
 }
 
 /// @nodoc
-class _$CreateAccountSuccessCopyWithImpl<$Res>
+class __$$CreateAccountSuccessCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $CreateAccountSuccessCopyWith<$Res> {
-  _$CreateAccountSuccessCopyWithImpl(
-      CreateAccountSuccess _value, $Res Function(CreateAccountSuccess) _then)
-      : super(_value, (v) => _then(v as CreateAccountSuccess));
+    implements _$$CreateAccountSuccessCopyWith<$Res> {
+  __$$CreateAccountSuccessCopyWithImpl(_$CreateAccountSuccess _value,
+      $Res Function(_$CreateAccountSuccess) _then)
+      : super(_value, (v) => _then(v as _$CreateAccountSuccess));
 
   @override
-  CreateAccountSuccess get _value => super._value as CreateAccountSuccess;
+  _$CreateAccountSuccess get _value => super._value as _$CreateAccountSuccess;
 
   @override
   $Res call({
     Object? name = freezed,
     Object? password = freezed,
   }) {
-    return _then(CreateAccountSuccess(
+    return _then(_$CreateAccountSuccess(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -17295,7 +16968,7 @@ class _$CreateAccountSuccess implements CreateAccountSuccess {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateAccountSuccess &&
+            other is _$CreateAccountSuccess &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.password, password));
   }
@@ -17308,8 +16981,8 @@ class _$CreateAccountSuccess implements CreateAccountSuccess {
 
   @JsonKey(ignore: true)
   @override
-  $CreateAccountSuccessCopyWith<CreateAccountSuccess> get copyWith =>
-      _$CreateAccountSuccessCopyWithImpl<CreateAccountSuccess>(
+  _$$CreateAccountSuccessCopyWith<_$CreateAccountSuccess> get copyWith =>
+      __$$CreateAccountSuccessCopyWithImpl<_$CreateAccountSuccess>(
           this, _$identity);
 
   @override
@@ -17604,41 +17277,41 @@ class _$CreateAccountSuccess implements CreateAccountSuccess {
 
 abstract class CreateAccountSuccess implements Responses {
   const factory CreateAccountSuccess(
-      {required String name,
-      required String password}) = _$CreateAccountSuccess;
+      {required final String name,
+      required final String password}) = _$CreateAccountSuccess;
 
-  String get name;
-  String get password;
+  String get name => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateAccountSuccessCopyWith<CreateAccountSuccess> get copyWith =>
+  _$$CreateAccountSuccessCopyWith<_$CreateAccountSuccess> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UpdateAccountSuccessCopyWith<$Res> {
-  factory $UpdateAccountSuccessCopyWith(UpdateAccountSuccess value,
-          $Res Function(UpdateAccountSuccess) then) =
-      _$UpdateAccountSuccessCopyWithImpl<$Res>;
+abstract class _$$UpdateAccountSuccessCopyWith<$Res> {
+  factory _$$UpdateAccountSuccessCopyWith(_$UpdateAccountSuccess value,
+          $Res Function(_$UpdateAccountSuccess) then) =
+      __$$UpdateAccountSuccessCopyWithImpl<$Res>;
   $Res call({String name, String password});
 }
 
 /// @nodoc
-class _$UpdateAccountSuccessCopyWithImpl<$Res>
+class __$$UpdateAccountSuccessCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $UpdateAccountSuccessCopyWith<$Res> {
-  _$UpdateAccountSuccessCopyWithImpl(
-      UpdateAccountSuccess _value, $Res Function(UpdateAccountSuccess) _then)
-      : super(_value, (v) => _then(v as UpdateAccountSuccess));
+    implements _$$UpdateAccountSuccessCopyWith<$Res> {
+  __$$UpdateAccountSuccessCopyWithImpl(_$UpdateAccountSuccess _value,
+      $Res Function(_$UpdateAccountSuccess) _then)
+      : super(_value, (v) => _then(v as _$UpdateAccountSuccess));
 
   @override
-  UpdateAccountSuccess get _value => super._value as UpdateAccountSuccess;
+  _$UpdateAccountSuccess get _value => super._value as _$UpdateAccountSuccess;
 
   @override
   $Res call({
     Object? name = freezed,
     Object? password = freezed,
   }) {
-    return _then(UpdateAccountSuccess(
+    return _then(_$UpdateAccountSuccess(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -17670,7 +17343,7 @@ class _$UpdateAccountSuccess implements UpdateAccountSuccess {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UpdateAccountSuccess &&
+            other is _$UpdateAccountSuccess &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.password, password));
   }
@@ -17683,8 +17356,8 @@ class _$UpdateAccountSuccess implements UpdateAccountSuccess {
 
   @JsonKey(ignore: true)
   @override
-  $UpdateAccountSuccessCopyWith<UpdateAccountSuccess> get copyWith =>
-      _$UpdateAccountSuccessCopyWithImpl<UpdateAccountSuccess>(
+  _$$UpdateAccountSuccessCopyWith<_$UpdateAccountSuccess> get copyWith =>
+      __$$UpdateAccountSuccessCopyWithImpl<_$UpdateAccountSuccess>(
           this, _$identity);
 
   @override
@@ -17979,39 +17652,39 @@ class _$UpdateAccountSuccess implements UpdateAccountSuccess {
 
 abstract class UpdateAccountSuccess implements Responses {
   const factory UpdateAccountSuccess(
-      {required String name,
-      required String password}) = _$UpdateAccountSuccess;
+      {required final String name,
+      required final String password}) = _$UpdateAccountSuccess;
 
-  String get name;
-  String get password;
+  String get name => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UpdateAccountSuccessCopyWith<UpdateAccountSuccess> get copyWith =>
+  _$$UpdateAccountSuccessCopyWith<_$UpdateAccountSuccess> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginSuccessCopyWith<$Res> {
-  factory $LoginSuccessCopyWith(
-          LoginSuccess value, $Res Function(LoginSuccess) then) =
-      _$LoginSuccessCopyWithImpl<$Res>;
+abstract class _$$LoginSuccessCopyWith<$Res> {
+  factory _$$LoginSuccessCopyWith(
+          _$LoginSuccess value, $Res Function(_$LoginSuccess) then) =
+      __$$LoginSuccessCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$LoginSuccessCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $LoginSuccessCopyWith<$Res> {
-  _$LoginSuccessCopyWithImpl(
-      LoginSuccess _value, $Res Function(LoginSuccess) _then)
-      : super(_value, (v) => _then(v as LoginSuccess));
+class __$$LoginSuccessCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$LoginSuccessCopyWith<$Res> {
+  __$$LoginSuccessCopyWithImpl(
+      _$LoginSuccess _value, $Res Function(_$LoginSuccess) _then)
+      : super(_value, (v) => _then(v as _$LoginSuccess));
 
   @override
-  LoginSuccess get _value => super._value as LoginSuccess;
+  _$LoginSuccess get _value => super._value as _$LoginSuccess;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(LoginSuccess(
+    return _then(_$LoginSuccess(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -18037,7 +17710,7 @@ class _$LoginSuccess implements LoginSuccess {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LoginSuccess &&
+            other is _$LoginSuccess &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -18047,8 +17720,8 @@ class _$LoginSuccess implements LoginSuccess {
 
   @JsonKey(ignore: true)
   @override
-  $LoginSuccessCopyWith<LoginSuccess> get copyWith =>
-      _$LoginSuccessCopyWithImpl<LoginSuccess>(this, _$identity);
+  _$$LoginSuccessCopyWith<_$LoginSuccess> get copyWith =>
+      __$$LoginSuccessCopyWithImpl<_$LoginSuccess>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -18341,30 +18014,31 @@ class _$LoginSuccess implements LoginSuccess {
 }
 
 abstract class LoginSuccess implements Responses {
-  const factory LoginSuccess(String field0) = _$LoginSuccess;
+  const factory LoginSuccess(final String field0) = _$LoginSuccess;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginSuccessCopyWith<LoginSuccess> get copyWith =>
+  _$$LoginSuccessCopyWith<_$LoginSuccess> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $QuitRoomSuccessCopyWith<$Res> {
-  factory $QuitRoomSuccessCopyWith(
-          QuitRoomSuccess value, $Res Function(QuitRoomSuccess) then) =
-      _$QuitRoomSuccessCopyWithImpl<$Res>;
+abstract class _$$QuitRoomSuccessCopyWith<$Res> {
+  factory _$$QuitRoomSuccessCopyWith(
+          _$QuitRoomSuccess value, $Res Function(_$QuitRoomSuccess) then) =
+      __$$QuitRoomSuccessCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$QuitRoomSuccessCopyWithImpl<$Res> extends _$ResponsesCopyWithImpl<$Res>
-    implements $QuitRoomSuccessCopyWith<$Res> {
-  _$QuitRoomSuccessCopyWithImpl(
-      QuitRoomSuccess _value, $Res Function(QuitRoomSuccess) _then)
-      : super(_value, (v) => _then(v as QuitRoomSuccess));
+class __$$QuitRoomSuccessCopyWithImpl<$Res>
+    extends _$ResponsesCopyWithImpl<$Res>
+    implements _$$QuitRoomSuccessCopyWith<$Res> {
+  __$$QuitRoomSuccessCopyWithImpl(
+      _$QuitRoomSuccess _value, $Res Function(_$QuitRoomSuccess) _then)
+      : super(_value, (v) => _then(v as _$QuitRoomSuccess));
 
   @override
-  QuitRoomSuccess get _value => super._value as QuitRoomSuccess;
+  _$QuitRoomSuccess get _value => super._value as _$QuitRoomSuccess;
 }
 
 /// @nodoc
@@ -18380,7 +18054,7 @@ class _$QuitRoomSuccess implements QuitRoomSuccess {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is QuitRoomSuccess);
+        (other.runtimeType == runtimeType && other is _$QuitRoomSuccess);
   }
 
   @override
@@ -18681,22 +18355,23 @@ abstract class QuitRoomSuccess implements Responses {
 }
 
 /// @nodoc
-abstract class $QuitGameSessionSuccessCopyWith<$Res> {
-  factory $QuitGameSessionSuccessCopyWith(QuitGameSessionSuccess value,
-          $Res Function(QuitGameSessionSuccess) then) =
-      _$QuitGameSessionSuccessCopyWithImpl<$Res>;
+abstract class _$$QuitGameSessionSuccessCopyWith<$Res> {
+  factory _$$QuitGameSessionSuccessCopyWith(_$QuitGameSessionSuccess value,
+          $Res Function(_$QuitGameSessionSuccess) then) =
+      __$$QuitGameSessionSuccessCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$QuitGameSessionSuccessCopyWithImpl<$Res>
+class __$$QuitGameSessionSuccessCopyWithImpl<$Res>
     extends _$ResponsesCopyWithImpl<$Res>
-    implements $QuitGameSessionSuccessCopyWith<$Res> {
-  _$QuitGameSessionSuccessCopyWithImpl(QuitGameSessionSuccess _value,
-      $Res Function(QuitGameSessionSuccess) _then)
-      : super(_value, (v) => _then(v as QuitGameSessionSuccess));
+    implements _$$QuitGameSessionSuccessCopyWith<$Res> {
+  __$$QuitGameSessionSuccessCopyWithImpl(_$QuitGameSessionSuccess _value,
+      $Res Function(_$QuitGameSessionSuccess) _then)
+      : super(_value, (v) => _then(v as _$QuitGameSessionSuccess));
 
   @override
-  QuitGameSessionSuccess get _value => super._value as QuitGameSessionSuccess;
+  _$QuitGameSessionSuccess get _value =>
+      super._value as _$QuitGameSessionSuccess;
 }
 
 /// @nodoc
@@ -18712,7 +18387,7 @@ class _$QuitGameSessionSuccess implements QuitGameSessionSuccess {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is QuitGameSessionSuccess);
+        (other.runtimeType == runtimeType && other is _$QuitGameSessionSuccess);
   }
 
   @override
@@ -19013,30 +18688,6 @@ abstract class QuitGameSessionSuccess implements Responses {
 }
 
 /// @nodoc
-class _$RoomStateTearOff {
-  const _$RoomStateTearOff();
-
-  Empty empty() {
-    return const Empty();
-  }
-
-  OpponentIsReady opponentIsReady(String field0) {
-    return OpponentIsReady(
-      field0,
-    );
-  }
-
-  OpponentIsNotReady opponentIsNotReady(String field0) {
-    return OpponentIsNotReady(
-      field0,
-    );
-  }
-}
-
-/// @nodoc
-const $RoomState = _$RoomStateTearOff();
-
-/// @nodoc
 mixin _$RoomState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -19100,19 +18751,19 @@ class _$RoomStateCopyWithImpl<$Res> implements $RoomStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $EmptyCopyWith<$Res> {
-  factory $EmptyCopyWith(Empty value, $Res Function(Empty) then) =
-      _$EmptyCopyWithImpl<$Res>;
+abstract class _$$EmptyCopyWith<$Res> {
+  factory _$$EmptyCopyWith(_$Empty value, $Res Function(_$Empty) then) =
+      __$$EmptyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EmptyCopyWithImpl<$Res> extends _$RoomStateCopyWithImpl<$Res>
-    implements $EmptyCopyWith<$Res> {
-  _$EmptyCopyWithImpl(Empty _value, $Res Function(Empty) _then)
-      : super(_value, (v) => _then(v as Empty));
+class __$$EmptyCopyWithImpl<$Res> extends _$RoomStateCopyWithImpl<$Res>
+    implements _$$EmptyCopyWith<$Res> {
+  __$$EmptyCopyWithImpl(_$Empty _value, $Res Function(_$Empty) _then)
+      : super(_value, (v) => _then(v as _$Empty));
 
   @override
-  Empty get _value => super._value as Empty;
+  _$Empty get _value => super._value as _$Empty;
 }
 
 /// @nodoc
@@ -19128,7 +18779,7 @@ class _$Empty implements Empty {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Empty);
+        (other.runtimeType == runtimeType && other is _$Empty);
   }
 
   @override
@@ -19208,28 +18859,29 @@ abstract class Empty implements RoomState {
 }
 
 /// @nodoc
-abstract class $OpponentIsReadyCopyWith<$Res> {
-  factory $OpponentIsReadyCopyWith(
-          OpponentIsReady value, $Res Function(OpponentIsReady) then) =
-      _$OpponentIsReadyCopyWithImpl<$Res>;
+abstract class _$$OpponentIsReadyCopyWith<$Res> {
+  factory _$$OpponentIsReadyCopyWith(
+          _$OpponentIsReady value, $Res Function(_$OpponentIsReady) then) =
+      __$$OpponentIsReadyCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$OpponentIsReadyCopyWithImpl<$Res> extends _$RoomStateCopyWithImpl<$Res>
-    implements $OpponentIsReadyCopyWith<$Res> {
-  _$OpponentIsReadyCopyWithImpl(
-      OpponentIsReady _value, $Res Function(OpponentIsReady) _then)
-      : super(_value, (v) => _then(v as OpponentIsReady));
+class __$$OpponentIsReadyCopyWithImpl<$Res>
+    extends _$RoomStateCopyWithImpl<$Res>
+    implements _$$OpponentIsReadyCopyWith<$Res> {
+  __$$OpponentIsReadyCopyWithImpl(
+      _$OpponentIsReady _value, $Res Function(_$OpponentIsReady) _then)
+      : super(_value, (v) => _then(v as _$OpponentIsReady));
 
   @override
-  OpponentIsReady get _value => super._value as OpponentIsReady;
+  _$OpponentIsReady get _value => super._value as _$OpponentIsReady;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(OpponentIsReady(
+    return _then(_$OpponentIsReady(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -19255,7 +18907,7 @@ class _$OpponentIsReady implements OpponentIsReady {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is OpponentIsReady &&
+            other is _$OpponentIsReady &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -19265,8 +18917,8 @@ class _$OpponentIsReady implements OpponentIsReady {
 
   @JsonKey(ignore: true)
   @override
-  $OpponentIsReadyCopyWith<OpponentIsReady> get copyWith =>
-      _$OpponentIsReadyCopyWithImpl<OpponentIsReady>(this, _$identity);
+  _$$OpponentIsReadyCopyWith<_$OpponentIsReady> get copyWith =>
+      __$$OpponentIsReadyCopyWithImpl<_$OpponentIsReady>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -19338,38 +18990,38 @@ class _$OpponentIsReady implements OpponentIsReady {
 }
 
 abstract class OpponentIsReady implements RoomState {
-  const factory OpponentIsReady(String field0) = _$OpponentIsReady;
+  const factory OpponentIsReady(final String field0) = _$OpponentIsReady;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OpponentIsReadyCopyWith<OpponentIsReady> get copyWith =>
+  _$$OpponentIsReadyCopyWith<_$OpponentIsReady> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OpponentIsNotReadyCopyWith<$Res> {
-  factory $OpponentIsNotReadyCopyWith(
-          OpponentIsNotReady value, $Res Function(OpponentIsNotReady) then) =
-      _$OpponentIsNotReadyCopyWithImpl<$Res>;
+abstract class _$$OpponentIsNotReadyCopyWith<$Res> {
+  factory _$$OpponentIsNotReadyCopyWith(_$OpponentIsNotReady value,
+          $Res Function(_$OpponentIsNotReady) then) =
+      __$$OpponentIsNotReadyCopyWithImpl<$Res>;
   $Res call({String field0});
 }
 
 /// @nodoc
-class _$OpponentIsNotReadyCopyWithImpl<$Res>
+class __$$OpponentIsNotReadyCopyWithImpl<$Res>
     extends _$RoomStateCopyWithImpl<$Res>
-    implements $OpponentIsNotReadyCopyWith<$Res> {
-  _$OpponentIsNotReadyCopyWithImpl(
-      OpponentIsNotReady _value, $Res Function(OpponentIsNotReady) _then)
-      : super(_value, (v) => _then(v as OpponentIsNotReady));
+    implements _$$OpponentIsNotReadyCopyWith<$Res> {
+  __$$OpponentIsNotReadyCopyWithImpl(
+      _$OpponentIsNotReady _value, $Res Function(_$OpponentIsNotReady) _then)
+      : super(_value, (v) => _then(v as _$OpponentIsNotReady));
 
   @override
-  OpponentIsNotReady get _value => super._value as OpponentIsNotReady;
+  _$OpponentIsNotReady get _value => super._value as _$OpponentIsNotReady;
 
   @override
   $Res call({
     Object? field0 = freezed,
   }) {
-    return _then(OpponentIsNotReady(
+    return _then(_$OpponentIsNotReady(
       field0 == freezed
           ? _value.field0
           : field0 // ignore: cast_nullable_to_non_nullable
@@ -19395,7 +19047,7 @@ class _$OpponentIsNotReady implements OpponentIsNotReady {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is OpponentIsNotReady &&
+            other is _$OpponentIsNotReady &&
             const DeepCollectionEquality().equals(other.field0, field0));
   }
 
@@ -19405,8 +19057,9 @@ class _$OpponentIsNotReady implements OpponentIsNotReady {
 
   @JsonKey(ignore: true)
   @override
-  $OpponentIsNotReadyCopyWith<OpponentIsNotReady> get copyWith =>
-      _$OpponentIsNotReadyCopyWithImpl<OpponentIsNotReady>(this, _$identity);
+  _$$OpponentIsNotReadyCopyWith<_$OpponentIsNotReady> get copyWith =>
+      __$$OpponentIsNotReadyCopyWithImpl<_$OpponentIsNotReady>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -19478,10 +19131,10 @@ class _$OpponentIsNotReady implements OpponentIsNotReady {
 }
 
 abstract class OpponentIsNotReady implements RoomState {
-  const factory OpponentIsNotReady(String field0) = _$OpponentIsNotReady;
+  const factory OpponentIsNotReady(final String field0) = _$OpponentIsNotReady;
 
-  String get field0;
+  String get field0 => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OpponentIsNotReadyCopyWith<OpponentIsNotReady> get copyWith =>
+  _$$OpponentIsNotReadyCopyWith<_$OpponentIsNotReady> get copyWith =>
       throw _privateConstructorUsedError;
 }

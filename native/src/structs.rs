@@ -395,18 +395,12 @@ impl From<wuziqi::Responses> for Responses {
                 InvalidAccountPassword::BadCharacterAccountName => {
                     "bad character in name".to_string()
                 }
-                InvalidAccountPassword::AccountNameTooShort => {
-                    "account name too short".to_string()
-                }
-                InvalidAccountPassword::AccountNameTooLong => {
-                    "account name too long".to_string()
-                }
+                InvalidAccountPassword::AccountNameTooShort => "account name too short".to_string(),
+                InvalidAccountPassword::AccountNameTooLong => "account name too long".to_string(),
                 InvalidAccountPassword::BadCharacterAccountPassword => {
                     "bad character in password".to_string()
                 }
-                InvalidAccountPassword::PasswordTooShort => {
-                    "password too short".to_string()
-                }
+                InvalidAccountPassword::PasswordTooShort => "password too short".to_string(),
                 InvalidAccountPassword::PasswordTooLong => "password too long".to_string(),
             }
         }

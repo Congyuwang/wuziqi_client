@@ -27,8 +27,8 @@ pub fn connect_to_server(sink: StreamSink<Responses>, domain_port: String) -> Re
             .splitn(2, ":")
             .next()
             .ok_or(std::io::Error::from(ErrorKind::InvalidInput))?;
-        let server_name =
-            ServerName::try_from(domain).map_err(|_| std::io::Error::from(ErrorKind::InvalidInput))?;
+        let server_name = ServerName::try_from(domain)
+            .map_err(|_| std::io::Error::from(ErrorKind::InvalidInput))?;
         let mut root_certs = RootCertStore::empty();
         root_certs.add_server_trust_anchors(webpki_roots::TLS_SERVER_ROOTS.0.into_iter().map(
             |c| {
